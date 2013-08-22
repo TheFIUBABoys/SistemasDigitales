@@ -1,0 +1,115 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\questasim_6.6b\examples
+T_opt
+Z1 VjWgi1kPNhzF^^M:6HET7i0
+Z2 04 4 8 work test test_arq 1
+Z3 =3-002522f29b7d-52167b51-34b-a40
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 n@_opt
+Z6 OE;O;6.6b;45
+Z7 dC:\questasim_6.6b\examples
+T_opt1
+Z8 V5?_e4ZZinF<i]:`deNfX73
+Z9 04 4 9 work test test_arq2 1
+Z10 =1-002522f29b7d-521678e0-167-3e4
+R4
+Z11 n@_opt1
+R6
+R7
+Econt2b
+Z12 w1377205050
+Z13 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z14 dC:\Documents and Settings\alumno\Escritorio\Sistemas Digitales\Guias\Guia1
+Z15 8C:/Documents and Settings/alumno/Escritorio/Sistemas Digitales/Guias/Guia1/1.vhd
+Z16 FC:/Documents and Settings/alumno/Escritorio/Sistemas Digitales/Guias/Guia1/1.vhd
+l0
+L28
+Z17 VMg]f9A]P`c[XZ6c`jLh6P2
+Z18 OE;C;6.6b;45
+32
+Z19 o-work work -2002 -explicit
+Z20 tExplicit 1
+Z21 !s100 `:ReW:;]AlH52m6>_<E5V2
+Acont2b_arq
+Z22 DEx79 C:\Documents and Settings\alumno\Escritorio\Sistemas Digitales\Guias\Guia1\work 3 ffd 0 22 hERL=MFc@KcT=Ba>JRf0W1
+Z23 DPx22 C:\questasim_6.6b\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z24 DEx79 C:\Documents and Settings\alumno\Escritorio\Sistemas Digitales\Guias\Guia1\work 6 cont2b 0 22 Mg]f9A]P`c[XZ6c`jLh6P2
+32
+Z25 Mx1 22 C:\questasim_6.6b\ieee 14 std_logic_1164
+l50
+L37
+Z26 V@`eLb[nO2cOeF@GA;oYfM0
+R18
+R19
+R20
+Z27 !s100 f4;Ye6amBEzRz849QN0AI0
+Z28 w1377204807
+Effd
+R12
+R13
+R14
+R15
+R16
+l0
+L4
+Z29 VhERL=MFc@KcT=Ba>JRf0W1
+R18
+32
+R19
+R20
+Z30 !s100 nX2]SHPV4dllMSKk^;GDi2
+Affd_arq
+R23
+R22
+32
+R25
+l14
+L13
+Z31 VLZ=b`SLZXTH?Zb<k^zKD<3
+R18
+R19
+R20
+Z32 !s100 jQlU9R^>?HLF_K3KdfR>P0
+Z33 w1377203102
+Etest
+R12
+R23
+32
+R14
+R15
+R16
+l0
+L65
+Z34 V<O8RUA7:OzjW6VXYU82@W1
+R18
+R19
+R20
+Z35 !s100 ;Tb[1iK[FPF4AH>Ed_L<23
+Atest_arq2
+R13
+Z36 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+l97
+L86
+Z37 V=lo;SfbmJ3]SOjb?6R<iR1
+Z38 !s100 SLU9@U36RiB4e>acl]Sb30
+R18
+32
+Z39 Mx1 4 ieee 14 std_logic_1164
+R19
+R20
+Atest_arq
+R24
+R23
+Z40 DEx79 C:\Documents and Settings\alumno\Escritorio\Sistemas Digitales\Guias\Guia1\work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+32
+R25
+l79
+L68
+Z41 VL^nOo5Pb?]aS@]@l<b4cP2
+R18
+R19
+R20
+Z42 !s100 6^7@[Fa1@HD4GhZ0J@@7T2

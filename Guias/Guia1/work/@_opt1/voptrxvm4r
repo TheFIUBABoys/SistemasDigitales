@@ -1,0 +1,112 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\questasim_6.6b\examples
+T_opt
+Z1 VD>Wdg5aJ<:mn0VVJN3iZ<1
+Z2 04 4 8 work test test_arq 1
+Z3 =1-002522f29b7d-521677ba-109-b70
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 n@_opt
+Z6 OE;O;6.6b;45
+Z7 dC:\questasim_6.6b\examples
+T_opt1
+Z8 V5?_e4ZZinF<i]:`deNfX73
+Z9 04 4 9 work test test_arq2 1
+Z10 =1-002522f29b7d-521678e0-167-3e4
+R4
+Z11 n@_opt1
+R6
+R7
+Econt2b
+Z12 w1377204402
+Z13 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z14 dC:\Documents and Settings\alumno\Escritorio\Sistemas Digitales\Guias\Guia1
+Z15 8C:/Documents and Settings/alumno/Escritorio/Sistemas Digitales/Guias/Guia1/1.vhd
+Z16 FC:/Documents and Settings/alumno/Escritorio/Sistemas Digitales/Guias/Guia1/1.vhd
+l0
+L28
+Z17 VMg]f9A]P`c[XZ6c`jLh6P2
+Z18 OE;C;6.6b;45
+32
+Z19 o-work work -2002 -explicit
+Z20 tExplicit 1
+Z21 !s100 `:ReW:;]AlH52m6>_<E5V2
+Acont2b_arq
+R13
+Z22 DEx4 work 6 cont2b 0 22 Mg]f9A]P`c[XZ6c`jLh6P2
+l49
+L37
+Z23 VV:nTJ>1IfegT2e]X^0hVh3
+R18
+32
+Z24 Mx1 4 ieee 14 std_logic_1164
+R19
+R20
+Z25 !s100 Dm3n6HHKRn>Y;ZW2ZQkWS2
+Effd
+R12
+Z26 DPx22 C:\questasim_6.6b\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R14
+R15
+R16
+l0
+L4
+Z27 VhERL=MFc@KcT=Ba>JRf0W1
+R18
+R19
+R20
+Z28 !s100 nX2]SHPV4dllMSKk^;GDi2
+Affd_arq
+R26
+Z29 DEx79 C:\Documents and Settings\alumno\Escritorio\Sistemas Digitales\Guias\Guia1\work 3 ffd 0 22 hERL=MFc@KcT=Ba>JRf0W1
+32
+Z30 Mx1 22 C:\questasim_6.6b\ieee 14 std_logic_1164
+l14
+L13
+Z31 VLZ=b`SLZXTH?Zb<k^zKD<3
+R18
+R19
+R20
+Z32 !s100 jQlU9R^>?HLF_K3KdfR>P0
+Etest
+R12
+R26
+32
+R14
+R15
+R16
+l0
+L70
+Z33 V<O8RUA7:OzjW6VXYU82@W1
+R18
+R19
+R20
+Z34 !s100 m@^LXj1BSg;LJ]76?YLB61
+Atest_arq2
+R29
+R26
+DEx79 C:\Documents and Settings\alumno\Escritorio\Sistemas Digitales\Guias\Guia1\work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+32
+R30
+l102
+L91
+Z35 V=lo;SfbmJ3]SOjb?6R<iR1
+R18
+R19
+R20
+Z36 !s100 0>Tj@[BH4YG5b_DW@0obG1
+Atest_arq
+R13
+Z37 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+l84
+L73
+Z38 V3d3:VBEcc5lZ6Mn0J@jQm0
+R18
+32
+R24
+R19
+R20
+Z39 !s100 V:Yc49jAHNUchRhino><R3
