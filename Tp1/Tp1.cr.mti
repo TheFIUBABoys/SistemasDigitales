@@ -1,4 +1,19 @@
-{C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp 1/Tp 1.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp 1/Tp 1.vhd}
+{C:/Documents and Settings/alumno/Escritorio/SisDig/Tp1/Tp 1.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDig/Tp1/Tp 1.vhd}
+QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package cont4b
+-- Compiling entity contbcd
+-- Compiling architecture contbcd_arq of contbcd
+-- Loading package numeric_std
+-- Compiling entity cont26b
+-- Compiling architecture cont26b_arq of cont26b
+-- Compiling entity test
+-- Compiling architecture test_contador26b of test
+-- Compiling architecture test_contadorbcd of test
+-- Loading entity test
+
+} {} {}} {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp 1/Tp 1.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp 1/Tp 1.vhd}
 QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
 -- Loading package standard
 -- Loading package std_logic_1164
