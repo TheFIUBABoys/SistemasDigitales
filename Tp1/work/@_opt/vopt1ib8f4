@@ -1,0 +1,249 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Documents and Settings\alumno\Escritorio\SisDig\Tp1
+T_opt
+Z1 ViQIl[QU=zHIfD[<^5D@H_2
+Z2 04 4 16 work test test_contador26b 1
+Z3 =1-002522f29b7d-521fb92b-33c-c58
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 n@_opt
+Z6 OE;O;6.6b;45
+Z7 dC:\Documents and Settings\alumno\Escritorio\SisDig\Tp1
+Econt26b
+Z8 w1377810664
+Z9 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z10 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+R7
+Z11 8C:/Documents and Settings/alumno/Escritorio/SisDig/Tp1/Tp 1.vhd
+Z12 FC:/Documents and Settings/alumno/Escritorio/SisDig/Tp1/Tp 1.vhd
+l0
+L138
+Z13 V2=HFlalQi2E=idd=5D?mn3
+Z14 OE;C;6.6b;45
+32
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1
+Z17 !s100 omJnX^lnHam>VJf8L1JY<2
+Acont26b_arq
+Z18 DPx22 C:\questasim_6.6b\ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z19 DPx22 C:\questasim_6.6b\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z20 DEx59 C:\Documents and Settings\alumno\Escritorio\SisDig\Tp1\work 7 cont26b 0 22 2=HFlalQi2E=idd=5D?mn3
+32
+Z21 Mx2 22 C:\questasim_6.6b\ieee 14 std_logic_1164
+Z22 Mx1 22 C:\questasim_6.6b\ieee 11 numeric_std
+l149
+L145
+Z23 V2@7hTUI[DHoXKCf9NOfFC1
+R14
+R15
+R16
+Z24 !s100 ]J;]kYD@8`bzKBe=02;X11
+Z25 w1377810381
+Econt2b
+R8
+R10
+R7
+R11
+R12
+l0
+L31
+Z26 V`am>P0T[DQV8kYmom[l[?2
+R14
+32
+R15
+R16
+Z27 !s100 TBX1PXLDg0o^T=N6fT2Gm0
+Acont2b_arq
+R10
+Z28 DEx4 work 6 cont2b 0 22 `am>P0T[DQV8kYmom[l[?2
+l55
+L41
+Z29 V[]b=P62jNKLY??<6zh1C>2
+R14
+32
+Z30 Mx1 4 ieee 14 std_logic_1164
+R15
+R16
+Z31 !s100 h__A3Ud6Z:kWDV23_G6K>1
+Econt4b
+R8
+R10
+R7
+R11
+R12
+l0
+L68
+Z32 VN>DK__haBmB0QcoK10[R21
+R14
+32
+R15
+R16
+Z33 !s100 nJMaQINSB;5E2J<N:??iL2
+Acont4b_arq
+R10
+Z34 DEx4 work 6 cont4b 0 22 N>DK__haBmB0QcoK10[R21
+l92
+L77
+Z35 VQIjn4=dmiQl7DK;?W>G@K2
+R14
+32
+R30
+R15
+R16
+Z36 !s100 f1ja0oY7NM4oLNn<ImJC52
+Econt_26b
+Z37 w1377807998
+R10
+R7
+R11
+R12
+l0
+L136
+Z38 VT;j_78OA;<zTnZzIAf7i63
+R14
+32
+Z39 o-work work
+R16
+Z40 !s100 MEfo4Y610@<n2UdWj[36]2
+Acont26b_arq
+R10
+Z41 DEx4 work 8 cont_26b 0 22 T;j_78OA;<zTnZzIAf7i63
+l158
+L145
+Z42 V@IhBo0<5]ZIzcf?akIfDi0
+R14
+32
+R30
+R39
+R16
+Z43 !s100 ;>gg^2zmNKH75E=8hFg;=1
+Econtbcd
+R8
+R10
+R7
+R11
+R12
+l0
+L102
+Z44 ViQAKQNeXF>6mMPZoh1`WL3
+R14
+32
+R15
+R16
+Z45 !s100 0RkDjjoQ=UzZl8l_fD1393
+Acontbcd_arq
+R10
+Z46 DEx4 work 7 contbcd 0 22 iQAKQNeXF>6mMPZoh1`WL3
+l124
+L111
+Z47 Ve;EWegKKkGX6`c_bUBRi>1
+R14
+32
+R30
+R15
+R16
+Z48 !s100 _[91zEY`Y7lOaLh2B@U]m3
+Effd
+R8
+R10
+R7
+R11
+R12
+l0
+L4
+Z49 V9fH]gLDF2lbhX_jSzM@bl3
+R14
+32
+R15
+R16
+Z50 !s100 K6>j8HDZVW^O>:VUX2joY3
+Affd_arq
+R10
+Z51 DEx4 work 3 ffd 0 22 9fH]gLDF2lbhX_jSzM@bl3
+l15
+L14
+Z52 VP19ATKjoGVn:cIG2zY1o90
+R14
+32
+R30
+R15
+R16
+Z53 !s100 K@acik6VdQ[KS0cT<h1NY3
+Etest
+R8
+R10
+R7
+R11
+R12
+l0
+L169
+Z54 V<O8RUA7:OzjW6VXYU82@W1
+R14
+32
+R15
+R16
+Z55 !s100 RP05l>f7:?66S>WjLOOj23
+Atest_contadorbcd
+R10
+Z56 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+l239
+L228
+Z57 VkBPbDa^Km>7W?m[AiTF7Y1
+R14
+32
+R30
+R15
+R16
+Z58 !s100 A12LhWF=idZeAddl9PQfT0
+Atest_ffd
+R10
+R56
+l220
+L208
+Z59 V3B?Oeb<W2zY`_WRX9UDCh2
+R14
+32
+R30
+R15
+R16
+Z60 !s100 Jf3P6H=UadB2I`;b<dJF]1
+Atest_contador4b
+R10
+R56
+l200
+L189
+Z61 Vk:5@l3Z7LmXKnGIHB_=9T0
+R14
+32
+R30
+R15
+R16
+Z62 !s100 k:U;]Y:;;fGVU9;PTARIa1
+Atest_contador26b
+R20
+R19
+Z63 DEx59 C:\Documents and Settings\alumno\Escritorio\SisDig\Tp1\work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+32
+Z64 Mx1 22 C:\questasim_6.6b\ieee 14 std_logic_1164
+l182
+L172
+Z65 VMmYj;3I4WLN@em=cB>f0e0
+R14
+R15
+R16
+Z66 !s100 _CI>NDQ]<>K?lWF94TecF2
+Atest_contador2b
+R10
+R56
+l181
+L169
+Z67 Va[>4Rf?6IZ<:Ez9D93L8l0
+R14
+32
+R30
+R15
+R16
+Z68 w1377809042
+Z69 !s100 3`IX>H?gRCDW0h]8B[`F11

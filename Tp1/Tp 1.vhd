@@ -131,46 +131,36 @@ end contBCD_arq;
 
 
 -- Contador 26 bits
-library IEEE;
-use IEEE.std_logic_1164.all;
-entity cont_26b is
-	port (
-		clk: in std_logic;
-		reset: in std_logic;
-		enable: in std_logic;
-		Q: out std_logic_vector(28 downto 0)
-	);
-end;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-architecture cont26b_arq of cont_26b is
-component cont4b is
-	port (
-		clk: in std_logic;
-		reset: in std_logic;
-		enable: in std_logic;
-		Q: out std_logic_vector(3 downto 0)
-	);
-end component;
+entity cont26b is
+    port (
+        clk, rst, enable: in std_logic;
+        Q : out std_logic
+    );
+end cont26b;
 
-signal Q_temp: std_logic_vector(27 downto 0);
-signal en_temp: std_logic_vector(6 downto 0);
+architecture cont26b_arq of cont26b is
+    signal count_i: unsigned(25 downto 0);
 
+signal cont_temp: std_logic_vector(25 downto 0);	
 begin
-	lcont4b1: cont4b port map(clk, Q_temp(26), enable, Q_temp(27 downto 24));
-	en_temp(0) <= (Q_temp(27) and Q_temp(26) and Q_temp(25) and Q_temp(24)) and enable;
-	
-	lcont4b2: cont4b port map(clk, Q_temp(26), en_temp(0), Q_temp(23 downto 20));
-	en_temp(1) <= (Q_temp(23) and Q_temp(22) and Q_temp(21) and Q_temp(20)) and en_temp(0);
-	
-	lcont4b3: cont4b port map(clk, Q_temp(26), en_temp(1), Q_temp(19 downto 16));
-	en_temp(1) <= (Q_temp(23) and Q_temp(22) and Q_temp(21) and Q_temp(20)) and en_temp(0);
-	
-	lcont4b4: cont4b port map(clk, Q_temp(26), en_temp(2), Q_temp(15 downto 12));
-	lcont4b5: cont4b port map(clk, Q_temp(26), en_temp(3), Q_temp(13 downto 10));
-	lcont4b6: cont4b port map(clk, Q_temp(26), en_temp(4), Q_temp(07 downto 04));
-	lcont4b7: cont4b port map(clk, Q_temp(26), en_temp(5), Q_temp(03 downto 00));
-	
-end cont26b_arq;
+    process(clk, rst)
+    begin
+        if rst='1' then
+            count_i <= (others => '0');
+        elsif rising_edge(clk) then
+            if (enable = '1') then
+                count_i <= count_i + 1;
+            end if;
+        end if;
+    end process;
+    cont_temp <= std_logic_vector(count_i);
+	Q <= cont_temp(25);
+end architecture;
+
 
 -- Banco de Pruebas
 library IEEE;
@@ -179,24 +169,20 @@ use IEEE.std_logic_1164.all;
 entity test is
 end;
 
-architecture test_contador2b of test is
-	component cont2b is
+architecture test_contador26b of test is
+	component cont26b is   
 	port (
-		clk: in std_logic;
-		reset: in std_logic;
-		enable: in std_logic;
-		Q0: out std_logic;
-		Q1: out std_logic
-	);
+        clk, rst, enable: in std_logic;
+        Q : out std_logic
+    );
 	end component;
 	signal r_t,ck_t,e_t: std_logic := '1';
-	signal q_t: std_logic_vector(1 downto 0);
+	signal q_t: std_logic;
 begin
-	ck_t <= not ck_t after 10 ns;
+	ck_t <= not ck_t after 1 ns;
 	r_t <= '0' after 1 ps;
-	e_t <= not e_t after 20 ns;
 	
-	inst_cont2b: cont2b port map(ck_t,r_t,e_t,q_t(0),q_t(1));
+	inst_cont26b: cont26b port map(ck_t,r_t,e_t,q_t);
 end;
 
 architecture test_contador4b of test is
