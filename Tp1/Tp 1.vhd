@@ -87,16 +87,14 @@ end component;
 
 signal q_temp: std_logic;
 signal q2_temp: std_logic;
-signal clk2_temp: std_logic;
+signal en_temp: std_logic;
 
 begin
 	lcont2b1: cont2b port map(clk,reset,enable,q_temp, q2_temp);
 	Q(0) <= q_temp;
 	Q(1) <= q2_temp;
-	clk2_temp <= q_temp nand q2_temp;
-	lcont2b2: cont2b port map(clk2_temp,reset, enable, Q(2), Q(3));
+	en_temp <= (q_temp and q2_temp) and enable;	lcont2b2: cont2b port map(clk,reset, en_temp, Q(2), Q(3));
 end cont4b_arq;
-
 
 -- Contador BCD
 library IEEE;
@@ -130,6 +128,49 @@ begin
 	
 	Q<= Q_temp;
 end contBCD_arq;
+
+
+-- Contador 26 bits
+library IEEE;
+use IEEE.std_logic_1164.all;
+entity cont_26b is
+	port (
+		clk: in std_logic;
+		reset: in std_logic;
+		enable: in std_logic;
+		Q: out std_logic_vector(28 downto 0)
+	);
+end;
+
+architecture cont26b_arq of cont_26b is
+component cont4b is
+	port (
+		clk: in std_logic;
+		reset: in std_logic;
+		enable: in std_logic;
+		Q: out std_logic_vector(3 downto 0)
+	);
+end component;
+
+signal Q_temp: std_logic_vector(27 downto 0);
+signal en_temp: std_logic_vector(6 downto 0);
+
+begin
+	lcont4b1: cont4b port map(clk, Q_temp(26), enable, Q_temp(27 downto 24));
+	en_temp(0) <= (Q_temp(27) and Q_temp(26) and Q_temp(25) and Q_temp(24)) and enable;
+	
+	lcont4b2: cont4b port map(clk, Q_temp(26), en_temp(0), Q_temp(23 downto 20));
+	en_temp(1) <= (Q_temp(23) and Q_temp(22) and Q_temp(21) and Q_temp(20)) and en_temp(0);
+	
+	lcont4b3: cont4b port map(clk, Q_temp(26), en_temp(1), Q_temp(19 downto 16));
+	en_temp(1) <= (Q_temp(23) and Q_temp(22) and Q_temp(21) and Q_temp(20)) and en_temp(0);
+	
+	lcont4b4: cont4b port map(clk, Q_temp(26), en_temp(2), Q_temp(15 downto 12));
+	lcont4b5: cont4b port map(clk, Q_temp(26), en_temp(3), Q_temp(13 downto 10));
+	lcont4b6: cont4b port map(clk, Q_temp(26), en_temp(4), Q_temp(07 downto 04));
+	lcont4b7: cont4b port map(clk, Q_temp(26), en_temp(5), Q_temp(03 downto 00));
+	
+end cont26b_arq;
 
 -- Banco de Pruebas
 library IEEE;
