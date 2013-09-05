@@ -13,6 +13,26 @@ QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
 -- Compiling architecture test_contadorbcd of test
 -- Loading entity test
 
+} {} {}} {C:/Documents and Settings/alumno/Escritorio/SisDig/Tp1/cont4b.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDig/Tp1/cont4b.vhd}
+QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity ffd
+-- Compiling architecture ffd_arq of ffd
+-- Compiling entity cont2b
+-- Compiling architecture cont2b_arq of cont2b
+-- Compiling entity cont4b
+-- Compiling architecture cont4b_arq of cont4b
+-- Compiling package cont4b
+-- Compiling package body cont4b
+-- Loading package cont4b
+-- Compiling entity testcont4b_2b_ffd
+-- Compiling architecture test_contador4b of testcont4b_2b_ffd
+-- Compiling architecture test_ffd of testcont4b_2b_ffd
+-- Loading entity testcont4b_2b_ffd
+-- Compiling architecture test_contador2b of testcont4b_2b_ffd
+-- Loading entity testcont4b_2b_ffd
+
 } {} {}} {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp 1/Tp 1.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp 1/Tp 1.vhd}
 QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
 -- Loading package standard
