@@ -6,11 +6,11 @@ use work.all;
 entity Cont2b is
   port(
 ---   Entradad del clock
-    clk   :   in std_logic;
+    clk     :   in std_logic;
     reset   :   in std_logic;
-    enable   :   in std_logic;
+    enable  :   in std_logic;
 ---   Salida del contador. Cuenta en binario
-    Q     :   out std_logic_vector(1 downto 0)
+    Q       :   out std_logic_vector(1 downto 0)
   );
 end entity Cont2b;
 
