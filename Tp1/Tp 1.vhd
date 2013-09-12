@@ -299,59 +299,40 @@ entity logicaDisplay is
 end logicaDisplay;
 
 architecture logicaDisplay_arq of logicaDisplay is
-signal aux: unsigned(3 downto 0);
 begin
-	process(contadores(0))
+	process(contadores)
 	begin
-		aux<=unsigned(contadores);
-		case to_integer(aux) is
-			when 0 => 
-				a<='0';b<='0';c<='0';d<='0';e<='0';f<='1';g<='0';
-			when 1 => 
-				a<='1';b<='0';c<='0';d<='1';e<='1';f<='1';g<='1';
-			when 2 => 
-				a<='0';b<='0';c<='1';d<='0';e<='0';f<='1';g<='0';
-			when 3 => 
-				a<='0';b<='0';c<='0';d<='0';e<='1';f<='1';g<='0';
-			when 4 => 
-				a<='1';b<='0';c<='0';d<='1';e<='1';f<='0';g<='0';
-			when 5 => 
-				a<='0';b<='1';c<='0';d<='0';e<='1';f<='0';g<='0';
-			when 6 => 
-				a<='0';b<='1';c<='0';d<='0';e<='0';f<='0';g<='0';
-			when 7 => 
-				a<='0';b<='0';c<='0';d<='1';e<='1';f<='1';g<='1';
-			when 8 => 
-				a<='0';b<='0';c<='0';d<='0';e<='0';f<='0';g<='0';
-			when 9 => 
-				a<='0';b<='0';c<='0';d<='0';e<='1';f<='0';g<='0';
-			when others => 
-				a<='1';b<='1';c<='1';d<='1';e<='1';f<='1';g<='1';
-		end case;
-	dp<='1';
+		if contadores="0000" then a<='0';b<='0';c<='0';d<='0';e<='0';f<='1';g<='0';
+			elsif contadores="0001" then a<='1';b<='0';c<='0';d<='1';e<='1';f<='1';g<='1';
+			elsif contadores="0010" then a<='0';b<='0';c<='1';d<='0';e<='0';f<='1';g<='0';
+			elsif contadores="0011" then a<='0';b<='0';c<='0';d<='0';e<='1';f<='1';g<='0';
+			elsif contadores="0100" then a<='1';b<='0';c<='0';d<='1';e<='1';f<='0';g<='0';
+			elsif contadores="0101" then a<='0';b<='1';c<='0';d<='0';e<='1';f<='0';g<='0';
+			elsif contadores="0110" then a<='0';b<='1';c<='0';d<='0';e<='0';f<='0';g<='0';
+			elsif contadores="0111" then a<='0';b<='0';c<='0';d<='1';e<='1';f<='1';g<='1';
+			elsif contadores="1000" then a<='0';b<='0';c<='0';d<='0';e<='0';f<='0';g<='0';
+			elsif contadores="1001" then a<='0';b<='0';c<='0';d<='0';e<='1';f<='0';g<='0';
+			else a<='1';b<='1';c<='1';d<='1';e<='1';f<='1';g<='1';
+		end if;
+		dp<='1';
 	end process;
 end architecture;
 
 
--- Contador Display
+-- Conmutador Digitos
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity controladorDisplay is
+entity conmutadorDigitos is
 
     port (
         clk, rst, enable: in std_logic;
-        cont0: in std_logic_vector(3 downto 0);
-		cont1: in std_logic_vector(3 downto 0);
-		cont2: in std_logic_vector(3 downto 0);
-		cont3: in std_logic_vector(3 downto 0);
-		a,b,c,d,e,f,g,dp: out std_logic;
 		digitos: out std_logic_vector(3 downto 0)
     );
-end controladorDisplay;
+end conmutadorDigitos;
 
-architecture controladorDisplay_arq of controladorDisplay is
+architecture conmutadorDigitos_arq of conmutadorDigitos is
 	signal q: std_logic_vector(0 to 1);
 	component cont21b is
 	    port (
@@ -365,8 +346,59 @@ begin
 	digitos(1) <= not q(0) or q(1);
 	digitos(2) <= q(0) or not q(1);
 	digitos(3) <= q(0) nand q(1);
+
 end architecture;
 
+-- Contador Display
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity controladorDisplay is
+    port (
+		clk, rst, enable: in std_logic;
+		a,b,c,d,e,f,g,dp: out std_logic;
+		cont0: in std_logic_vector(3 downto 0);
+		cont1: in std_logic_vector(3 downto 0);
+		cont2: in std_logic_vector(3 downto 0);
+		cont3: in std_logic_vector(3 downto 0);
+		digitosO: out std_logic_vector(3 downto 0)
+    );
+end controladorDisplay;
+
+architecture controladorDisplay_arq of controladorDisplay is
+	component logicaDisplay is
+	port (
+       contadores: in std_logic_vector(3 downto 0);
+	   a,b,c,d,e,f,g,dp: out std_logic
+    );
+	end component;
+	component conmutadorDigitos is
+	port (
+        clk, rst, enable: in std_logic;
+		digitos: out std_logic_vector(3 downto 0)
+    );
+	end component;
+	-- Warning irrelevant
+	signal contActual: std_logic_vector(3 downto 0);
+	signal digitos: std_logic_vector(3 downto 0);
+begin
+	inst_log: logicaDisplay port map(contActual,a,b,c,d,e,f,g,dp);
+	inst_conm: conmutadorDigitos port map(clk, rst, enable, digitos);
+
+	process(digitos)
+	begin
+		if digitos="0001" then contActual <= cont0;
+		elsif digitos="0010" then contActual <= cont1;
+		elsif digitos="0100" then contActual <= cont2;
+		elsif digitos="1000" then contActual <= cont3;
+		end if;
+	end process;
+	
+	digitosO<=digitos;
+
+end architecture;
+	
 -- Banco de Pruebas
 library IEEE;
 use IEEE.std_logic_1164.all;
