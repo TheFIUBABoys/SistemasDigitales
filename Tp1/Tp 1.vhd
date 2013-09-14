@@ -280,7 +280,7 @@ begin
         end if;
     end process;
     cont_temp <= std_logic_vector(count_i);
-	q <= cont_temp(2);
+	q <= cont_temp(5);
 
 end architecture;
 
@@ -332,7 +332,6 @@ entity conmutadorDigitos is
 end conmutadorDigitos;
 
 architecture conmutadorDigitos_arq of conmutadorDigitos is
-	signal q: std_logic_vector(0 to 1);
 begin
 	process(d) begin
 		if d="00" then
@@ -424,7 +423,10 @@ use ieee.numeric_std.all;
 entity controladorDisplay is
     port (
 		clk: in std_logic;
-		cont: in std_logic_vector(15 downto 0);
+		cont0: in std_logic_vector(3 downto 0);
+		cont1: in std_logic_vector(3 downto 0);
+		cont2: in std_logic_vector(3 downto 0);
+		cont3: in std_logic_vector(3 downto 0);
 		selectorDigito: out std_logic_vector(3 downto 0);
 		a,b,c,d,e,f,g,dp: out std_logic
     );
@@ -463,13 +465,14 @@ architecture controladorDisplay_arq of controladorDisplay is
     end component;
 	
 	signal outEnable: std_logic:='1';
-	signal res: std_logic:='0';
+	signal res: std_logic:='1';
 	signal outCont2b: std_logic_vector(1 downto 0):="00";
 	signal contActual: std_logic_vector(3 downto 0):="0000";
 
 begin
-	genEnable: cont21b port map(clk,'0','1',outEnable);
-	inst_cont2b: cont2b port map(clk,'0',outEnable,outCont2b(0),outCont2b(1));
+	res<='0';
+	genEnable: cont21b port map(clk,res,'1',outEnable);
+	inst_cont2b: cont2b port map(clk,res,outEnable,outCont2b(0),outCont2b(1));
 	inst_conm: conmutadorDigitos port map(outCont2b,selectorDigito);
 	inst_log: logicaDisplay port map(contActual,a,b,c,d,e,f,g,dp);
 	
@@ -478,13 +481,13 @@ begin
 	process(outCont2b)
 	begin
 		if outCont2b="11" then
-			contActual <= cont(3 downto 0);
+			contActual <= cont0;
 		elsif outCont2b="10" then
-			contActual <= cont(7 downto 4);
+			contActual <= cont1;
 		elsif outCont2b="01" then
-			contActual <= cont(11 downto 8);
+			contActual <= cont2;
 		else
-			contActual <= cont(15 downto 12);
+			contActual <= cont3;
 		
 		end if;
 	
@@ -625,18 +628,22 @@ architecture test_controladorDisplay of test is
 	component controladorDisplay is
 	port (
 		clk: in std_logic;
-		cont: in std_logic_vector(15 downto 0);
+		cont0: in std_logic_vector(3 downto 0);
+		cont1: in std_logic_vector(3 downto 0);
+		cont2: in std_logic_vector(3 downto 0);
+		cont3: in std_logic_vector(3 downto 0);
 		selectorDigito: out std_logic_vector(3 downto 0);
 		a,b,c,d,e,f,g,dp: out std_logic
     );
 	end component;
 	signal selector_t: std_logic_vector(3 downto 0);
-	signal cont_t: std_logic_vector(15 downto 0):=(others =>'0');
+	signal cont0,cont1,cont2,cont3: std_logic_vector(3 downto 0):=(others =>'0');
 	signal ck_t: std_logic := '1';
 	signal a,b,c,d,e,f,g,dp: std_logic;
 begin
 	ck_t <= not ck_t after 1 ns;
-	cont_t(0)<= not cont_t(0) after 4 ns;
+	cont0<= not cont0 after 4 ns;
+	cont1<= not cont1 after 8 ns;
 		
-	inst_cont: controladorDisplay port map(ck_t,cont_t,selector_t,a,b,c,d,e,f,g,dp);
+	inst_cont: controladorDisplay port map(ck_t,cont0,cont1,cont2,cont3,selector_t,a,b,c,d,e,f,g,dp);
 end;
