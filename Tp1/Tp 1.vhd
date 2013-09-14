@@ -54,8 +54,8 @@ component FFD is
 	enable: in std_logic
 	);
 end component;
-signal d: std_logic_vector(0 to 1);
-signal q: std_logic_vector(0 to 1);
+signal d: std_logic_vector(0 to 1):="00";
+signal q: std_logic_vector(0 to 1):="00";
 
 begin
 	inst_FFD1: FFD port map(clk,reset,d(0),q(0),enable);
@@ -176,7 +176,7 @@ architecture test_contador2b of testCont4b_2b_FFD is
 begin
   ck_t <= not ck_t after 10 ns;
   r_t <= '0' after 1 ps;
-  e_t <= not e_t after 20 ns;
+  e_t <= '1' after 1 ps;
   
   inst_cont2b: cont2b port map(ck_t,r_t,e_t,q_t(0),q_t(1));
 end; 
@@ -280,7 +280,7 @@ begin
         end if;
     end process;
     cont_temp <= std_logic_vector(count_i);
-	q <= cont_temp(20);
+	q <= cont_temp(2);
 
 end architecture;
 
@@ -437,48 +437,59 @@ architecture controladorDisplay_arq of controladorDisplay is
 	   a,b,c,d,e,f,g,dp: out std_logic
     );
 	end component;
+	
 	component cont2b is
 	port (
-		clk,reset,enable: in std_logic;
-		q0,q1: out std_logic
+		clk: in std_logic;
+		reset: in std_logic;
+		enable: in std_logic;
+		Q0: out std_logic;
+		Q1: out std_logic
 	);
 	end component;
+	
 	component cont21b is
 	port (
         clk, rst, enable: in std_logic;
         q : out std_logic
     );
 	end component;
+	
 	component conmutadorDigitos is
-	 port (
+	port (
         d: in std_logic_vector(1 downto 0);
 		digitos: out std_logic_vector(3 downto 0)
     );
     end component;
 	
-	signal outEnable: std_logic;
-	signal outCont2b: std_logic_vector(1 downto 0);
-	signal contActual: std_logic_vector(3 downto 0);
+	signal outEnable: std_logic:='1';
+	signal res: std_logic:='0';
+	signal outCont2b: std_logic_vector(1 downto 0):="00";
+	signal contActual: std_logic_vector(3 downto 0):="0000";
+
 begin
 	genEnable: cont21b port map(clk,'0','1',outEnable);
 	inst_cont2b: cont2b port map(clk,'0',outEnable,outCont2b(0),outCont2b(1));
 	inst_conm: conmutadorDigitos port map(outCont2b,selectorDigito);
+	inst_log: logicaDisplay port map(contActual,a,b,c,d,e,f,g,dp);
 	
 	-- Multiplexamos los contadores; siendo consistente con conmutadorDigitos,
 	-- el digito mas significativo es el primero en mostrarse en el ciclo.
-	process(outCont2b) begin
+	process(outCont2b)
+	begin
 		if outCont2b="11" then
 			contActual <= cont(3 downto 0);
 		elsif outCont2b="10" then
 			contActual <= cont(7 downto 4);
 		elsif outCont2b="01" then
 			contActual <= cont(11 downto 8);
-		else contActual <= cont(15 downto 12);
+		else
+			contActual <= cont(15 downto 12);
 		
 		end if;
 	
 	end process;
-	inst_log: logicaDisplay port map(contActual,a,b,c,d,e,f,g,dp);
+	
 
 end architecture;
 
@@ -533,16 +544,16 @@ architecture test_contador21b of test is
 	component cont21b is   
 	port (
         clk, rst, enable: in std_logic;
-        q0, q1: out std_logic
+        q: out std_logic
     );
 	end component;
 	signal r_t, ck_t, e_t: std_logic := '1';
-	signal q0_t, q1_t: std_logic;
+	signal q_t: std_logic;
 begin
 	ck_t <= not ck_t after 1 ns;
 	r_t <= '0' after 1 ps;
 	
-	inst_cont21b: cont21b port map(ck_t,r_t,e_t,q0_t,q1_t);
+	inst_cont21b: cont21b port map(ck_t,r_t,e_t,q_t);
 end;
 
 
