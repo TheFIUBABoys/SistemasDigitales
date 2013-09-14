@@ -642,8 +642,8 @@ architecture test_controladorDisplay of test is
 	signal a,b,c,d,e,f,g,dp: std_logic;
 begin
 	ck_t <= not ck_t after 1 ns;
-	cont0<= not cont0 after 4 ns;
-	cont1<= not cont1 after 8 ns;
+	cont0(0)<= not cont0(0) after 4 ns;
+	cont1(0)<= not cont1(0) after 8 ns;
 		
 	inst_cont: controladorDisplay port map(ck_t,cont0,cont1,cont2,cont3,selector_t,a,b,c,d,e,f,g,dp);
 end;
