@@ -259,7 +259,7 @@ use ieee.numeric_std.all;
 entity cont21b is
     port (
         clk, rst, enable: in std_logic;
-        q0, q1 : out std_logic
+        q : out std_logic
     );
 end cont21b;
 
@@ -280,8 +280,8 @@ begin
         end if;
     end process;
     cont_temp <= std_logic_vector(count_i);
-	q0 <= cont_temp(20);
-	q1 <= cont_temp(19);
+	q <= cont_temp(20);
+
 end architecture;
 
 -- Logica de numeracion
@@ -319,88 +319,39 @@ begin
 end architecture;
 
 
--- Conmutador Digitos
+-- Conmutador Digitos: conmuta de izquierda a derecha si d va de 00 a 11. Tested OK
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity conmutadorDigitos is
-
     port (
-        clk, rst, enable: in std_logic;
+        d: in std_logic_vector(1 downto 0); -- Selector de cual display quiero
 		digitos: out std_logic_vector(3 downto 0)
     );
 end conmutadorDigitos;
 
 architecture conmutadorDigitos_arq of conmutadorDigitos is
 	signal q: std_logic_vector(0 to 1);
-	component cont21b is
-	    port (
-        clk, rst, enable: in std_logic;
-        q0, q1 : out std_logic
-    );
-	end component;
 begin
-	inst_cont21b: cont21b port map(clk,rst,enable,q(0),q(1));
-	digitos(0) <= q(0) or q(1);
-	digitos(1) <= not q(0) or q(1);
-	digitos(2) <= q(0) or not q(1);
-	digitos(3) <= q(0) nand q(1);
-
-end architecture;
-
--- Contador Display
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-
-entity controladorDisplay is
-    port (
-		clk, rst, enable: in std_logic;
-		a,b,c,d,e,f,g,dp: out std_logic;
-		cont0: in std_logic_vector(3 downto 0);
-		cont1: in std_logic_vector(3 downto 0);
-		cont2: in std_logic_vector(3 downto 0);
-		cont3: in std_logic_vector(3 downto 0);
-		digitosO: out std_logic_vector(3 downto 0)
-    );
-end controladorDisplay;
-
-architecture controladorDisplay_arq of controladorDisplay is
-	component logicaDisplay is
-	port (
-       contadores: in std_logic_vector(3 downto 0);
-	   a,b,c,d,e,f,g,dp: out std_logic
-    );
-	end component;
-	component conmutadorDigitos is
-	port (
-        clk, rst, enable: in std_logic;
-		digitos: out std_logic_vector(3 downto 0)
-    );
-	end component;
-	-- Warning irrelevant
-	signal contActual: std_logic_vector(3 downto 0);
-	signal digitos: std_logic_vector(3 downto 0);
-begin
-	inst_log: logicaDisplay port map(contActual,a,b,c,d,e,f,g,dp);
-	inst_conm: conmutadorDigitos port map(clk, rst, enable, digitos);
-
-	process(digitos)
-	begin
-		if digitos="0001" then contActual <= cont0;
-		elsif digitos="0010" then contActual <= cont1;
-		elsif digitos="0100" then contActual <= cont2;
-		elsif digitos="1000" then contActual <= cont3;
+	process(d) begin
+		if d="00" then
+			digitos <= "0111";
+		elsif d="01" then
+			digitos <= "1011";
+		elsif d="10" then
+			digitos <= "1101";
+		else 
+			digitos <= "1110";
+		
 		end if;
+		
 	end process;
-	
-	digitosO<=digitos;
 
 end architecture;
 
 
--- Contador 9999
+-- Contador 9999. Tested OK.
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -463,6 +414,77 @@ begin
 
 end architecture;
 	
+	
+
+-- Controlador Display
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity controladorDisplay is
+    port (
+		clk: in std_logic;
+		cont: in std_logic_vector(15 downto 0);
+		selectorDigito: out std_logic_vector(3 downto 0);
+		a,b,c,d,e,f,g,dp: out std_logic
+    );
+end controladorDisplay;
+
+architecture controladorDisplay_arq of controladorDisplay is
+	component logicaDisplay is
+	port (
+       contadores: in std_logic_vector(3 downto 0);
+	   a,b,c,d,e,f,g,dp: out std_logic
+    );
+	end component;
+	component cont2b is
+	port (
+		clk,reset,enable: in std_logic;
+		q0,q1: out std_logic
+	);
+	end component;
+	component cont21b is
+	port (
+        clk, rst, enable: in std_logic;
+        q : out std_logic
+    );
+	end component;
+	component conmutadorDigitos is
+	 port (
+        d: in std_logic_vector(1 downto 0);
+		digitos: out std_logic_vector(3 downto 0)
+    );
+    end component;
+	
+	signal outEnable: std_logic;
+	signal outCont2b: std_logic_vector(1 downto 0);
+	signal contActual: std_logic_vector(3 downto 0);
+begin
+	genEnable: cont21b port map(clk,'0','1',outEnable);
+	inst_cont2b: cont2b port map(clk,'0',outEnable,outCont2b(0),outCont2b(1));
+	inst_conm: conmutadorDigitos port map(outCont2b,selectorDigito);
+	
+	-- Multiplexamos los contadores; siendo consistente con conmutadorDigitos,
+	-- el digito mas significativo es el primero en mostrarse en el ciclo.
+	process(outCont2b) begin
+		if outCont2b="11" then
+			contActual <= cont(3 downto 0);
+		elsif outCont2b="10" then
+			contActual <= cont(7 downto 4);
+		elsif outCont2b="01" then
+			contActual <= cont(11 downto 8);
+		else contActual <= cont(15 downto 12);
+		
+		end if;
+	
+	end process;
+	inst_log: logicaDisplay port map(contActual,a,b,c,d,e,f,g,dp);
+
+end architecture;
+
+
+
+
 -- Banco de Pruebas
 library IEEE;
 use IEEE.std_logic_1164.all;
@@ -569,3 +591,41 @@ begin
 	inst_contador9999b: contador9999 port map(ck_t,r_t,e_t,testOut);
 end;
 
+
+
+architecture test_conmutador of test is
+	component conmutadorDigitos is   
+	port (
+        d: in std_logic_vector(1 downto 0);
+		digitos: out std_logic_vector(3 downto 0)
+    );
+	end component;
+	signal d_t: std_logic_vector(1 downto 0):="00";
+	signal digitos_t: std_logic_vector(3 downto 0);
+begin
+	d_t(0) <= not d_t(0) after 1 ns;
+	d_t(1) <= not d_t(1) after 2 ns;
+		
+	inst_conm: conmutadorDigitos port map(d_t,digitos_t);
+end;
+
+
+architecture test_controladorDisplay of test is
+	component controladorDisplay is
+	port (
+		clk: in std_logic;
+		cont: in std_logic_vector(15 downto 0);
+		selectorDigito: out std_logic_vector(3 downto 0);
+		a,b,c,d,e,f,g,dp: out std_logic
+    );
+	end component;
+	signal selector_t: std_logic_vector(3 downto 0);
+	signal cont_t: std_logic_vector(15 downto 0):=(others =>'0');
+	signal ck_t: std_logic := '1';
+	signal a,b,c,d,e,f,g,dp: std_logic;
+begin
+	ck_t <= not ck_t after 1 ns;
+	cont_t(0)<= not cont_t(0) after 4 ns;
+		
+	inst_cont: controladorDisplay port map(ck_t,cont_t,selector_t,a,b,c,d,e,f,g,dp);
+end;
