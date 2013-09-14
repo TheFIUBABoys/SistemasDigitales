@@ -398,6 +398,70 @@ begin
 	digitosO<=digitos;
 
 end architecture;
+
+
+-- Contador 9999
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+---cuenta de 0000 a 9999
+entity contador9999 is
+    port (
+		clk, rst, enable: in std_logic;
+		salida: out std_logic_vector(15 downto 0)
+    );
+end contador9999;
+
+architecture contador9999_arq of contador9999 is
+	component contBCD is
+	port (
+		clk: in std_logic;
+		reset: in std_logic;
+		enable: in std_logic;
+		q: out std_logic_vector(3 downto 0)
+	);
+	end component;
+	
+	signal aux: std_logic_vector(2 downto 0):="000";
+	signal rst_aux: std_logic:='0';
+	signal salida_aux: std_logic_vector(15 downto 0);
+begin
+	inst_contBCD1: contBCD port map(clk,rst_aux,enable,salida_aux(3 downto 0));
+	inst_contBCD2: contBCD port map(clk,rst_aux,aux(0),salida_aux(7 downto 4));
+	inst_contBCD3: contBCD port map(clk,rst_aux,aux(1),salida_aux(11 downto 8));
+	inst_contBCD4: contBCD port map(clk,rst_aux,aux(2),salida_aux(15 downto 12));
+	process(clk,rst)
+	begin
+		if salida_aux(3 downto 0) = "1001" then
+			aux(0)<='1';
+		else
+			aux(0)<='0';
+		end if;
+		if salida_aux(7 downto 4) = "1001" then
+			aux(1)<='1';
+		else
+			aux(1)<='0';
+		end if;
+		if salida_aux(11 downto 8) = "1001" then
+			aux(2)<='1';
+		else
+			aux(2)<='0';
+		end if;
+		
+		if unsigned(salida_aux) = 9999 then
+			rst_aux <= '1';
+		else
+			rst_aux <= '0';
+		end if;
+		
+		if rst = '1' then
+			rst_aux <='1';
+		end if;
+	end process;
+	salida <= salida_aux;
+
+end architecture;
 	
 -- Banco de Pruebas
 library IEEE;
@@ -489,4 +553,19 @@ begin
 end;
 
 
+architecture test_contador9999 of test is
+	component contador9999 is   
+	port (
+		clk, rst, enable: in std_logic;
+		salida: out std_logic_vector(15 downto 0)
+    );
+	end component;
+	signal r_t, ck_t, e_t: std_logic := '1';
+	signal testOut: std_logic_vector(15 downto 0);
+begin
+	ck_t <= not ck_t after 1 ns;
+	r_t <= '0' after 1 ps;
+	
+	inst_contador9999b: contador9999 port map(ck_t,r_t,e_t,testOut);
+end;
 
