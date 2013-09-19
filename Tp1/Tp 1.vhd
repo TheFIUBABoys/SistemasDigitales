@@ -280,7 +280,7 @@ begin
         end if;
     end process;
     cont_temp <= std_logic_vector(count_i);
-	q <= cont_temp(5);
+	q <= cont_temp(20);
 
 end architecture;
 
@@ -497,6 +497,30 @@ begin
 end architecture;
 
 
+
+
+-- GLOBAL
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+package Tp1 is
+	component Tp1 is
+		port (
+			clk: in std_logic;
+			boton: in std_logic;
+			selectorDigito: out std_logic_vector(3 downto 0);
+			a,b,c,d,e,f,g,dp: out std_logic
+		);
+	end component;
+end Tp1;
+
+package body Tp1 is
+end Tp1;
 
 
 -- Banco de Pruebas

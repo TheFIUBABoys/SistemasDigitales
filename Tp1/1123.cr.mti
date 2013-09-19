@@ -1,1 +1,50 @@
+{C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp1/Tp 1.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp1/Tp 1.vhd}
+QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity ffd
+-- Compiling architecture ffd_arq of ffd
+-- Compiling entity cont2b
+-- Compiling architecture cont2b_arq of cont2b
+-- Compiling entity cont4b
+-- Compiling architecture cont4b_arq of cont4b
+-- Compiling entity testcont4b_2b_ffd
+-- Compiling architecture test_contador4b of testcont4b_2b_ffd
+-- Compiling architecture test_ffd of testcont4b_2b_ffd
+-- Loading entity testcont4b_2b_ffd
+-- Compiling architecture test_contador2b of testcont4b_2b_ffd
+-- Loading entity testcont4b_2b_ffd
+-- Compiling entity contbcd
+-- Compiling architecture contbcd_arq of contbcd
+-- Loading package numeric_std
+-- Compiling entity cont26b
+-- Compiling architecture cont26b_arq of cont26b
+-- Compiling entity cont21b
+-- Compiling architecture cont21b_arq of cont21b
+-- Compiling entity logicadisplay
+-- Compiling architecture logicadisplay_arq of logicadisplay
+-- Compiling entity conmutadordigitos
+-- Compiling architecture conmutadordigitos_arq of conmutadordigitos
+-- Compiling entity contador9999
+-- Compiling architecture contador9999_arq of contador9999
+-- Compiling entity controladordisplay
+-- Compiling architecture controladordisplay_arq of controladordisplay
+-- Compiling package tp1
+-- Compiling package body tp1
+-- Loading package tp1
+-- Compiling entity test
+-- Compiling architecture test_contador26b of test
+-- Compiling architecture test_contadorbcd of test
+-- Loading entity test
+-- Compiling architecture test_contador21b of test
+-- Loading entity test
+-- Compiling architecture testlogicadisplay of test
+-- Loading entity test
+-- Compiling architecture test_contador9999 of test
+-- Loading entity test
+-- Compiling architecture test_conmutador of test
+-- Loading entity test
+-- Compiling architecture test_controladordisplay of test
+-- Loading entity test
 
+} {} {}}
