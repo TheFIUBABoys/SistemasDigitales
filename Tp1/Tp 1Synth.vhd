@@ -345,11 +345,9 @@ use ieee.numeric_std.all;
 entity GenEnable is
   generic(max: integer);
   port(
---- Entradad del clock
     clk : in std_logic;
     reset : in std_logic;
     enable : in std_logic;
---- Salida del contador. Cuenta en binario
     Q : out std_logic
   );
 end entity GenEnable;
@@ -362,15 +360,15 @@ count_proc: process(clk, reset)
     begin
         if (reset='1') then
             counter <= 0;
-q_tmp <= '0';
+			q_tmp <= '0';
         elsif (rising_edge(clk)) then
             if (enable = '1') then
                 counter <= counter + 1;
-q_tmp <= '0';
+				q_tmp <= '0';
                 if (counter = max) then
-counter <= 0;
-q_tmp <= '1';
-end if;
+					counter <= 0;
+					q_tmp <= '1';
+				end if;
             end if;
         end if;
     end process count_proc;
@@ -406,16 +404,14 @@ architecture controladorDisplay_arq of controladorDisplay is
 	end component;
 	
 	component GenEnable is
-  generic(max: integer);
-  port(
---- Entradad del clock
-    clk : in std_logic;
-    reset : in std_logic;
-    enable : in std_logic;
---- Salida del contador. Cuenta en binario
-    Q : out std_logic
-  );
-end component;
+	  generic(max: integer);
+	  port(
+		clk : in std_logic;
+		reset : in std_logic;
+		enable : in std_logic;
+		Q : out std_logic
+	  );
+	end component;
   
   
 	component cont2b is
@@ -540,7 +536,7 @@ end component;
 begin
 	res<='0';enableAux<='1';
 	--inst_enable: cont26b port map(clk,res,enableAux,enablePosta);
-	instGenEnable: 	GenEnable generic map(500000) port map(clk,res,enableAux,enablePosta);
+	instGenEnable: 	GenEnable generic map(33554432) port map(clk,res,enableAux,enablePosta);
 	inst_cont: contador9999 port map(clk,boton,enablePosta,outContador);
 	inst_disp: controladorDisplay port map(clk,outContador(3 downto 0),outContador(7 downto 4), outContador(11 downto 8),outContador(15	downto 12),selectorDigito,a,b,c,d,e,f,g,dp);
 end architecture;

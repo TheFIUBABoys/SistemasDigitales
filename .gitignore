@@ -1,0 +1,9 @@
+#############
+## PdfLatex
+#############
+
+*.log
+*.aux
+*.out
+*.toc
+*.synctex.gz
