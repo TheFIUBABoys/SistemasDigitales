@@ -1,0 +1,66 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\questasim_6.6b\examples
+T_opt
+Z1 VWeX_Ql^0n8Wi=eKQZMKzD2
+Z2 04 4 8 work test test_arq 1
+Z3 =1-002522f29b7d-52165e1f-261-a34
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 n@_opt
+Z6 OE;O;6.6b;45
+Z7 dC:\questasim_6.6b\examples
+Esum1b
+Z8 w1377196668
+Z9 DPx22 C:\questasim_6.6b\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z10 dC:\Documents and Settings\alumno\Escritorio\sumador_1bit
+Z11 8C:/Documents and Settings/alumno/Escritorio/sumador_1bit/sum1b.vhd
+Z12 FC:/Documents and Settings/alumno/Escritorio/sumador_1bit/sum1b.vhd
+l0
+L4
+Z13 Vjf^3ZDE4N>jeWE>PE<H^W2
+Z14 OE;C;6.6b;45
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1
+Z17 !s100 _A^SYfVBd9ZkVV>;AZNX`2
+Asum1b_arq
+R9
+Z18 DEx61 C:\Documents and Settings\alumno\Escritorio\sumador_1bit\work 5 sum1b 0 22 jf^3ZDE4N>jeWE>PE<H^W2
+32
+Z19 Mx1 22 C:\questasim_6.6b\ieee 14 std_logic_1164
+l15
+L14
+Z20 VEXe<3hF797fE;NEl:4??K1
+R14
+R15
+R16
+Z21 !s100 33f]VcI@S^FA_CG6FCecE3
+Etest
+R8
+R9
+32
+R10
+R11
+R12
+l0
+L24
+Z22 V<O8RUA7:OzjW6VXYU82@W1
+R14
+R15
+R16
+Z23 !s100 fhF=iA4@Aa9O0]MnMdNhB0
+Atest_arq
+R18
+R9
+DEx61 C:\Documents and Settings\alumno\Escritorio\sumador_1bit\work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+32
+R19
+l39
+L27
+Z24 VRWRn_m9<]MjMaelL<lio>1
+R14
+R15
+R16
+Z25 !s100 7KL;PFFgK0gGHG0<n2M532
