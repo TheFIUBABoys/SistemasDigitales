@@ -1,0 +1,193 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\questasim_6.6b\examples
+T_opt
+Z1 VWeX_Ql^0n8Wi=eKQZMKzD2
+Z2 04 4 8 work test test_arq 1
+Z3 =1-002522f29b7d-52165e1f-261-a34
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 n@_opt
+Z6 OE;O;6.6b;45
+Z7 dC:\questasim_6.6b\examples
+T_opt1
+Z8 VE0k4NHJI71Aak>[eGmH>23
+Z9 04 4 19 work test testsumadorrestador 1
+Z10 =2-002522f2dec5-524491a3-1f-ba0
+R4
+Z11 n@_opt1
+R6
+R7
+T_opt2
+Z12 V<9Sdc?Wjk8M>ze9QFSNDW2
+R9
+Z13 =1-002522f2dec5-524da766-3b9-da0
+Z14 o-quiet -auto_acc_if_foreign -work work
+Z15 n@_opt2
+R6
+R7
+Esum1b
+Z16 w1380221668
+Z17 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z18 dC:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits
+Z19 8C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/sumadorNBits.vhd
+Z20 FC:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/sumadorNBits.vhd
+l0
+L4
+Z21 Vjf^3ZDE4N>jeWE>PE<H^W2
+Z22 OE;C;6.6b;45
+32
+Z23 o-work work -2002 -explicit
+Z24 tExplicit 1
+Z25 !s100 _A^SYfVBd9ZkVV>;AZNX`2
+Asum1b_arq
+R17
+Z26 DEx4 work 5 sum1b 0 22 jf^3ZDE4N>jeWE>PE<H^W2
+l15
+L14
+Z27 VEXe<3hF797fE;NEl:4??K1
+R22
+32
+Z28 Mx1 4 ieee 14 std_logic_1164
+R23
+R24
+Z29 !s100 33f]VcI@S^FA_CG6FCecE3
+Esumador
+Z30 w1380225367
+Z31 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R17
+R18
+R19
+R20
+l0
+L5
+Z32 VJCPBnmjM@1dc5a9>]?HJ?0
+R22
+32
+R23
+R24
+Z33 !s100 WhEG`YG]jXQSXAh<THbND2
+Asum
+R31
+R17
+Z34 DEx4 work 7 sumador 0 22 JCPBnmjM@1dc5a9>]?HJ?0
+l19
+L16
+Z35 VXZMF[i?SiR1cFi>BooPIW3
+R22
+32
+Z36 Mx2 4 ieee 14 std_logic_1164
+Z37 Mx1 4 ieee 11 numeric_std
+R23
+R24
+Z38 !s100 eC^[1LRXF7C0figGKW<Fo2
+Esumadorrestador
+R30
+R31
+R17
+R18
+R19
+R20
+l0
+L29
+Z39 V@H@15RPOzII79X1f=Cc7e3
+R22
+32
+R23
+R24
+Z40 !s100 mlR1^^iAj2PY9SiEX6^@P2
+Asumrest
+R31
+R17
+Z41 DEx4 work 15 sumadorrestador 0 22 @H@15RPOzII79X1f=Cc7e3
+l53
+L40
+Z42 VJc42jOW0XB9i;4VNAjXjC3
+R22
+32
+R36
+R37
+R23
+R24
+Z43 !s100 GSNDJm1DNa9bOOJaSXWJ22
+Etest
+Z44 w1380225436
+Z45 DPx22 C:\questasim_6.6b\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R18
+Z46 8C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/testSumador.vhd
+Z47 FC:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/testSumador.vhd
+l0
+L5
+Z48 V<O8RUA7:OzjW6VXYU82@W1
+R22
+R23
+R24
+Z49 !s100 YOODBm5@mBnNgLjA23=IP1
+Atestsumadorrestador
+DEx70 C:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits\work 7 sumador 0 22 JCPBnmjM@1dc5a9>]?HJ?0
+DPx22 C:\questasim_6.6b\ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+DEx70 C:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits\work 15 sumadorrestador 0 22 @H@15RPOzII79X1f=Cc7e3
+R45
+DEx70 C:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits\work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+32
+Mx2 22 C:\questasim_6.6b\ieee 14 std_logic_1164
+Mx1 22 C:\questasim_6.6b\ieee 11 numeric_std
+l43
+L30
+Z50 V;5jU[VR:9VR:SA4[NHYmW3
+R22
+R23
+R24
+Z51 !s100 D[9I0Nf;io;4^g35hCELn0
+Atestsumador
+R17
+Z52 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+l21
+L8
+Z53 Vobj_kiaI5dh3O]A]kV85A3
+R22
+32
+R28
+R23
+R24
+Z54 !s100 0BZV7bCf6e8`n^RIln>Jn3
+Atest_arq
+R17
+R52
+l20
+L8
+Z55 VRWRn_m9<]MjMaelL<lio>1
+R22
+32
+R28
+R23
+R24
+Z56 w1380221679
+Z57 !s100 e>gSHPS7PR6DW9a[Y5fkN3
+Etestrestador
+Z58 w1380224874
+R18
+R46
+R47
+l0
+L31
+Z59 VMR7<a>lSIQk1nBChQ2Gig0
+R22
+32
+R23
+R24
+Z60 !s100 >21J`b75S3?;iSUeaCho>3
+Atestsumadorrestador
+R17
+Z61 DEx4 work 12 testrestador 0 22 PG@QJ5XA=I4Xd4mJRTmRY1
+l51
+L38
+Z62 VBMZCfe1TGL]R_1eEo>MfI1
+R22
+32
+R28
+R23
+R24
+Z63 !s100 ;L98C6ib7W^J^3OiGzd2[2
