@@ -12,170 +12,178 @@ Z5 n@_opt
 Z6 OE;O;6.6b;45
 Z7 dC:\questasim_6.6b\examples
 T_opt1
-VE0k4NHJI71Aak>[eGmH>23
-Z8 04 4 19 work test testsumadorrestador 1
-Z9 =2-002522f2dec5-524491a3-1f-ba0
+Z8 VE0k4NHJI71Aak>[eGmH>23
+Z9 04 4 19 work test testsumadorrestador 1
+Z10 =2-002522f2dec5-524491a3-1f-ba0
 R4
-Z10 n@_opt1
+Z11 n@_opt1
+R6
+R7
+T_opt2
+V<9Sdc?Wjk8M>ze9QFSNDW2
+R9
+Z12 =1-002522f2dec5-524da766-3b9-da0
+Z13 o-quiet -auto_acc_if_foreign -work work
+Z14 n@_opt2
 R6
 R7
 Esum1b
-Z11 w1380221668
-Z12 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
-Z13 dC:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits
-Z14 8C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/sumadorNBits.vhd
-Z15 FC:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/sumadorNBits.vhd
+Z15 w1380221668
+Z16 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z17 dC:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits
+Z18 8C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/sumadorNBits.vhd
+Z19 FC:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/sumadorNBits.vhd
 l0
 L4
-Z16 Vjf^3ZDE4N>jeWE>PE<H^W2
-Z17 OE;C;6.6b;45
+Z20 Vjf^3ZDE4N>jeWE>PE<H^W2
+Z21 OE;C;6.6b;45
 32
-Z18 o-work work -2002 -explicit
-Z19 tExplicit 1
-Z20 !s100 _A^SYfVBd9ZkVV>;AZNX`2
+Z22 o-work work -2002 -explicit
+Z23 tExplicit 1
+Z24 !s100 _A^SYfVBd9ZkVV>;AZNX`2
 Asum1b_arq
-R12
-Z21 DEx4 work 5 sum1b 0 22 jf^3ZDE4N>jeWE>PE<H^W2
+R16
+Z25 DEx4 work 5 sum1b 0 22 jf^3ZDE4N>jeWE>PE<H^W2
 l15
 L14
-Z22 VEXe<3hF797fE;NEl:4??K1
-R17
+Z26 VEXe<3hF797fE;NEl:4??K1
+R21
 32
-Z23 Mx1 4 ieee 14 std_logic_1164
+Z27 Mx1 4 ieee 14 std_logic_1164
+R22
+R23
+Z28 !s100 33f]VcI@S^FA_CG6FCecE3
+Esumador
+Z29 w1380225367
+Z30 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R16
+R17
 R18
 R19
-Z24 !s100 33f]VcI@S^FA_CG6FCecE3
-Esumador
-Z25 w1380225367
-Z26 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
-R12
-R13
-R14
-R15
 l0
 L5
-Z27 VJCPBnmjM@1dc5a9>]?HJ?0
-R17
+Z31 VJCPBnmjM@1dc5a9>]?HJ?0
+R21
 32
-R18
-R19
-Z28 !s100 WhEG`YG]jXQSXAh<THbND2
+R22
+R23
+Z32 !s100 WhEG`YG]jXQSXAh<THbND2
 Asum
-R26
-R12
-Z29 DEx4 work 7 sumador 0 22 JCPBnmjM@1dc5a9>]?HJ?0
+R30
+R16
+Z33 DEx4 work 7 sumador 0 22 JCPBnmjM@1dc5a9>]?HJ?0
 l19
 L16
-Z30 VXZMF[i?SiR1cFi>BooPIW3
-R17
+Z34 VXZMF[i?SiR1cFi>BooPIW3
+R21
 32
-Z31 Mx2 4 ieee 14 std_logic_1164
-Z32 Mx1 4 ieee 11 numeric_std
+Z35 Mx2 4 ieee 14 std_logic_1164
+Z36 Mx1 4 ieee 11 numeric_std
+R22
+R23
+Z37 !s100 eC^[1LRXF7C0figGKW<Fo2
+Esumadorrestador
+R29
+R30
+R16
+R17
 R18
 R19
-Z33 !s100 eC^[1LRXF7C0figGKW<Fo2
-Esumadorrestador
-R25
-R26
-R12
-R13
-R14
-R15
 l0
 L29
-Z34 V@H@15RPOzII79X1f=Cc7e3
-R17
+Z38 V@H@15RPOzII79X1f=Cc7e3
+R21
 32
-R18
-R19
-Z35 !s100 mlR1^^iAj2PY9SiEX6^@P2
+R22
+R23
+Z39 !s100 mlR1^^iAj2PY9SiEX6^@P2
 Asumrest
-R26
-R12
-Z36 DEx4 work 15 sumadorrestador 0 22 @H@15RPOzII79X1f=Cc7e3
+R30
+R16
+Z40 DEx4 work 15 sumadorrestador 0 22 @H@15RPOzII79X1f=Cc7e3
 l53
 L40
-Z37 VJc42jOW0XB9i;4VNAjXjC3
-R17
+Z41 VJc42jOW0XB9i;4VNAjXjC3
+R21
 32
-R31
-R32
-R18
-R19
-Z38 !s100 GSNDJm1DNa9bOOJaSXWJ22
+R35
+R36
+R22
+R23
+Z42 !s100 GSNDJm1DNa9bOOJaSXWJ22
 Etest
-Z39 w1380225436
-R12
-R13
-Z40 8C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/testSumador.vhd
-Z41 FC:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/testSumador.vhd
+Z43 w1380225436
+R16
+R17
+Z44 8C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/testSumador.vhd
+Z45 FC:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/testSumador.vhd
 l0
 L5
-Z42 V<O8RUA7:OzjW6VXYU82@W1
-R17
+Z46 V<O8RUA7:OzjW6VXYU82@W1
+R21
 32
-R18
-R19
-Z43 !s100 YOODBm5@mBnNgLjA23=IP1
+R22
+R23
+Z47 !s100 YOODBm5@mBnNgLjA23=IP1
 Atestsumadorrestador
-R12
-Z44 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+R16
+Z48 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
 l43
 L30
-Z45 V;5jU[VR:9VR:SA4[NHYmW3
-R17
+Z49 V;5jU[VR:9VR:SA4[NHYmW3
+R21
 32
+R27
+R22
 R23
-R18
-R19
-Z46 !s100 D[9I0Nf;io;4^g35hCELn0
+Z50 !s100 D[9I0Nf;io;4^g35hCELn0
 Atestsumador
-R12
-R44
+R16
+R48
 l21
 L8
-Z47 Vobj_kiaI5dh3O]A]kV85A3
-R17
+Z51 Vobj_kiaI5dh3O]A]kV85A3
+R21
 32
+R27
+R22
 R23
-R18
-R19
-Z48 !s100 0BZV7bCf6e8`n^RIln>Jn3
+Z52 !s100 0BZV7bCf6e8`n^RIln>Jn3
 Atest_arq
-R12
-R44
+R16
+R48
 l20
 L8
-Z49 VRWRn_m9<]MjMaelL<lio>1
-R17
+Z53 VRWRn_m9<]MjMaelL<lio>1
+R21
 32
+R27
+R22
 R23
-R18
-R19
-Z50 w1380221679
-Z51 !s100 e>gSHPS7PR6DW9a[Y5fkN3
+Z54 w1380221679
+Z55 !s100 e>gSHPS7PR6DW9a[Y5fkN3
 Etestrestador
-Z52 w1380224874
-R13
-R40
-R41
+Z56 w1380224874
+R17
+R44
+R45
 l0
 L31
-Z53 VMR7<a>lSIQk1nBChQ2Gig0
-R17
+Z57 VMR7<a>lSIQk1nBChQ2Gig0
+R21
 32
-R18
-R19
-Z54 !s100 >21J`b75S3?;iSUeaCho>3
+R22
+R23
+Z58 !s100 >21J`b75S3?;iSUeaCho>3
 Atestsumadorrestador
-R12
-Z55 DEx4 work 12 testrestador 0 22 PG@QJ5XA=I4Xd4mJRTmRY1
+R16
+Z59 DEx4 work 12 testrestador 0 22 PG@QJ5XA=I4Xd4mJRTmRY1
 l51
 L38
-Z56 VBMZCfe1TGL]R_1eEo>MfI1
-R17
+Z60 VBMZCfe1TGL]R_1eEo>MfI1
+R21
 32
+R27
+R22
 R23
-R18
-R19
-Z57 !s100 ;L98C6ib7W^J^3OiGzd2[2
+Z61 !s100 ;L98C6ib7W^J^3OiGzd2[2
