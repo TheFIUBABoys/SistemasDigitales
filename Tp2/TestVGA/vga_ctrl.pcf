@@ -1,0 +1,17 @@
+//! **************************************************************************
+// Written by: Map M.53d on Thu Oct 10 15:38:03 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "red_o" LOCATE = SITE "H14" LEVEL 1;
+COMP "hs" LOCATE = SITE "F15" LEVEL 1;
+COMP "vs" LOCATE = SITE "F14" LEVEL 1;
+COMP "grn_i" LOCATE = SITE "L14" LEVEL 1;
+COMP "blu_i" LOCATE = SITE "L13" LEVEL 1;
+COMP "grn_o" LOCATE = SITE "H15" LEVEL 1;
+COMP "blu_o" LOCATE = SITE "G15" LEVEL 1;
+COMP "mclk" LOCATE = SITE "C9" LEVEL 1;
+COMP "red_i" LOCATE = SITE "H18" LEVEL 1;
+NET "mclk_BUFGP/IBUFG" BEL "mclk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

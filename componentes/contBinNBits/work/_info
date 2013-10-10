@@ -1,0 +1,34 @@
+m255
+K3
+13
+cModel Technology
+dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2
+Econtbinnbits
+Z0 w1381429369
+Z1 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z3 dC:\Documents and Settings\alumno\Escritorio\SisDigit\componentes\contBinNBits
+Z4 8C:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/ContBinNBits.vhd
+Z5 FC:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/ContBinNBits.vhd
+l0
+L4
+Ve?5YCcPH?EMhDa`X6<3[61
+!s100 [Td3R<<4P9k^QOChDdO^z3
+Z6 OE;C;6.6b;45
+32
+Z7 o-work work -2002 -explicit
+Z8 tExplicit 1
+Aarq_contbinnbits
+R1
+R2
+DEx4 work 12 contbinnbits 0 22 e?5YCcPH?EMhDa`X6<3[61
+l19
+L14
+VzgJ5`E16YJSGmFAN2KIiS0
+!s100 T^35X_Wa^Kn^P<jW]?aJ<2
+R6
+32
+Z9 Mx2 4 ieee 14 std_logic_1164
+Mx1 4 ieee 11 numeric_std
+R7
+R8

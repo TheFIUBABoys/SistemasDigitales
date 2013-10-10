@@ -1,0 +1,9 @@
+V3 3
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" 2013/10/10.15:32:14 M.53d
+EN work/vga_ctrl 1381430268 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" \
+      PB ieee/std_logic_1164 1270894585 PB ieee/std_logic_arith 1270894586 \
+      PB ieee/STD_LOGIC_UNSIGNED 1270894587
+AR work/vga_ctrl/Behavioral 1381430269 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" \
+      EN work/vga_ctrl 1381430268
