@@ -1,16 +1,16 @@
 set -tmpdir "xst/projnav.tmp"
 set -xsthdpdir "xst"
 run
--ifn vga_ctrl.prj
+-ifn aplicVGA.prj
 -ifmt mixed
--ofn vga_ctrl
+-ofn aplicVGA
 -ofmt NGC
 -p xc3s500e-4-fg320
--top vga_ctrl
+-top aplicVGA
 -opt_mode Speed
 -opt_level 1
 -iuc NO
--lso vga_ctrl.lso
+-lso aplicVGA.lso
 -keep_hierarchy NO
 -netlist_hierarchy as_optimized
 -rtlview Yes

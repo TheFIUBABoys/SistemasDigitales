@@ -1,9 +1,25 @@
-V3 3
-FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" 2013/10/10.15:32:14 M.53d
-EN work/vga_ctrl 1381430268 \
+V3 11
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" 2013/10/10.18:03:03 M.53d
+EN work/aplicVGA 1381438994 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" \
+      PB ieee/std_logic_1164 1270894585 PB ieee/std_logic_arith 1270894586 \
+      PB ieee/STD_LOGIC_UNSIGNED 1270894587
+AR work/aplicVGA/Behavioral 1381438995 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" \
+      EN work/aplicVGA 1381438994 CP vga_ctrl CP Char_ROM
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" 2013/10/10.15:32:50 M.53d
+EN work/Char_ROM 1381438992 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" \
+      PB ieee/std_logic_1164 1270894585 PB ieee/std_logic_arith 1270894586 \
+      PB ieee/STD_LOGIC_UNSIGNED 1270894587
+AR work/Char_ROM/p 1381438993 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" \
+      EN work/Char_ROM 1381438992
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" 2013/10/10.17:47:13 M.53d
+EN work/vga_ctrl 1381438990 \
       FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" \
       PB ieee/std_logic_1164 1270894585 PB ieee/std_logic_arith 1270894586 \
       PB ieee/STD_LOGIC_UNSIGNED 1270894587
-AR work/vga_ctrl/Behavioral 1381430269 \
+AR work/vga_ctrl/Behavioral 1381438991 \
       FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" \
-      EN work/vga_ctrl 1381430268
+      EN work/vga_ctrl 1381438990

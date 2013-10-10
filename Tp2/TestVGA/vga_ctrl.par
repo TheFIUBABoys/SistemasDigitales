@@ -1,7 +1,7 @@
 Release 12.1 par M.53d (nt)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-PC73::  Thu Oct 10 15:38:06 2013
+PC73::  Thu Oct 10 17:41:27 2013
 
 par -w -intstyle ise -ol high -t 1 vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
 
@@ -30,7 +30,7 @@ Device speed data version:  "PRODUCTION 1.27 2010-04-09".
 
 Design Summary Report:
 
- Number of External IOBs                          29 out of 232    12%
+ Number of External IOBs                          34 out of 232    14%
 
    Number of External Input IOBs                  4
 
@@ -38,17 +38,17 @@ Design Summary Report:
         Number of LOCed External Input IBUFs      4 out of 4     100%
 
 
-   Number of External Output IOBs                25
+   Number of External Output IOBs                30
 
-      Number of External Output IOBs             25
-        Number of LOCed External Output IOBs      5 out of 25     20%
+      Number of External Output IOBs             30
+        Number of LOCed External Output IOBs     10 out of 30     33%
 
 
    Number of External Bidir IOBs                  0
 
 
    Number of BUFGMUXs                        1 out of 24      4%
-   Number of Slices                         43 out of 4656    1%
+   Number of Slices                         44 out of 4656    1%
       Number of SLICEMs                      0 out of 2328    0%
 
 
@@ -67,48 +67,48 @@ Total REAL time at the beginning of Placer: 2 secs
 Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:cb25f389) REAL time: 4 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:21e43419) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-INFO:Place:834 - Only a subset of IOs are locked. Out of 25 IOs, 5 are locked and 20 are not locked. If you would like
+INFO:Place:834 - Only a subset of IOs are locked. Out of 30 IOs, 10 are locked and 20 are not locked. If you would like
    to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:cb25f389) REAL time: 4 secs 
+Phase 2.7  Design Feasibility Check (Checksum:21e43419) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:cb25f389) REAL time: 4 secs 
+Phase 3.31  Local Placement Optimization (Checksum:21e43419) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-........
-Phase 4.2  Initial Clock and IO Placement (Checksum:13283c81) REAL time: 11 secs 
+.......
+Phase 4.2  Initial Clock and IO Placement (Checksum:3a479a19) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:13283c81) REAL time: 11 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:3a479a19) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:13283c81) REAL time: 11 secs 
+Phase 6.36  Local Placement Optimization (Checksum:3a479a19) REAL time: 2 secs 
 
 Phase 7.3  Local Placement Optimization
-........
-Phase 7.3  Local Placement Optimization (Checksum:9086d7bb) REAL time: 11 secs 
+......
+Phase 7.3  Local Placement Optimization (Checksum:a5f476a2) REAL time: 2 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:9086d7bb) REAL time: 11 secs 
+Phase 8.5  Local Placement Optimization (Checksum:a5f476a2) REAL time: 2 secs 
 
 Phase 9.8  Global Placement
 ..
 ..
-Phase 9.8  Global Placement (Checksum:adc8e76d) REAL time: 11 secs 
+Phase 9.8  Global Placement (Checksum:d487d01c) REAL time: 10 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:adc8e76d) REAL time: 11 secs 
+Phase 10.5  Local Placement Optimization (Checksum:d487d01c) REAL time: 10 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:d66f2873) REAL time: 11 secs 
+Phase 11.18  Placement Optimization (Checksum:a49fa142) REAL time: 10 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:d66f2873) REAL time: 11 secs 
+Phase 12.5  Local Placement Optimization (Checksum:a49fa142) REAL time: 10 secs 
 
-Total REAL time to Placer completion: 11 secs 
+Total REAL time to Placer completion: 10 secs 
 Total CPU  time to Placer completion: 9 secs 
 Writing design to file vga_ctrl.ncd
 
@@ -117,35 +117,29 @@ Writing design to file vga_ctrl.ncd
 Starting Router
 
 
-Phase  1  : 291 unrouted;      REAL time: 17 secs 
+Phase  1  : 294 unrouted;      REAL time: 15 secs 
 
-Phase  2  : 278 unrouted;      REAL time: 17 secs 
+Phase  2  : 281 unrouted;      REAL time: 15 secs 
 
-Phase  3  : 57 unrouted;      REAL time: 17 secs 
+Phase  3  : 29 unrouted;      REAL time: 15 secs 
 
-Phase  4  : 78 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+Phase  4  : 52 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
-
-Updating file: vga_ctrl.ncd with current fully routed design.
-
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
-
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
 Updating file: vga_ctrl.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
 
-Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
 
-Total REAL time to Router completion: 19 secs 
+Total REAL time to Router completion: 17 secs 
 Total CPU time to Router completion: 17 secs 
 
 Partition Implementation Status
@@ -164,7 +158,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|          mclk_BUFGP | BUFGMUX_X1Y11| No   |   12 |  0.017     |  0.182      |
+|          mclk_BUFGP | BUFGMUX_X2Y11| No   |   12 |  0.018     |  0.172      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -181,8 +175,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net mcl | SETUP       |         N/A|     4.808ns|     N/A|           0
-  k_BUFGP                                   | HOLD        |     1.197ns|            |       0|           0
+  Autotimespec constraint for clock net mcl | SETUP       |         N/A|     4.610ns|     N/A|           0
+  k_BUFGP                                   | HOLD        |     1.405ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -198,8 +192,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 20 secs 
-Total CPU time to PAR completion: 18 secs 
+Total REAL time to PAR completion: 18 secs 
+Total CPU time to PAR completion: 17 secs 
 
 Peak Memory Usage:  240 MB
 

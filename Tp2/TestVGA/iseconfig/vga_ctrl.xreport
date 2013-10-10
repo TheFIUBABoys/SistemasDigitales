@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-10-10T15:37:41</DateModified>
+  <DateModified>2013-10-10T17:30:22</DateModified>
   <ModuleName>vga_ctrl</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2013-10-10T17:30:08</SummaryTimeStamp>
   <SavedFilePath>C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/iseconfig/vga_ctrl.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA</ImplementationReportsDirectory>
-  <DateInitialized>2013-10-10T15:37:41</DateInitialized>
+  <DateInitialized>2013-10-10T17:30:22</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

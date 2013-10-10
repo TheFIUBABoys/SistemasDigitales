@@ -26,26 +26,36 @@ entity aplicVGA is
 		RxRdy: in std_logic;
       hsync : out std_logic;
       vsync : out std_logic;
-		red_out : out std_logic;
-      grn_out : out std_logic;
-      blu_out : out std_logic
+		red_out : out std_logic_vector(2 downto 0);
+      grn_out : out std_logic_vector(2 downto 0);
+      blu_out : out std_logic_vector(1 downto 0)
 		-- bb: out std_logic
 	);
+	
+	attribute loc: string;
+			
+-- Mapeo de pines para el kit spartan 3E
+		attribute loc of clk: signal is "B8";
+		attribute loc of hsync: signal is "T4";
+		attribute loc of vsync: signal is "U3";
+		attribute loc of red_out: signal is "R9 T8 R8";
+		attribute loc of grn_out: signal is "N8 P8 P6";
+		attribute loc of blu_out: signal is "U5 U4";
 end aplicVGA;
 
 architecture Behavioral of aplicVGA is
 
 	component vga_ctrl is
-		port(
+		Port (
 			mclk : in std_logic;
-         red_in : in std_logic;
-         grn_in : in std_logic;
-         blu_in : in std_logic;
+         red_i : in std_logic;
+         grn_i : in std_logic;
+         blu_i : in std_logic;
          hs : out std_logic;
          vs : out std_logic;
-         red_out : out std_logic;
-         grn_out : out std_logic;
-         blu_out : out std_logic;
+         red_o : out std_logic_vector(2 downto 0);
+         grn_o : out std_logic_vector(2 downto 0);
+         blu_o : out std_logic_vector(1 downto 0);
 			pixel_row: out std_logic_vector(9 downto 0);
 			pixel_col: out std_logic_vector(9 downto 0)
 			);
@@ -75,7 +85,7 @@ architecture Behavioral of aplicVGA is
 	aaa: vga_ctrl port map(clk, red_in, grn_in, blu_in, hsync, vsync, red_out, grn_out, blu_out, pixel_row, pixel_col);
 	
 	--address <= pixel_row(8 downto 3);
-	font_row	<= pixel_row_aux(2 downto 0); --pixel_row(2 downto 0);
+	font_row <= pixel_row_aux(2 downto 0); --pixel_row(2 downto 0);
 	font_col <= pixel_col_aux(2 downto 0);
 	
 	red_in <= rom_out and enable;
@@ -96,6 +106,8 @@ architecture Behavioral of aplicVGA is
 		end if;
 	end process;
 	
+	
+
 	process(RxRdy)
 	begin
 	    if RxRdy ='1'then
@@ -105,7 +117,7 @@ architecture Behavioral of aplicVGA is
 			      address <= "001000";
 		       elsif char_in = "01001111" then -- caracter O
 			      address <= "001001";
-		       else address <= "001010";    -- caracter error
+		       else address <= "000111";    -- caracter error
 		    end if;
 		 end if;
 	end process;

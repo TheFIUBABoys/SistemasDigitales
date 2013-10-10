@@ -1,0 +1,105 @@
+--------------------------------------------------------------------------------
+Release 12.1 Trace  (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.1\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf
+
+Design file:              aplicVGA.ncd
+Physical constraint file: aplicVGA.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2010-04-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock RxRdy
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+char_in<0>  |    1.563(F)|    0.102(F)|RxRdy_BUFGP       |   0.000|
+char_in<1>  |    1.922(F)|   -0.188(F)|RxRdy_BUFGP       |   0.000|
+char_in<2>  |    2.129(F)|   -0.142(F)|RxRdy_BUFGP       |   0.000|
+char_in<3>  |    1.988(F)|   -0.107(F)|RxRdy_BUFGP       |   0.000|
+char_in<4>  |    1.894(F)|    0.220(F)|RxRdy_BUFGP       |   0.000|
+char_in<5>  |    2.192(F)|    0.804(F)|RxRdy_BUFGP       |   0.000|
+char_in<6>  |    2.093(F)|    0.804(F)|RxRdy_BUFGP       |   0.000|
+char_in<7>  |    2.034(F)|    0.844(F)|RxRdy_BUFGP       |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock RxRdy to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+grn_out<0>  |   18.478(F)|RxRdy_BUFGP       |   0.000|
+grn_out<1>  |   18.489(F)|RxRdy_BUFGP       |   0.000|
+grn_out<2>  |   18.459(F)|RxRdy_BUFGP       |   0.000|
+red_out<0>  |   19.095(F)|RxRdy_BUFGP       |   0.000|
+red_out<1>  |   19.656(F)|RxRdy_BUFGP       |   0.000|
+red_out<2>  |   19.373(F)|RxRdy_BUFGP       |   0.000|
+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+blu_out<0>  |   16.006(R)|clk_BUFGP         |   0.000|
+blu_out<1>  |   16.004(R)|clk_BUFGP         |   0.000|
+grn_out<0>  |   20.229(R)|clk_BUFGP         |   0.000|
+grn_out<1>  |   20.240(R)|clk_BUFGP         |   0.000|
+grn_out<2>  |   20.210(R)|clk_BUFGP         |   0.000|
+hsync       |   11.975(R)|clk_BUFGP         |   0.000|
+red_out<0>  |   20.846(R)|clk_BUFGP         |   0.000|
+red_out<1>  |   21.407(R)|clk_BUFGP         |   0.000|
+red_out<2>  |   21.124(R)|clk_BUFGP         |   0.000|
+vsync       |   12.924(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.698|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Thu Oct 10 18:03:43 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 93 MB
+
+
+

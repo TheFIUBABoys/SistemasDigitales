@@ -21,25 +21,25 @@ entity vga_ctrl is
          blu_i : in std_logic;
          hs : out std_logic;
          vs : out std_logic;
-         red_o : out std_logic;
-         grn_o : out std_logic;
-         blu_o : out std_logic;
+         red_o : out std_logic_vector(2 downto 0);
+         grn_o : out std_logic_vector(2 downto 0);
+         blu_o : out std_logic_vector(1 downto 0);
 			pixel_row: out std_logic_vector(9 downto 0);
 			pixel_col: out std_logic_vector(9 downto 0)
 			);
 
-			attribute loc: string;
+			-- attribute loc: string;
 			
--- Mapeo de pines para el kit spartan 3E
-			attribute loc of mclk: signal is "C9";
-         attribute loc of red_i: signal is "H18";
-         attribute loc of grn_i: signal is "L14";
-         attribute loc of blu_i: signal is "L13";
-			attribute loc of hs: signal is "F15";
-			attribute loc of vs: signal is "F14";
-			attribute loc of red_o: signal is "H14";
-			attribute loc of grn_o: signal is "H15";
-			attribute loc of blu_o: signal is "G15";
+-- -- Mapeo de pines para el kit spartan 3E
+		-- attribute loc of mclk: signal is "B8";
+      -- attribute loc of red_i: signal is "H18";
+      -- attribute loc of grn_i: signal is "G18";
+      -- attribute loc of blu_i: signal is "K18";
+		-- attribute loc of hs: signal is "T4";
+		-- attribute loc of vs: signal is "U3";
+		-- attribute loc of red_o: signal is "R9 T8 R8";
+		-- attribute loc of grn_o: signal is "N8 P8 P6";
+		-- attribute loc of blu_o: signal is "U5 U4";
 
 -- Mapeo de pines para el kit spartan 3
 --         attribute loc of mclk: signal is "T9";
@@ -58,7 +58,7 @@ architecture Behavioral of vga_ctrl is
 
 
 	constant hpixels		: std_logic_vector(9 downto 0) := "1100100000";	 -- Numero de pixeles en una linea horizontal (800)
-	constant vlines		: std_logic_vector(9 downto 0) := "1000001001";	 -- Numero de lineas horizontales en el display (521)
+	constant vlines		: std_logic_vector(9 downto 0) := "0111000010";	 -- Numero de lineas horizontales en el display (521)
 	
 	constant hbp			: std_logic_vector(9 downto 0) := "0010010000";	 -- Back porch horizontal (144)
 	constant hfp			: std_logic_vector(9 downto 0) := "1100010000";	 -- Front porch horizontal (784)
@@ -126,10 +126,10 @@ begin
 -- Ejemplos
 -- Los colores están comandados por los switches de entrada del kit
 
-    red_o <= '1' when ((hc(9 downto 6) = "0111") and vc(9 downto 6) = "0100" and red_i = '1' and vidon ='1') else '0';	-- Dibuja un cuadrado rojo
+    red_o <= "111" when ((hc(9 downto 6) = "0111") and vc(9 downto 6) = "0100" and red_i = '1' and vidon ='1') else "000";	-- Dibuja un cuadrado rojo
     --red_o <= '1' when (hc = "1010101100" and red_i = '1' and vidon ='1') else '0';   -- Dibuja una linea roja (valor específico del contador horizontal
-    grn_o <= '1' when (hc = "0100000100" and grn_i = '1' and vidon ='1') else '0';	-- Dibuja una linea verde (valor específico del contador horizontal)
-    blu_o <= '1' when (vc = "0100100001" and blu_i = '1' and vidon ='1') else '0';	-- Dibuja una linea azul (valor específico del contador vertical)
+    grn_o <= "111" when (hc = "0100000100" and grn_i = '1' and vidon ='1') else "000";	-- Dibuja una linea verde (valor específico del contador horizontal)
+    blu_o <= "11" when (vc = "0000000001" and blu_i = '1' and vidon ='1') else "00";	-- Dibuja una linea azul (valor específico del contador vertical)
 
 --    red_o <= '1' when (red_i = '1' and vidon = '1') else '0';			-- Pinta la pantalla del color formado
 --    grn_o <= '1' when (grn_i = '1' and vidon = '1') else '0';			-- por la combinación de las entradas

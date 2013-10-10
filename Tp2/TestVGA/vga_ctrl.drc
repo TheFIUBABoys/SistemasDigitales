@@ -1,7 +1,7 @@
 Release 12.1 Drc M.53d (nt)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-Thu Oct 10 15:38:48 2013
+Thu Oct 10 17:41:49 2013
 
 drc -z vga_ctrl.ncd vga_ctrl.pcf
 

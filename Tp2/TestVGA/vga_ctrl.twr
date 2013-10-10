@@ -43,31 +43,36 @@ Clock mclk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-blu_o       |   15.512(R)|mclk_BUFGP        |   0.000|
-grn_o       |   15.370(R)|mclk_BUFGP        |   0.000|
-hs          |   11.855(R)|mclk_BUFGP        |   0.000|
-pixel_col<0>|    8.225(R)|mclk_BUFGP        |   0.000|
-pixel_col<1>|    8.378(R)|mclk_BUFGP        |   0.000|
-pixel_col<2>|    8.610(R)|mclk_BUFGP        |   0.000|
-pixel_col<3>|    8.584(R)|mclk_BUFGP        |   0.000|
-pixel_col<4>|   14.235(R)|mclk_BUFGP        |   0.000|
-pixel_col<5>|   13.605(R)|mclk_BUFGP        |   0.000|
-pixel_col<6>|   14.690(R)|mclk_BUFGP        |   0.000|
-pixel_col<7>|   14.545(R)|mclk_BUFGP        |   0.000|
-pixel_col<8>|   14.216(R)|mclk_BUFGP        |   0.000|
-pixel_col<9>|   13.271(R)|mclk_BUFGP        |   0.000|
-pixel_row<0>|   15.509(R)|mclk_BUFGP        |   0.000|
-pixel_row<1>|   15.337(R)|mclk_BUFGP        |   0.000|
-pixel_row<2>|   15.398(R)|mclk_BUFGP        |   0.000|
-pixel_row<3>|   14.735(R)|mclk_BUFGP        |   0.000|
-pixel_row<4>|   15.907(R)|mclk_BUFGP        |   0.000|
-pixel_row<5>|   15.755(R)|mclk_BUFGP        |   0.000|
-pixel_row<6>|   14.786(R)|mclk_BUFGP        |   0.000|
-pixel_row<7>|   14.721(R)|mclk_BUFGP        |   0.000|
-pixel_row<8>|   14.289(R)|mclk_BUFGP        |   0.000|
-pixel_row<9>|   14.257(R)|mclk_BUFGP        |   0.000|
-red_o       |   15.932(R)|mclk_BUFGP        |   0.000|
-vs          |   12.077(R)|mclk_BUFGP        |   0.000|
+blu_o<0>    |   15.039(R)|mclk_BUFGP        |   0.000|
+blu_o<1>    |   15.041(R)|mclk_BUFGP        |   0.000|
+grn_o<0>    |   15.331(R)|mclk_BUFGP        |   0.000|
+grn_o<1>    |   15.352(R)|mclk_BUFGP        |   0.000|
+grn_o<2>    |   15.581(R)|mclk_BUFGP        |   0.000|
+hs          |   12.722(R)|mclk_BUFGP        |   0.000|
+pixel_col<0>|    8.349(R)|mclk_BUFGP        |   0.000|
+pixel_col<1>|    7.490(R)|mclk_BUFGP        |   0.000|
+pixel_col<2>|    8.267(R)|mclk_BUFGP        |   0.000|
+pixel_col<3>|    8.036(R)|mclk_BUFGP        |   0.000|
+pixel_col<4>|   15.636(R)|mclk_BUFGP        |   0.000|
+pixel_col<5>|   15.215(R)|mclk_BUFGP        |   0.000|
+pixel_col<6>|   15.601(R)|mclk_BUFGP        |   0.000|
+pixel_col<7>|   14.451(R)|mclk_BUFGP        |   0.000|
+pixel_col<8>|   14.616(R)|mclk_BUFGP        |   0.000|
+pixel_col<9>|   13.153(R)|mclk_BUFGP        |   0.000|
+pixel_row<0>|   15.246(R)|mclk_BUFGP        |   0.000|
+pixel_row<1>|   15.033(R)|mclk_BUFGP        |   0.000|
+pixel_row<2>|   15.533(R)|mclk_BUFGP        |   0.000|
+pixel_row<3>|   15.221(R)|mclk_BUFGP        |   0.000|
+pixel_row<4>|   15.317(R)|mclk_BUFGP        |   0.000|
+pixel_row<5>|   14.767(R)|mclk_BUFGP        |   0.000|
+pixel_row<6>|   14.763(R)|mclk_BUFGP        |   0.000|
+pixel_row<7>|   14.659(R)|mclk_BUFGP        |   0.000|
+pixel_row<8>|   14.312(R)|mclk_BUFGP        |   0.000|
+pixel_row<9>|   14.355(R)|mclk_BUFGP        |   0.000|
+red_o<0>    |   15.035(R)|mclk_BUFGP        |   0.000|
+red_o<1>    |   15.592(R)|mclk_BUFGP        |   0.000|
+red_o<2>    |   14.694(R)|mclk_BUFGP        |   0.000|
+vs          |   12.456(R)|mclk_BUFGP        |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock mclk
@@ -75,20 +80,25 @@ Clock to Setup on destination clock mclk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-mclk           |    4.808|         |         |         |
+mclk           |    4.610|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-blu_i          |blu_o          |    8.816|
-grn_i          |grn_o          |    8.477|
-red_i          |red_o          |    6.715|
+blu_i          |blu_o<0>       |    9.987|
+blu_i          |blu_o<1>       |    9.989|
+grn_i          |grn_o<0>       |   11.011|
+grn_i          |grn_o<1>       |   11.032|
+grn_i          |grn_o<2>       |   11.261|
+red_i          |red_o<0>       |    9.713|
+red_i          |red_o<1>       |   10.270|
+red_i          |red_o<2>       |    9.372|
 ---------------+---------------+---------+
 
 
-Analysis completed Thu Oct 10 15:38:28 2013 
+Analysis completed Thu Oct 10 17:41:47 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:

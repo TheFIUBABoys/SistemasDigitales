@@ -1,0 +1,3 @@
+vhdl work "../VGActrl.vhd"
+vhdl work "../Char_ROM.vhd"
+vhdl work "../aplicVGA.vhd"

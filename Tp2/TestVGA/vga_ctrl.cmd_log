@@ -1,6 +1,0 @@
-xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/vga_ctrl.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/vga_ctrl.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "vga_ctrl.ngc" vga_ctrl.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o vga_ctrl_map.ncd vga_ctrl.ngd vga_ctrl.pcf 
-par -w -intstyle ise -ol high -t 1 vga_ctrl_map.ncd vga_ctrl.ncd vga_ctrl.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml vga_ctrl.twx vga_ctrl.ncd -o vga_ctrl.twr vga_ctrl.pcf 
-bitgen -intstyle ise -f vga_ctrl.ut vga_ctrl.ncd 

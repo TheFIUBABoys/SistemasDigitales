@@ -1,2 +1,6 @@
-EN vga_ctrl NULL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" sub00/vhpl00 1381430268
-AR vga_ctrl behavioral "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" sub00/vhpl01 1381430269
+AR aplicvga behavioral "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" sub00/vhpl03 1381438995
+EN vga_ctrl NULL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" sub00/vhpl00 1381438990
+AR vga_ctrl behavioral "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" sub00/vhpl01 1381438991
+EN aplicvga NULL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" sub00/vhpl02 1381438994
+EN char_rom NULL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" sub00/vhpl04 1381438992
+AR char_rom p "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" sub00/vhpl05 1381438993
