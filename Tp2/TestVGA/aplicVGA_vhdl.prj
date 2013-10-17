@@ -1,3 +1,7 @@
+vhdl work "C:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2\registroNbits.vhd"
+vhdl work "C:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2\genEnableNCiclos.vhd"
 vhdl work "C:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2\VGActrl.vhd"
+vhdl work "C:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2\Tp2.vhd"
+vhdl work "C:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2\ContBinNBits.vhd"
 vhdl work "C:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2\Char_ROM.vhd"
 vhdl work "C:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2\aplicVGA.vhd"

@@ -77,3 +77,185 @@ map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVG
 par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
 bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 
+xst -intstyle ise -ifn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.xst" -ofn "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/TestVGA/aplicVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "aplicVGA.ngc" aplicVGA.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o aplicVGA_map.ncd aplicVGA.ngd aplicVGA.pcf 
+par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml aplicVGA.twx aplicVGA.ncd -o aplicVGA.twr aplicVGA.pcf 
+bitgen -intstyle ise -f aplicVGA.ut aplicVGA.ncd 

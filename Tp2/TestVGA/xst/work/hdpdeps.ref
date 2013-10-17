@@ -1,25 +1,84 @@
-V3 11
-FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" 2013/10/10.18:03:03 M.53d
-EN work/aplicVGA 1381438994 \
+V3 42
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" 2013/10/17.18:03:37 M.53d
+EN work/aplicVGA 1382043970 \
       FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" \
-      PB ieee/std_logic_1164 1270894585 PB ieee/std_logic_arith 1270894586 \
-      PB ieee/STD_LOGIC_UNSIGNED 1270894587
-AR work/aplicVGA/Behavioral 1381438995 \
+      PB ieee/std_logic_1164 1270894585 PB ieee/STD_LOGIC_UNSIGNED 1270894587 \
+      PB ieee/NUMERIC_STD 1270894586
+AR work/aplicVGA/Behavioral 1382043971 \
       FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" \
-      EN work/aplicVGA 1381438994 CP vga_ctrl CP Char_ROM
-FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" 2013/10/10.15:32:50 M.53d
-EN work/Char_ROM 1381438992 \
+      EN work/aplicVGA 1382043970 CP GenEnable CP ContBinNBits CP vga_ctrl CP Tp2 \
+      CP Char_ROM
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" 2013/10/17.18:05:41 M.53d
+EN work/Char_ROM 1382043968 \
       FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" \
       PB ieee/std_logic_1164 1270894585 PB ieee/std_logic_arith 1270894586 \
       PB ieee/STD_LOGIC_UNSIGNED 1270894587
-AR work/Char_ROM/p 1381438993 \
+AR work/Char_ROM/p 1382043969 \
       FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" \
-      EN work/Char_ROM 1381438992
+      EN work/Char_ROM 1382043968
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/ContBinNBits.vhd" 2013/10/10.15:22:49 M.53d
+EN work/ContBinNBits 1382043952 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/ContBinNBits.vhd" \
+      PB ieee/std_logic_1164 1270894585 PB ieee/NUMERIC_STD 1270894586
+AR work/ContBinNBits/arq_ContBinNBits 1382043953 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/ContBinNBits.vhd" \
+      EN work/ContBinNBits 1382043952
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/genEnableNCiclos.vhd" 2013/10/03.14:47:43 M.53d
+EN work/GenEnable 1382043950 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/genEnableNCiclos.vhd" \
+      PB ieee/std_logic_1164 1270894585 PB ieee/NUMERIC_STD 1270894586
+AR work/GenEnable/arq_GenEnable 1382043951 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/genEnableNCiclos.vhd" \
+      EN work/GenEnable 1382043950
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/registroNbits.vhd" 2013/10/03.14:33:17 M.53d
+EN work/registro 1382043948 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/registroNbits.vhd" \
+      PB ieee/std_logic_1164 1270894585 PB ieee/NUMERIC_STD 1270894586
+AR work/registro/pp 1382043949 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/registroNbits.vhd" \
+      EN work/registro 1382043948
+FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" 2013/10/17.17:55:35 M.53d
+EN work/FFD 1382043956 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      PB ieee/std_logic_1164 1270894585
+AR work/FFD/FFD_arq 1382043957 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      EN work/FFD 1382043956
+EN work/cont2b 1382043958 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      PB ieee/std_logic_1164 1270894585
+AR work/cont2b/cont2b_arq 1382043959 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      EN work/cont2b 1382043958 CP FFD
+EN work/cont4b 1382043960 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      PB ieee/std_logic_1164 1270894585
+AR work/cont4b/cont4b_arq 1382043961 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      EN work/cont4b 1382043960 CP cont2b
+EN work/contBCD 1382043962 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      PB ieee/std_logic_1164 1270894585
+AR work/contBCD/contBCD_arq 1382043963 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      EN work/contBCD 1382043962 CP cont4b
+EN work/contador9999 1382043964 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      PB ieee/std_logic_1164 1270894585 PB ieee/NUMERIC_STD 1270894586
+AR work/contador9999/contador9999_arq 1382043965 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      EN work/contador9999 1382043964 CP contBCD
+EN work/Tp2 1382043966 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      PB ieee/std_logic_1164 1270894585 PB ieee/NUMERIC_STD 1270894586
+AR work/Tp2/Tp2_arq 1382043967 \
+      FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" \
+      EN work/Tp2 1382043966 CP registro CP contador9999 CP GenEnable
 FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" 2013/10/10.17:47:13 M.53d
-EN work/vga_ctrl 1381438990 \
+EN work/vga_ctrl 1382043954 \
       FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" \
       PB ieee/std_logic_1164 1270894585 PB ieee/std_logic_arith 1270894586 \
       PB ieee/STD_LOGIC_UNSIGNED 1270894587
-AR work/vga_ctrl/Behavioral 1381438991 \
+AR work/vga_ctrl/Behavioral 1382043955 \
       FL "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" \
-      EN work/vga_ctrl 1381438990
+      EN work/vga_ctrl 1382043954

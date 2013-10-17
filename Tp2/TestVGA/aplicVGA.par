@@ -1,7 +1,7 @@
 Release 12.1 par M.53d (nt)
 Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
-PC73::  Thu Oct 10 18:03:23 2013
+PC73::  Thu Oct 17 18:06:03 2013
 
 par -w -intstyle ise -ol high -t 1 aplicVGA_map.ncd aplicVGA.ncd aplicVGA.pcf 
 
@@ -30,12 +30,12 @@ Device speed data version:  "PRODUCTION 1.27 2010-04-09".
 
 Design Summary Report:
 
- Number of External IOBs                          20 out of 232     8%
+ Number of External IOBs                          12 out of 232     5%
 
-   Number of External Input IOBs                 10
+   Number of External Input IOBs                  2
 
-      Number of External Input IBUFs             10
-        Number of LOCed External Input IBUFs      1 out of 10     10%
+      Number of External Input IBUFs              2
+        Number of LOCed External Input IBUFs      2 out of 2     100%
 
 
    Number of External Output IOBs                10
@@ -47,9 +47,9 @@ Design Summary Report:
    Number of External Bidir IOBs                  0
 
 
-   Number of BUFGMUXs                        2 out of 24      8%
-   Number of Slices                         84 out of 4656    1%
-      Number of SLICEMs                      2 out of 2328    1%
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of Slices                        165 out of 4656    3%
+      Number of SLICEMs                      0 out of 2328    0%
 
 
 
@@ -67,47 +67,40 @@ Total REAL time at the beginning of Placer: 2 secs
 Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:258a8eba) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:f547bc94) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:258a8eba) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:f547bc94) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:258a8eba) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:f547bc94) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-........
-Phase 4.2  Initial Clock and IO Placement (Checksum:27c07abc) REAL time: 2 secs 
+
+Phase 4.2  Initial Clock and IO Placement (Checksum:a30bf354) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:27c07abc) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:a30bf354) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:27c07abc) REAL time: 2 secs 
+Phase 6.36  Local Placement Optimization (Checksum:a30bf354) REAL time: 2 secs 
 
-Phase 7.3  Local Placement Optimization
+Phase 7.8  Global Placement
 ........
-Phase 7.3  Local Placement Optimization (Checksum:4b1e3b20) REAL time: 2 secs 
+.......
+Phase 7.8  Global Placement (Checksum:4005912f) REAL time: 9 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:4b1e3b20) REAL time: 2 secs 
+Phase 8.5  Local Placement Optimization (Checksum:4005912f) REAL time: 9 secs 
 
-Phase 9.8  Global Placement
-..
-..
-Phase 9.8  Global Placement (Checksum:ea198d83) REAL time: 9 secs 
+Phase 9.18  Placement Optimization
+Phase 9.18  Placement Optimization (Checksum:b723902b) REAL time: 10 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:ea198d83) REAL time: 9 secs 
-
-Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:d369cdb0) REAL time: 10 secs 
-
-Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:d369cdb0) REAL time: 10 secs 
+Phase 10.5  Local Placement Optimization (Checksum:b723902b) REAL time: 10 secs 
 
 Total REAL time to Placer completion: 10 secs 
-Total CPU  time to Placer completion: 9 secs 
+Total CPU  time to Placer completion: 10 secs 
 Writing design to file aplicVGA.ncd
 
 
@@ -115,32 +108,42 @@ Writing design to file aplicVGA.ncd
 Starting Router
 
 
-Phase  1  : 554 unrouted;      REAL time: 15 secs 
+Phase  1  : 1083 unrouted;      REAL time: 15 secs 
 
-Phase  2  : 530 unrouted;      REAL time: 15 secs 
+Phase  2  : 1010 unrouted;      REAL time: 16 secs 
 
-Phase  3  : 130 unrouted;      REAL time: 15 secs 
+Phase  3  : 188 unrouted;      REAL time: 16 secs 
 
-Phase  4  : 165 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+Phase  4  : 204 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
 
 Updating file: aplicVGA.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 16 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+Updating file: aplicVGA.ncd with current fully routed design.
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
-WARNING:Route:455 - CLK Net:pixel_col_aux_and0000 may have excessive skew because 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 28 secs 
+WARNING:Route:455 - CLK Net:digito_and0001 may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:address_or0000 may have excessive skew because 
+      2 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:num_not0001 may have excessive skew because 
       4 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 17 secs 
-Total CPU time to Router completion: 17 secs 
+Total REAL time to Router completion: 28 secs 
+Total CPU time to Router completion: 28 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -158,12 +161,13 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y11| No   |   12 |  0.019     |  0.139      |
+|           clk_BUFGP | BUFGMUX_X2Y11| No   |   53 |  0.033     |  0.172      |
 +---------------------+--------------+------+------+------------+-------------+
-|         RxRdy_BUFGP | BUFGMUX_X2Y10| No   |    4 |  0.011     |  0.163      |
+|      digito_and0001 |         Local|      |   12 |  0.284     |  2.308      |
 +---------------------+--------------+------+------+------------+-------------+
-|pixel_col_aux_and000 |              |      |      |            |             |
-|                   0 |         Local|      |    4 |  1.098     |  1.401      |
+|      address_or0000 |         Local|      |    2 |  0.583     |  1.141      |
++---------------------+--------------+------+------+------------+-------------+
+|         num_not0001 |         Local|      |    4 |  0.002     |  0.899      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -180,8 +184,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     4.698ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     1.178ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     5.141ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     1.074ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -197,16 +201,16 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 18 secs 
-Total CPU time to PAR completion: 17 secs 
+Total REAL time to PAR completion: 28 secs 
+Total CPU time to PAR completion: 28 secs 
 
-Peak Memory Usage:  241 MB
+Peak Memory Usage:  243 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 1
+Number of warning messages: 3
 Number of info messages: 1
 
 Writing design to file aplicVGA.ncd

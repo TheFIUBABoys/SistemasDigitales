@@ -9,33 +9,33 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.52 $
-Mapped Date    : Thu Oct 10 18:03:19 2013
+Mapped Date    : Thu Oct 17 18:05:59 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    3
 Logic Utilization:
-  Total Number Slice Registers:          32 out of   9,312    1%
-    Number used as Flip Flops:           22
-    Number used as Latches:              10
-  Number of 4 input LUTs:               133 out of   9,312    1%
+  Total Number Slice Registers:         104 out of   9,312    1%
+    Number used as Flip Flops:           85
+    Number used as Latches:              19
+  Number of 4 input LUTs:               228 out of   9,312    2%
 Logic Distribution:
-  Number of occupied Slices:             84 out of   4,656    1%
-    Number of Slices containing only related logic:      84 out of      84 100%
-    Number of Slices containing unrelated logic:          0 out of      84   0%
+  Number of occupied Slices:            165 out of   4,656    3%
+    Number of Slices containing only related logic:     165 out of     165 100%
+    Number of Slices containing unrelated logic:          0 out of     165   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         159 out of   9,312    1%
-    Number used as logic:               133
-    Number used as a route-thru:         26
+  Total Number of 4 input LUTs:         284 out of   9,312    3%
+    Number used as logic:               228
+    Number used as a route-thru:         56
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 20 out of     232    8%
-  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of bonded IOBs:                 12 out of     232    5%
+  Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                3.39
+Average Fanout of Non-Clock Nets:                3.21
 
 Peak Memory Usage:  231 MB
 Total REAL time to MAP completion:  2 secs 
@@ -83,13 +83,28 @@ Section 2 - Warnings
 WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net pixel_col_aux_and0000 is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net digito_and0001 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net address_or0000 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net num_not0001 is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
 INFO:Security:54 - 'xc3s500e' is a WebPack part.
+INFO:LIT:243 - Logical network char_in<16> has no load.
+INFO:LIT:395 - The above info message is repeated 16 more times for the
+   following (max. 5 shown):
+   char_in<15>,
+   char_in<14>,
+   char_in<13>,
+   char_in<12>,
+   char_in<11>
+   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -117,22 +132,14 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| RxRdy                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | blu_out<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | blu_out<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| char_in<0>                         | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| char_in<1>                         | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| char_in<2>                         | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| char_in<3>                         | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| char_in<4>                         | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| char_in<5>                         | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| char_in<6>                         | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| char_in<7>                         | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | clk                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | grn_out<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | grn_out<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | grn_out<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | hsync                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| input                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | red_out<0>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | red_out<1>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | red_out<2>                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |

@@ -38,49 +38,29 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock RxRdy
+Setup/Hold to clock clk
 ------------+------------+------------+------------------+--------+
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-char_in<0>  |    1.563(F)|    0.102(F)|RxRdy_BUFGP       |   0.000|
-char_in<1>  |    1.922(F)|   -0.188(F)|RxRdy_BUFGP       |   0.000|
-char_in<2>  |    2.129(F)|   -0.142(F)|RxRdy_BUFGP       |   0.000|
-char_in<3>  |    1.988(F)|   -0.107(F)|RxRdy_BUFGP       |   0.000|
-char_in<4>  |    1.894(F)|    0.220(F)|RxRdy_BUFGP       |   0.000|
-char_in<5>  |    2.192(F)|    0.804(F)|RxRdy_BUFGP       |   0.000|
-char_in<6>  |    2.093(F)|    0.804(F)|RxRdy_BUFGP       |   0.000|
-char_in<7>  |    2.034(F)|    0.844(F)|RxRdy_BUFGP       |   0.000|
+input       |    1.431(R)|    0.065(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
-
-Clock RxRdy to Pad
-------------+------------+------------------+--------+
-            | clk (edge) |                  | Clock  |
-Destination |   to PAD   |Internal Clock(s) | Phase  |
-------------+------------+------------------+--------+
-grn_out<0>  |   18.478(F)|RxRdy_BUFGP       |   0.000|
-grn_out<1>  |   18.489(F)|RxRdy_BUFGP       |   0.000|
-grn_out<2>  |   18.459(F)|RxRdy_BUFGP       |   0.000|
-red_out<0>  |   19.095(F)|RxRdy_BUFGP       |   0.000|
-red_out<1>  |   19.656(F)|RxRdy_BUFGP       |   0.000|
-red_out<2>  |   19.373(F)|RxRdy_BUFGP       |   0.000|
-------------+------------+------------------+--------+
 
 Clock clk to Pad
 ------------+------------+------------------+--------+
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-blu_out<0>  |   16.006(R)|clk_BUFGP         |   0.000|
-blu_out<1>  |   16.004(R)|clk_BUFGP         |   0.000|
-grn_out<0>  |   20.229(R)|clk_BUFGP         |   0.000|
-grn_out<1>  |   20.240(R)|clk_BUFGP         |   0.000|
-grn_out<2>  |   20.210(R)|clk_BUFGP         |   0.000|
-hsync       |   11.975(R)|clk_BUFGP         |   0.000|
-red_out<0>  |   20.846(R)|clk_BUFGP         |   0.000|
-red_out<1>  |   21.407(R)|clk_BUFGP         |   0.000|
-red_out<2>  |   21.124(R)|clk_BUFGP         |   0.000|
-vsync       |   12.924(R)|clk_BUFGP         |   0.000|
+blu_out<0>  |   14.353(R)|clk_BUFGP         |   0.000|
+blu_out<1>  |   14.241(R)|clk_BUFGP         |   0.000|
+grn_out<0>  |   24.103(R)|clk_BUFGP         |   0.000|
+grn_out<1>  |   23.961(R)|clk_BUFGP         |   0.000|
+grn_out<2>  |   24.335(R)|clk_BUFGP         |   0.000|
+hsync       |   12.223(R)|clk_BUFGP         |   0.000|
+red_out<0>  |   24.239(R)|clk_BUFGP         |   0.000|
+red_out<1>  |   24.231(R)|clk_BUFGP         |   0.000|
+red_out<2>  |   24.518(R)|clk_BUFGP         |   0.000|
+vsync       |   12.026(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -88,18 +68,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.698|         |         |         |
+clk            |    5.141|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Oct 10 18:03:43 2013 
+Analysis completed Thu Oct 17 18:06:34 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 93 MB
+Peak Memory Usage: 94 MB
 
 
 

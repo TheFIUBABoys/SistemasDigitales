@@ -1,3 +1,7 @@
+vhdl work "../registroNbits.vhd"
+vhdl work "../genEnableNCiclos.vhd"
 vhdl work "../VGActrl.vhd"
+vhdl work "../Tp2.vhd"
+vhdl work "../ContBinNBits.vhd"
 vhdl work "../Char_ROM.vhd"
 vhdl work "../aplicVGA.vhd"
