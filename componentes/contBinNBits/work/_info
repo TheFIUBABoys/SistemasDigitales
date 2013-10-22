@@ -1,0 +1,68 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2
+T_opt
+V;o`1;8[jm_ROGzMDIdK9m2
+04 4 8 work test testcont 1
+Z1 =9-002522f2dec5-5260331d-222-888
+Z2 o-quiet -auto_acc_if_foreign -work work
+Z3 n@_opt
+Z4 OE;O;6.6b;45
+Z5 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2
+Econtbinnbits
+Z6 w1382036244
+Z7 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z9 dC:\Documents and Settings\alumno\Escritorio\SisDigit\componentes\contBinNBits
+Z10 8C:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/ContBinNBits.vhd
+Z11 FC:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/ContBinNBits.vhd
+l0
+L8
+Z12 VB0DlRfT5czzV1dJPf;PN63
+Z13 OE;C;6.6b;45
+32
+Z14 o-work work -2002 -explicit
+Z15 tExplicit 1
+Z16 !s100 DO<`j?h60d_JCCf=DiW7G2
+Aarq_contbinnbits
+R7
+R8
+Z17 DEx4 work 12 contbinnbits 0 22 B0DlRfT5czzV1dJPf;PN63
+l21
+L17
+Z18 VgE4Vm87VNIBAMB^<;8ozd2
+R13
+32
+Z19 Mx2 4 ieee 14 std_logic_1164
+Z20 Mx1 4 ieee 11 numeric_std
+R14
+R15
+Z21 !s100 IFolk`_LBTNemNd>BJb[h0
+Etest
+Z22 w1382035912
+R8
+R9
+Z23 8C:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/testCont.vhd
+Z24 FC:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/testCont.vhd
+l0
+L5
+Z25 V<O8RUA7:OzjW6VXYU82@W1
+R13
+32
+R14
+R15
+Z26 !s100 YOODBm5@mBnNgLjA23=IP1
+Atestcont
+R8
+Z27 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+l20
+L8
+Z28 VAeeF]Gl2SG4CiV@H1nMKO3
+R13
+32
+Z29 Mx1 4 ieee 14 std_logic_1164
+R14
+R15
+Z30 !s100 GM^UWHlTn]h?Vf>OiFflj0

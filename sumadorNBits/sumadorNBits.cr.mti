@@ -1,0 +1,20 @@
+{C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/testSumador.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/testSumador.vhd}
+QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity test
+-- Compiling architecture testsumador of test
+-- Compiling architecture testsumadorrestador of test
+-- Loading entity test
+
+} {} {}} {C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/sumadorNBits.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/sumadorNBits/sumadorNBits.vhd}
+QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package numeric_std
+-- Compiling entity sumador
+-- Compiling architecture sum of sumador
+-- Compiling entity sumadorrestador
+-- Compiling architecture sumrest of sumadorrestador
+
+} {} {}}

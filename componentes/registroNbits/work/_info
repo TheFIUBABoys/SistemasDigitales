@@ -1,0 +1,68 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits
+T_opt
+VE=Ro=m12@QUV7YW71azn[3
+Z1 04 4 12 work test testregistro 1
+Z2 =6-002522f2dec5-524dac6c-7d-190
+Z3 o-quiet -auto_acc_if_foreign -work work
+Z4 n@_opt
+Z5 OE;O;6.6b;45
+Z6 dC:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits
+Eregistro
+Z7 w1380821597
+Z8 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z10 dC:\Documents and Settings\alumno\Escritorio\SisDigit\componentes\registroNbits
+Z11 8C:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/registroNbits/registroNbits.vhd
+Z12 FC:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/registroNbits/registroNbits.vhd
+l0
+L5
+Z13 VBmbNnl9YiMVX:kLfR9@dc2
+Z14 OE;C;6.6b;45
+32
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1
+Z17 !s100 Ehb^j]Re=BH_Ob62=j9O`1
+App
+R8
+R9
+Z18 DEx4 work 8 registro 0 22 BmbNnl9YiMVX:kLfR9@dc2
+l18
+L17
+Z19 VMoh`c_KFX@On;[2[?C`X]0
+R14
+32
+Z20 Mx2 4 ieee 14 std_logic_1164
+Z21 Mx1 4 ieee 11 numeric_std
+R15
+R16
+Z22 !s100 _Ybka0Le<jSY;l3m;0foh1
+Etest
+Z23 w1380822113
+R9
+R10
+Z24 8C:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/registroNbits/testRegistro.vhd
+Z25 FC:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/registroNbits/testRegistro.vhd
+l0
+L5
+Z26 V<O8RUA7:OzjW6VXYU82@W1
+R14
+32
+R15
+R16
+Z27 !s100 YOODBm5@mBnNgLjA23=IP1
+Atestregistro
+R9
+Z28 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+l21
+L8
+Z29 VjL?3>SV>WM8Vo2:2HmH9k0
+R14
+32
+Z30 Mx1 4 ieee 14 std_logic_1164
+R15
+R16
+Z31 !s100 TTnjE[fIz1QGi[@R<joz83

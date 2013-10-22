@@ -1,0 +1,71 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2
+T_opt
+Z1 V;o`1;8[jm_ROGzMDIdK9m2
+Z2 04 4 8 work test testcont 1
+Z3 =9-002522f2dec5-5260331d-222-888
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;6.6b;45
+Z7 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp2
+Econtbinnbits
+Z8 w1382036244
+Z9 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z10 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z11 dC:\Documents and Settings\alumno\Escritorio\SisDigit\componentes\contBinNBits
+Z12 8C:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/ContBinNBits.vhd
+Z13 FC:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/ContBinNBits.vhd
+l0
+L8
+Z14 VB0DlRfT5czzV1dJPf;PN63
+Z15 OE;C;6.6b;45
+32
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1
+Z18 !s100 DO<`j?h60d_JCCf=DiW7G2
+Aarq_contbinnbits
+R9
+R10
+Z19 DEx4 work 12 contbinnbits 0 22 B0DlRfT5czzV1dJPf;PN63
+l21
+L17
+Z20 VgE4Vm87VNIBAMB^<;8ozd2
+R15
+32
+Z21 Mx2 4 ieee 14 std_logic_1164
+Z22 Mx1 4 ieee 11 numeric_std
+R16
+R17
+Z23 !s100 IFolk`_LBTNemNd>BJb[h0
+Etest
+Z24 w1382035912
+Z25 DPx22 C:\questasim_6.6b\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R11
+Z26 8C:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/testCont.vhd
+Z27 FC:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/contBinNBits/testCont.vhd
+l0
+L5
+Z28 V<O8RUA7:OzjW6VXYU82@W1
+R15
+R16
+R17
+Z29 !s100 YOODBm5@mBnNgLjA23=IP1
+Atestcont
+DPx22 C:\questasim_6.6b\ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+DEx82 C:\Documents and Settings\alumno\Escritorio\SisDigit\componentes\contBinNBits\work 12 contbinnbits 0 22 B0DlRfT5czzV1dJPf;PN63
+R25
+DEx82 C:\Documents and Settings\alumno\Escritorio\SisDigit\componentes\contBinNBits\work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+32
+Mx2 22 C:\questasim_6.6b\ieee 14 std_logic_1164
+Mx1 22 C:\questasim_6.6b\ieee 11 numeric_std
+l20
+L8
+Z30 VAeeF]Gl2SG4CiV@H1nMKO3
+R15
+R16
+R17
+Z31 !s100 GM^UWHlTn]h?Vf>OiFflj0

@@ -1,0 +1,71 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits
+T_opt
+Z1 VE=Ro=m12@QUV7YW71azn[3
+Z2 04 4 12 work test testregistro 1
+Z3 =6-002522f2dec5-524dac6c-7d-190
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;6.6b;45
+Z7 dC:\Documents and Settings\alumno\Escritorio\SisDigit\sumadorNBits
+Eregistro
+Z8 w1380821597
+Z9 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z10 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z11 dC:\Documents and Settings\alumno\Escritorio\SisDigit\componentes\registroNbits
+Z12 8C:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/registroNbits/registroNbits.vhd
+Z13 FC:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/registroNbits/registroNbits.vhd
+l0
+L5
+Z14 VBmbNnl9YiMVX:kLfR9@dc2
+Z15 OE;C;6.6b;45
+32
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1
+Z18 !s100 Ehb^j]Re=BH_Ob62=j9O`1
+App
+R9
+R10
+Z19 DEx4 work 8 registro 0 22 BmbNnl9YiMVX:kLfR9@dc2
+l18
+L17
+Z20 VMoh`c_KFX@On;[2[?C`X]0
+R15
+32
+Z21 Mx2 4 ieee 14 std_logic_1164
+Z22 Mx1 4 ieee 11 numeric_std
+R16
+R17
+Z23 !s100 _Ybka0Le<jSY;l3m;0foh1
+Etest
+Z24 w1380822113
+Z25 DPx22 C:\questasim_6.6b\ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+R11
+Z26 8C:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/registroNbits/testRegistro.vhd
+Z27 FC:/Documents and Settings/alumno/Escritorio/SisDigit/componentes/registroNbits/testRegistro.vhd
+l0
+L5
+Z28 V<O8RUA7:OzjW6VXYU82@W1
+R15
+R16
+R17
+Z29 !s100 YOODBm5@mBnNgLjA23=IP1
+Atestregistro
+Z30 DPx22 C:\questasim_6.6b\ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z31 DEx83 C:\Documents and Settings\alumno\Escritorio\SisDigit\componentes\registroNbits\work 8 registro 0 22 BmbNnl9YiMVX:kLfR9@dc2
+R25
+Z32 DEx83 C:\Documents and Settings\alumno\Escritorio\SisDigit\componentes\registroNbits\work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+32
+Z33 Mx2 22 C:\questasim_6.6b\ieee 14 std_logic_1164
+Z34 Mx1 22 C:\questasim_6.6b\ieee 11 numeric_std
+l21
+L8
+Z35 VjL?3>SV>WM8Vo2:2HmH9k0
+R15
+R16
+R17
+Z36 !s100 TTnjE[fIz1QGi[@R<joz83

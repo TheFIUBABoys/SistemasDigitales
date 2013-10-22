@@ -1,0 +1,839 @@
+Release 12.1 - xst M.53d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: aplicVGA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "aplicVGA.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "aplicVGA"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : aplicVGA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : aplicVGA.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/registroNbits.vhd" in Library work.
+Architecture pp of Entity registro is up to date.
+Compiling vhdl file "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/genEnableNCiclos.vhd" in Library work.
+Architecture arq_genenable of Entity genenable is up to date.
+Compiling vhdl file "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/ContBinNBits.vhd" in Library work.
+Architecture arq_contbinnbits of Entity contbinnbits is up to date.
+Compiling vhdl file "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd" in Library work.
+Architecture behavioral of Entity vga_ctrl is up to date.
+Compiling vhdl file "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" in Library work.
+Architecture ffd_arq of Entity ffd is up to date.
+Architecture cont2b_arq of Entity cont2b is up to date.
+Architecture cont4b_arq of Entity cont4b is up to date.
+Architecture contbcd_arq of Entity contbcd is up to date.
+Architecture contador9999_arq of Entity contador9999 is up to date.
+Architecture tp2_arq of Entity tp2 is up to date.
+Compiling vhdl file "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" in Library work.
+Entity <char_rom> compiled.
+Entity <char_rom> (Architecture <p>) compiled.
+Compiling vhdl file "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd" in Library work.
+Architecture behavioral of Entity aplicvga is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <aplicVGA> in library <work> (architecture <behavioral>) with generics.
+	M = 3
+	N = 6
+	W = 8
+
+Analyzing hierarchy for entity <GenEnable> in library <work> (architecture <arq_genenable>) with generics.
+	contarHasta = 50000000
+
+Analyzing hierarchy for entity <ContBinNBits> in library <work> (architecture <arq_contbinnbits>) with generics.
+	N = 1
+
+Analyzing hierarchy for entity <vga_ctrl> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Tp2> in library <work> (architecture <tp2_arq>).
+
+Analyzing hierarchy for entity <Char_ROM> in library <work> (architecture <p>) with generics.
+	M = 3
+	N = 6
+	W = 8
+
+Analyzing hierarchy for entity <registro> in library <work> (architecture <pp>) with generics.
+	N = 1
+
+Analyzing hierarchy for entity <contador9999> in library <work> (architecture <contador9999_arq>).
+
+Analyzing hierarchy for entity <GenEnable> in library <work> (architecture <arq_genenable>) with generics.
+	contarHasta = 3300
+
+Analyzing hierarchy for entity <registro> in library <work> (architecture <pp>) with generics.
+	N = 16
+
+Analyzing hierarchy for entity <contBCD> in library <work> (architecture <contbcd_arq>).
+
+Analyzing hierarchy for entity <cont4b> in library <work> (architecture <cont4b_arq>).
+
+Analyzing hierarchy for entity <cont2b> in library <work> (architecture <cont2b_arq>).
+
+Analyzing hierarchy for entity <FFD> in library <work> (architecture <ffd_arq>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <aplicVGA> in library <work> (Architecture <behavioral>).
+	M = 3
+	N = 6
+	W = 8
+    Set user-defined property "LOC =  B18" for signal <input> in unit <aplicVGA>.
+    Set user-defined property "LOC =  B8" for signal <clk> in unit <aplicVGA>.
+    Set user-defined property "LOC =  T4" for signal <hsync> in unit <aplicVGA>.
+    Set user-defined property "LOC =  U3" for signal <vsync> in unit <aplicVGA>.
+    Set user-defined property "LOC =  R9 T8 R8" for signal <red_out> in unit <aplicVGA>.
+    Set user-defined property "LOC =  N8 P8 P6" for signal <grn_out> in unit <aplicVGA>.
+    Set user-defined property "LOC =  U5 U4" for signal <blu_out> in unit <aplicVGA>.
+Entity <aplicVGA> analyzed. Unit <aplicVGA> generated.
+
+Analyzing generic Entity <GenEnable.1> in library <work> (Architecture <arq_genenable>).
+	contarHasta = 50000000
+Entity <GenEnable.1> analyzed. Unit <GenEnable.1> generated.
+
+Analyzing generic Entity <ContBinNBits> in library <work> (Architecture <arq_contbinnbits>).
+	N = 1
+Entity <ContBinNBits> analyzed. Unit <ContBinNBits> generated.
+
+Analyzing Entity <vga_ctrl> in library <work> (Architecture <behavioral>).
+Entity <vga_ctrl> analyzed. Unit <vga_ctrl> generated.
+
+Analyzing Entity <Tp2> in library <work> (Architecture <tp2_arq>).
+Entity <Tp2> analyzed. Unit <Tp2> generated.
+
+Analyzing generic Entity <registro.1> in library <work> (Architecture <pp>).
+	N = 1
+Entity <registro.1> analyzed. Unit <registro.1> generated.
+
+Analyzing Entity <contador9999> in library <work> (Architecture <contador9999_arq>).
+WARNING:Xst:819 - "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd" line 170: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <salida_aux>, <aux>, <enable>
+Entity <contador9999> analyzed. Unit <contador9999> generated.
+
+Analyzing Entity <contBCD> in library <work> (Architecture <contbcd_arq>).
+Entity <contBCD> analyzed. Unit <contBCD> generated.
+
+Analyzing Entity <cont4b> in library <work> (Architecture <cont4b_arq>).
+Entity <cont4b> analyzed. Unit <cont4b> generated.
+
+Analyzing Entity <cont2b> in library <work> (Architecture <cont2b_arq>).
+Entity <cont2b> analyzed. Unit <cont2b> generated.
+
+Analyzing Entity <FFD> in library <work> (Architecture <ffd_arq>).
+Entity <FFD> analyzed. Unit <FFD> generated.
+
+Analyzing generic Entity <GenEnable.2> in library <work> (Architecture <arq_genenable>).
+	contarHasta = 3300
+Entity <GenEnable.2> analyzed. Unit <GenEnable.2> generated.
+
+Analyzing generic Entity <registro.2> in library <work> (Architecture <pp>).
+	N = 16
+Entity <registro.2> analyzed. Unit <registro.2> generated.
+
+Analyzing generic Entity <Char_ROM> in library <work> (Architecture <p>).
+	M = 3
+	N = 6
+	W = 8
+WARNING:Xst:790 - "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd" line 175: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <Char_ROM> analyzed. Unit <Char_ROM> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <GenEnable_1>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/genEnableNCiclos.vhd".
+    Found 32-bit up counter for signal <contador>.
+    Found 1-bit register for signal <Q_tmp>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <GenEnable_1> synthesized.
+
+
+Synthesizing Unit <ContBinNBits>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/ContBinNBits.vhd".
+WARNING:Xst:653 - Signal <contarHasta> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000001.
+    Found 32-bit up counter for signal <contador>.
+    Found 1-bit register for signal <Q_tmp<0>>.
+    Found 32-bit adder for signal <Q_tmp_0$add0000> created at line 30.
+    Found 32-bit comparator equal for signal <Q_tmp_0$cmp_eq0000> created at line 30.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <ContBinNBits> synthesized.
+
+
+Synthesizing Unit <vga_ctrl>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/VGActrl.vhd".
+    Found 1-bit register for signal <clkdiv_flag>.
+    Found 10-bit up counter for signal <hc>.
+    Found 10-bit comparator less for signal <hs$cmp_lt0000> created at line 117.
+    Found 10-bit subtractor for signal <pixel_col$addsub0000> created at line 120.
+    Found 10-bit subtractor for signal <pixel_row$addsub0000> created at line 121.
+    Found 10-bit up counter for signal <vc>.
+    Found 10-bit comparator greater for signal <vidon$cmp_gt0000> created at line 123.
+    Found 10-bit comparator greater for signal <vidon$cmp_gt0001> created at line 123.
+    Found 10-bit comparator less for signal <vidon$cmp_lt0000> created at line 123.
+    Found 10-bit comparator less for signal <vidon$cmp_lt0001> created at line 123.
+    Found 10-bit comparator less for signal <vs$cmp_lt0000> created at line 118.
+    Found 1-bit register for signal <vsenable>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+Unit <vga_ctrl> synthesized.
+
+
+Synthesizing Unit <Char_ROM>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Char_ROM.vhd".
+WARNING:Xst:646 - Signal <char_addr_aux<8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1781 - Signal <RAM> is used but never assigned. Tied to default value.
+    Found 256x8-bit ROM for signal <rom_out$varindex0000> created at line 175.
+    Found 1-bit 8-to-1 multiplexer for signal <rom_out>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Multiplexer(s).
+Unit <Char_ROM> synthesized.
+
+
+Synthesizing Unit <registro_1>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/registroNbits.vhd".
+    Found 1-bit register for signal <Q<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <registro_1> synthesized.
+
+
+Synthesizing Unit <GenEnable_2>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/genEnableNCiclos.vhd".
+    Found 32-bit up counter for signal <contador>.
+    Found 1-bit register for signal <Q_tmp>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <GenEnable_2> synthesized.
+
+
+Synthesizing Unit <registro_2>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/registroNbits.vhd".
+    Found 16-bit register for signal <Q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <registro_2> synthesized.
+
+
+Synthesizing Unit <FFD>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd".
+    Found 1-bit register for signal <Q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <FFD> synthesized.
+
+
+Synthesizing Unit <cont2b>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd".
+    Found 1-bit xor2 for signal <d<1>>.
+Unit <cont2b> synthesized.
+
+
+Synthesizing Unit <cont4b>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd".
+Unit <cont4b> synthesized.
+
+
+Synthesizing Unit <contBCD>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd".
+Unit <contBCD> synthesized.
+
+
+Synthesizing Unit <contador9999>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd".
+Unit <contador9999> synthesized.
+
+
+Synthesizing Unit <Tp2>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/Tp2.vhd".
+WARNING:Xst:1780 - Signal <resetBCD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <enReg> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <Tp2> synthesized.
+
+
+Synthesizing Unit <aplicVGA>.
+    Related source file is "C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp2/aplicVGA.vhd".
+WARNING:Xst:647 - Input <char_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <sig_startTX> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <reg_out<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <pixel_row_aux<9:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <pixel_col_aux<9:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <contOut<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 5-bit latch for signal <digito>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 10-bit latch for signal <pixel_col_aux>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 10-bit latch for signal <pixel_row_aux>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <digito> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <digito> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <digito>.
+    Found 10x6-bit ROM for signal <address$mux0015>.
+WARNING:Xst:737 - Found 4-bit latch for signal <num>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <address$mux0014>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 10-bit subtractor for signal <$mux0001>.
+    Found 11-bit comparator less for signal <digito$cmp_lt0000> created at line 160.
+    Found 11-bit comparator greatequal for signal <enable$cmp_ge0000> created at line 140.
+    Found 11-bit comparator greatequal for signal <enable$cmp_ge0001> created at line 144.
+    Found 11-bit comparator greatequal for signal <enable$cmp_ge0002> created at line 150.
+    Found 11-bit comparator greatequal for signal <enable$cmp_ge0003> created at line 155.
+    Found 11-bit comparator greatequal for signal <enable$cmp_ge0004> created at line 160.
+    Found 11-bit comparator greater for signal <enable$cmp_gt0000> created at line 140.
+    Found 11-bit comparator less for signal <enable$cmp_lt0000> created at line 140.
+    Found 11-bit comparator less for signal <enable$cmp_lt0001> created at line 144.
+    Found 11-bit comparator less for signal <enable$cmp_lt0002> created at line 150.
+    Found 11-bit comparator less for signal <enable$cmp_lt0003> created at line 155.
+    Found 11-bit comparator less for signal <enable$cmp_lt0004> created at line 160.
+    Found 10-bit subtractor for signal <mux0002$sub0000> created at line 143.
+    Found 10-bit subtractor for signal <pixel_col_aux$addsub0000> created at line 163.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+Unit <aplicVGA> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 10x6-bit ROM                                          : 1
+ 256x8-bit ROM                                         : 1
+# Adders/Subtractors                                   : 6
+ 10-bit subtractor                                     : 5
+ 32-bit adder                                          : 1
+# Counters                                             : 5
+ 10-bit up counter                                     : 2
+ 32-bit up counter                                     : 3
+# Registers                                            : 24
+ 1-bit register                                        : 23
+ 16-bit register                                       : 1
+# Latches                                              : 5
+ 10-bit latch                                          : 2
+ 4-bit latch                                           : 1
+ 5-bit latch                                           : 1
+ 6-bit latch                                           : 1
+# Comparators                                          : 19
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 4
+ 11-bit comparator greatequal                          : 5
+ 11-bit comparator greater                             : 1
+ 11-bit comparator less                                : 6
+ 32-bit comparator equal                               : 1
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <en> is unconnected in block <aplicVGA>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <cont> is unconnected in block <aplicVGA>.
+   It will be removed from the design.
+WARNING:Xst:2677 - Node <Q_0> of sequential type is unconnected in block <reg>.
+WARNING:Xst:2677 - Node <Q_1> of sequential type is unconnected in block <reg>.
+WARNING:Xst:2677 - Node <Q_2> of sequential type is unconnected in block <reg>.
+WARNING:Xst:2677 - Node <Q_3> of sequential type is unconnected in block <reg>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 10x6-bit ROM                                          : 1
+ 256x8-bit ROM                                         : 1
+# Adders/Subtractors                                   : 6
+ 10-bit subtractor                                     : 5
+ 32-bit adder                                          : 1
+# Counters                                             : 5
+ 10-bit up counter                                     : 2
+ 32-bit up counter                                     : 3
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+# Latches                                              : 5
+ 10-bit latch                                          : 2
+ 4-bit latch                                           : 1
+ 5-bit latch                                           : 1
+ 6-bit latch                                           : 1
+# Comparators                                          : 19
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 4
+ 11-bit comparator greatequal                          : 5
+ 11-bit comparator greater                             : 1
+ 11-bit comparator less                                : 6
+ 32-bit comparator equal                               : 1
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 8
+ 1-bit xor2                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <address_mux0014_5> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <en/Q_tmp> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <cont/Q_tmp_0> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:1710 - FF/Latch <address_mux0014_4> (without init value) has a constant value of 0 in block <aplicVGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <pixel_row_aux_3> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_row_aux_4> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_row_aux_5> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_row_aux_6> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_row_aux_7> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_row_aux_8> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_row_aux_9> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_col_aux_3> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_col_aux_4> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_col_aux_5> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_col_aux_6> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_col_aux_7> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_col_aux_8> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <pixel_col_aux_9> of sequential type is unconnected in block <aplicVGA>.
+
+Optimizing unit <aplicVGA> ...
+
+Optimizing unit <vga_ctrl> ...
+
+Optimizing unit <registro_2> ...
+
+Optimizing unit <contador9999> ...
+WARNING:Xst:2677 - Node <ccc/reg/Q_3> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <ccc/reg/Q_2> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <ccc/reg/Q_1> of sequential type is unconnected in block <aplicVGA>.
+WARNING:Xst:2677 - Node <ccc/reg/Q_0> of sequential type is unconnected in block <aplicVGA>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block aplicVGA, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 85
+ Flip-Flops                                            : 85
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : aplicVGA.ngr
+Top Level Output File Name         : aplicVGA
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 29
+
+Cell Usage :
+# BELS                             : 448
+#      GND                         : 1
+#      INV                         : 17
+#      LUT1                        : 56
+#      LUT2                        : 29
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 62
+#      LUT4                        : 122
+#      LUT4_D                      : 2
+#      LUT4_L                      : 1
+#      MUXCY                       : 71
+#      MUXF5                       : 14
+#      VCC                         : 1
+#      XORCY                       : 70
+# FlipFlops/Latches                : 104
+#      FDCE                        : 18
+#      FDE                         : 13
+#      FDR                         : 34
+#      FDRE                        : 20
+#      LD                          : 8
+#      LDCPE                       : 11
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 1
+#      OBUF                        : 10
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      160  out of   4656     3%  
+ Number of Slice Flip Flops:            104  out of   9312     1%  
+ Number of 4 input LUTs:                291  out of   9312     3%  
+ Number of IOs:                          29
+ Number of bonded IOBs:                  12  out of    232     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)     | Load  |
+-----------------------------------+---------------------------+-------+
+address_or0000(address_or00001:O)  | NONE(*)(address_mux0014_0)| 4     |
+num_not0001(num_not00011:O)        | NONE(*)(num_0)            | 4     |
+digito_and0001(grn_in1192:O)       | NONE(*)(digito_0)         | 11    |
+clk                                | BUFGP                     | 85    |
+-----------------------------------+---------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------+----------------------------------------------------------+-------+
+Control Signal                                               | Buffer(FF name)                                          | Load  |
+-------------------------------------------------------------+----------------------------------------------------------+-------+
+ccc/bdc/inst_contBCD1/r_temp(ccc/bdc/inst_contBCD1/r_temp1:O)| NONE(ccc/bdc/inst_contBCD1/lcont4b1/lcont2b1/inst_FFD1/Q)| 4     |
+ccc/bdc/inst_contBCD2/r_temp(ccc/bdc/inst_contBCD2/r_temp1:O)| NONE(ccc/bdc/inst_contBCD2/lcont4b1/lcont2b1/inst_FFD1/Q)| 4     |
+ccc/bdc/inst_contBCD3/r_temp(ccc/bdc/inst_contBCD3/r_temp1:O)| NONE(ccc/bdc/inst_contBCD3/lcont4b1/lcont2b1/inst_FFD1/Q)| 4     |
+ccc/bdc/inst_contBCD4/r_temp(ccc/bdc/inst_contBCD4/r_temp1:O)| NONE(ccc/bdc/inst_contBCD4/lcont4b1/lcont2b1/inst_FFD1/Q)| 4     |
+N0(XST_GND:G)                                                | NONE(ccc/dalay/Q_0)                                      | 3     |
+digito_0__and0000(digito_0__and00001:O)                      | NONE(digito_0)                                           | 1     |
+digito_0__or0000(digito_and0000103:O)                        | NONE(digito_0)                                           | 1     |
+digito_1__and0000(enable_and000094:O)                        | NONE(digito_1)                                           | 1     |
+digito_1__or0000(digito_1__or00001:O)                        | NONE(digito_1)                                           | 1     |
+digito_2__and0000(digito_2__and00001:O)                      | NONE(digito_2)                                           | 1     |
+digito_2__or0000(digito_2__or00001:O)                        | NONE(digito_2)                                           | 1     |
+digito_3__and0000(digito_3__and000011:O)                     | NONE(digito_3)                                           | 1     |
+digito_3__or0000(digito_3__or00001:O)                        | NONE(digito_3)                                           | 1     |
+digito_4__or0000(digito_4__or00001:O)                        | NONE(digito_4)                                           | 1     |
+pixel_col_aux_0__and0000(pixel_col_aux_0__and000011:O)       | NONE(pixel_col_aux_0)                                    | 1     |
+pixel_col_aux_0__and0001(pixel_col_aux_0__and000111:O)       | NONE(pixel_col_aux_0)                                    | 1     |
+pixel_col_aux_1__and0000(pixel_col_aux_1__and000011:O)       | NONE(pixel_col_aux_1)                                    | 1     |
+pixel_col_aux_1__and0001(pixel_col_aux_1__and000111:O)       | NONE(pixel_col_aux_1)                                    | 1     |
+pixel_col_aux_2__and0000(pixel_col_aux_2__and000011:O)       | NONE(pixel_col_aux_2)                                    | 1     |
+pixel_col_aux_2__and0001(pixel_col_aux_2__and000111:O)       | NONE(pixel_col_aux_2)                                    | 1     |
+pixel_row_aux_0__and0000(pixel_row_aux_0__and00001:O)        | NONE(pixel_row_aux_0)                                    | 1     |
+pixel_row_aux_0__and0001(pixel_row_aux_0__and00011:O)        | NONE(pixel_row_aux_0)                                    | 1     |
+pixel_row_aux_1__and0000(pixel_row_aux_1__and00001:O)        | NONE(pixel_row_aux_1)                                    | 1     |
+pixel_row_aux_1__and0001(pixel_row_aux_1__and00011:O)        | NONE(pixel_row_aux_1)                                    | 1     |
+pixel_row_aux_2__and0000(pixel_row_aux_2__and00001:O)        | NONE(pixel_row_aux_2)                                    | 1     |
+pixel_row_aux_2__and0001(pixel_row_aux_2__and00011:O)        | NONE(pixel_row_aux_2)                                    | 1     |
+-------------------------------------------------------------+----------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.364ns (Maximum Frequency: 157.146MHz)
+   Minimum input arrival time before clock: 1.946ns
+   Maximum output required time after clock: 20.728ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.364ns (frequency: 157.146MHz)
+  Total number of paths / destination ports: 2143 / 185
+-------------------------------------------------------------------------
+Delay:               6.364ns (Levels of Logic = 10)
+  Source:            ccc/ge/contador_8 (FF)
+  Destination:       ccc/ge/Q_tmp (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ccc/ge/contador_8 to ccc/ge/Q_tmp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.622  ccc/ge/contador_8 (ccc/ge/contador_8)
+     LUT4:I0->O            1   0.704   0.000  ccc/ge/contador_cmp_eq0000_wg_lut<0> (ccc/ge/contador_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  ccc/ge/contador_cmp_eq0000_wg_cy<0> (ccc/ge/contador_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  ccc/ge/contador_cmp_eq0000_wg_cy<1> (ccc/ge/contador_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  ccc/ge/contador_cmp_eq0000_wg_cy<2> (ccc/ge/contador_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  ccc/ge/contador_cmp_eq0000_wg_cy<3> (ccc/ge/contador_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  ccc/ge/contador_cmp_eq0000_wg_cy<4> (ccc/ge/contador_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  ccc/ge/contador_cmp_eq0000_wg_cy<5> (ccc/ge/contador_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  ccc/ge/contador_cmp_eq0000_wg_cy<6> (ccc/ge/contador_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          33   0.331   1.263  ccc/ge/contador_cmp_eq0000_wg_cy<7> (ccc/ge/contador_cmp_eq0000)
+     INV:I->O              1   0.704   0.420  ccc/ge/Q_tmp_not00011_INV_0 (ccc/ge/Q_tmp_not0001)
+     FDR:R                     0.911          ccc/ge/Q_tmp
+    ----------------------------------------
+    Total                      6.364ns (4.059ns logic, 2.305ns route)
+                                       (63.8% logic, 36.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.946ns (Levels of Logic = 1)
+  Source:            input (PAD)
+  Destination:       ccc/ff/Q_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: input to ccc/ff/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  input_IBUF (input_IBUF)
+     FDCE:D                    0.308          ccc/ff/Q_0
+    ----------------------------------------
+    Total                      1.946ns (1.526ns logic, 0.420ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 25106 / 10
+-------------------------------------------------------------------------
+Offset:              20.728ns (Levels of Logic = 12)
+  Source:            aaa/hc_5 (FF)
+  Destination:       red_out<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: aaa/hc_5 to red_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            13   0.591   1.158  aaa/hc_5 (aaa/hc_5)
+     LUT3:I0->O            4   0.704   0.666  aaa/pixel_col<9>11 (aaa/N1)
+     LUT3:I1->O            1   0.704   0.424  aaa/vidon_and00008 (aaa/vidon_and00008)
+     LUT4:I3->O            1   0.704   0.455  aaa/vidon_and0000147_SW0 (N59)
+     LUT4:I2->O           25   0.704   1.435  aaa/vidon_and0000147 (aaa/vidon)
+     LUT3:I0->O            3   0.704   0.706  aaa/pixel_row<1>1 (pixel_row<1>)
+     LUT3:I0->O            1   0.704   0.499  digito_cmp_lt0000212 (digito_cmp_lt0000212)
+     LUT4:I1->O           16   0.704   1.209  digito_cmp_lt0000247 (digito_cmp_lt0000)
+     LUT4:I0->O           10   0.704   0.961  enable_and000199 (enable_and0001)
+     LUT4:I1->O            1   0.704   0.455  grn_in_SW0 (N33)
+     LUT4:I2->O            2   0.704   0.622  grn_in (grn_in)
+     LUT4:I0->O            3   0.704   0.531  aaa/red_o_and000043 (red_out_0_OBUF)
+     OBUF:I->O                 3.272          red_out_2_OBUF (red_out<2>)
+    ----------------------------------------
+    Total                     20.728ns (11.607ns logic, 9.121ns route)
+                                       (56.0% logic, 44.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'digito_and0001'
+  Total number of paths / destination ports: 2352 / 6
+-------------------------------------------------------------------------
+Offset:              17.829ns (Levels of Logic = 13)
+  Source:            digito_0 (LATCH)
+  Destination:       red_out<2> (PAD)
+  Source Clock:      digito_and0001 falling
+
+  Data Path: digito_0 to red_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCPE:G->Q            7   0.676   0.883  digito_0 (digito_0)
+     LUT3:I0->O            6   0.704   0.704  address<1>11 (N01)
+     LUT3:I2->O           25   0.704   1.339  address<0>1 (address<0>)
+     LUT4:I1->O            1   0.704   0.595  bbb/Mrom_rom_out_varindex00003031 (N46)
+     LUT4:I0->O            1   0.704   0.455  bbb/Mrom_rom_out_varindex000030 (bbb/Mrom_rom_out_varindex000030)
+     LUT3:I2->O            1   0.704   0.000  bbb/Mmux_rom_out_15 (bbb/Mmux_rom_out_15)
+     MUXF5:I0->O           1   0.321   0.499  bbb/Mmux_rom_out_13_f5 (bbb/Mmux_rom_out_13_f5)
+     LUT3:I1->O            1   0.704   0.000  bbb/Mmux_rom_out_10 (bbb/Mmux_rom_out_10)
+     MUXF5:I0->O           1   0.321   0.455  bbb/Mmux_rom_out_8_f5 (bbb/Mmux_rom_out_8_f5)
+     LUT3:I2->O            1   0.704   0.000  bbb/Mmux_rom_out_4 (bbb/Mmux_rom_out_4)
+     MUXF5:I0->O           1   0.321   0.499  bbb/Mmux_rom_out_2_f5 (rom_out1)
+     LUT4:I1->O            2   0.704   0.622  grn_in (grn_in)
+     LUT4:I0->O            3   0.704   0.531  aaa/red_o_and000043 (red_out_0_OBUF)
+     OBUF:I->O                 3.272          red_out_2_OBUF (red_out<2>)
+    ----------------------------------------
+    Total                     17.829ns (11.247ns logic, 6.582ns route)
+                                       (63.1% logic, 36.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'address_or0000'
+  Total number of paths / destination ports: 408 / 6
+-------------------------------------------------------------------------
+Offset:              16.204ns (Levels of Logic = 12)
+  Source:            address_mux0014_0 (LATCH)
+  Destination:       red_out<2> (PAD)
+  Source Clock:      address_or0000 falling
+
+  Data Path: address_mux0014_0 to red_out<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               4   0.676   0.666  address_mux0014_0 (address_mux0014_0)
+     LUT3:I1->O           25   0.704   1.339  address<0>1 (address<0>)
+     LUT4:I1->O            1   0.704   0.595  bbb/Mrom_rom_out_varindex00003031 (N46)
+     LUT4:I0->O            1   0.704   0.455  bbb/Mrom_rom_out_varindex000030 (bbb/Mrom_rom_out_varindex000030)
+     LUT3:I2->O            1   0.704   0.000  bbb/Mmux_rom_out_15 (bbb/Mmux_rom_out_15)
+     MUXF5:I0->O           1   0.321   0.499  bbb/Mmux_rom_out_13_f5 (bbb/Mmux_rom_out_13_f5)
+     LUT3:I1->O            1   0.704   0.000  bbb/Mmux_rom_out_10 (bbb/Mmux_rom_out_10)
+     MUXF5:I0->O           1   0.321   0.455  bbb/Mmux_rom_out_8_f5 (bbb/Mmux_rom_out_8_f5)
+     LUT3:I2->O            1   0.704   0.000  bbb/Mmux_rom_out_4 (bbb/Mmux_rom_out_4)
+     MUXF5:I0->O           1   0.321   0.499  bbb/Mmux_rom_out_2_f5 (rom_out1)
+     LUT4:I1->O            2   0.704   0.622  grn_in (grn_in)
+     LUT4:I0->O            3   0.704   0.531  aaa/red_o_and000043 (red_out_0_OBUF)
+     OBUF:I->O                 3.272          red_out_2_OBUF (red_out<2>)
+    ----------------------------------------
+    Total                     16.204ns (10.543ns logic, 5.661ns route)
+                                       (65.1% logic, 34.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.83 secs
+ 
+--> 
+
+Total memory usage is 141152 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   46 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
