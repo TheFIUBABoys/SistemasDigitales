@@ -7,7 +7,7 @@ use IEEE.std_logic_1164.all;
 entity FFD is
 	port (
 		clk: in std_logic;
-		rst: in std_logic;
+		reset: in std_logic;
 		d: in std_logic;
 		Q: out std_logic;
 		enable: in std_logic
@@ -18,9 +18,9 @@ end;
 
 architecture FFD_arq of FFD is
 begin
-	process(clk, rst, enable)
+	process(clk, reset, enable)
 	  begin
-		if rst = '1' then
+		if reset = '1' then
 			Q <= '0';	
 		elsif rising_edge(clk) then
 			if enable ='1' then
@@ -37,7 +37,7 @@ use IEEE.std_logic_1164.all;
 entity cont2b is
 	port (
 		clk: in std_logic;
-		rst: in std_logic;
+		reset: in std_logic;
 		enable: in std_logic;
 		Q0: out std_logic;
 		Q1: out std_logic
@@ -48,7 +48,7 @@ architecture cont2b_arq of cont2b is
 component FFD is
 	port (
 	clk: in std_logic;
-	rst: in std_logic;
+	reset: in std_logic;
 	d: in std_logic;
 	Q: out std_logic;
 	enable: in std_logic
@@ -58,8 +58,8 @@ signal d: std_logic_vector(0 to 1):="00";
 signal q: std_logic_vector(0 to 1):="00";
 
 begin
-	inst_FFD1: FFD port map(clk,rst,d(0),q(0),enable);
-	inst_FFD2: FFD port map(clk,rst,d(1),q(1),enable);
+	inst_FFD1: FFD port map(clk,reset,d(0),q(0),enable);
+	inst_FFD2: FFD port map(clk,reset,d(1),q(1),enable);
 	
 	d(0)<= not q(0);
 	d(1)<= q(0) xor q(1);
@@ -75,7 +75,7 @@ use IEEE.std_logic_1164.all;
 entity cont4b is
 	port (
 		clk: in std_logic;
-		rst: in std_logic;
+		reset: in std_logic;
 		enable: in std_logic;
 		Q: out std_logic_vector(3 downto 0)
 	);
@@ -85,7 +85,7 @@ architecture cont4b_arq of cont4b is
 component cont2b is
 	port (
 		clk: in std_logic;
-		rst: in std_logic;
+		reset: in std_logic;
 		enable: in std_logic;
 		Q0: out std_logic;
 		Q1: out std_logic
@@ -97,11 +97,11 @@ signal q2_temp: std_logic;
 signal en_temp: std_logic;
 
 begin
-	lcont2b1: cont2b port map(clk,rst,enable,q_temp, q2_temp);
+	lcont2b1: cont2b port map(clk,reset,enable,q_temp, q2_temp);
 	Q(0) <= q_temp;
 	Q(1) <= q2_temp;
 	en_temp <= (q_temp and q2_temp) and enable;
-	lcont2b2: cont2b port map(clk,rst, en_temp, Q(2), Q(3));
+	lcont2b2: cont2b port map(clk,reset, en_temp, Q(2), Q(3));
 end cont4b_arq;
 
 
@@ -111,7 +111,7 @@ use IEEE.std_logic_1164.all;
 entity contBCD is
 	port (
 		clk: in std_logic;
-		rst: in std_logic;
+		reset: in std_logic;
 		enable: in std_logic;
 		Q: out std_logic_vector(3 downto 0)
 	);
@@ -122,7 +122,7 @@ architecture contBCD_arq of contBCD is
 	component cont4b is
 	port (
 		clk: in std_logic;
-		rst: in std_logic;
+		reset: in std_logic;
 		enable: in std_logic;
 		q: out std_logic_vector(3 downto 0)
 	);
@@ -133,7 +133,7 @@ signal Q_temp: std_logic_vector(3 downto 0);
 begin
 	lcont4b1: cont4b port map(clk,r_temp,enable,Q_temp);
 	
-	r_temp <= (( Q_temp(0) nor Q_temp(2) ) and ( Q_temp(3) and Q_temp(1) )) or (rst);
+	r_temp <= (( Q_temp(0) nor Q_temp(2) ) and ( Q_temp(3) and Q_temp(1) )) or (reset);
 	
 	Q<= Q_temp;
 end contBCD_arq;
@@ -288,7 +288,7 @@ architecture contador9999_arq of contador9999 is
 	component contBCD is
 	port (
 		clk: in std_logic;
-		rst: in std_logic;
+		reset: in std_logic;
 		enable: in std_logic;
 		q: out std_logic_vector(3 downto 0)
 	);
@@ -343,36 +343,36 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 entity GenEnable is
-  generic(contarHasta: integer);
+  generic(max: integer);
   port(
     clk : in std_logic;
-    rst : in std_logic;
+    reset : in std_logic;
     enable : in std_logic;
     Q : out std_logic
   );
 end entity GenEnable;
   
 architecture arq_GenEnable of GenEnable is
-signal contador: integer;
-signal Q_tmp : std_logic;
+signal counter: integer;
+signal q_tmp : std_logic;
 begin
-process(clk, rst)
-begin
-	if (rst='1') then
-		contador <= 0;
-		Q_tmp <= '0';
-	elsif (rising_edge(clk)) then
-		if (enable = '1') then
-			contador <= contador + 1;
-			Q_tmp <= '0';
-			if (contador = contarHasta) then
-				contador <= 0;
-				Q_tmp <= '1';
-			end if;
-		end if;
-	end if;
-end process;
-Q <= Q_tmp;
+count_proc: process(clk, reset)
+    begin
+        if (reset='1') then
+            counter <= 0;
+			q_tmp <= '0';
+        elsif (rising_edge(clk)) then
+            if (enable = '1') then
+                counter <= counter + 1;
+				q_tmp <= '0';
+                if (counter = max) then
+					counter <= 0;
+					q_tmp <= '1';
+				end if;
+            end if;
+        end if;
+    end process count_proc;
+Q <= q_tmp;
 end architecture arq_GenEnable;
 	
 	
@@ -404,10 +404,10 @@ architecture controladorDisplay_arq of controladorDisplay is
 	end component;
 	
 	component GenEnable is
-	  generic(contarHasta: integer);
+	  generic(max: integer);
 	  port(
 		clk : in std_logic;
-		rst : in std_logic;
+		reset : in std_logic;
 		enable : in std_logic;
 		Q : out std_logic
 	  );
@@ -417,7 +417,7 @@ architecture controladorDisplay_arq of controladorDisplay is
 	component cont2b is
 	port (
 		clk: in std_logic;
-		rst: in std_logic;
+		reset: in std_logic;
 		enable: in std_logic;
 		Q0: out std_logic;
 		Q1: out std_logic
@@ -517,12 +517,13 @@ architecture Tp1_arq of Tp1 is
 	end component;
 	
 	component GenEnable is
-  generic(contarHasta: integer);
+  generic(max: integer);
   port(
-
+--- Entradad del clock
     clk : in std_logic;
-    rst : in std_logic;
+    reset : in std_logic;
     enable : in std_logic;
+--- Salida del contador. Cuenta en binario
     Q : out std_logic
   );
 end component;
