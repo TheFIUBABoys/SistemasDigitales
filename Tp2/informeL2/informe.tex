@@ -32,6 +32,7 @@ En el presente trabajo práctico se detallará el diseño, desarrollo e implemen
 		\centering
 		\includegraphics{img/general.png}
 		\caption{Diagrama en bloques de la arquitectura propuesta por el enunciado.}
+		 \label{glob}
 	\end{figure}
 	\subsection{Diagrama bloque procesamiento de datos y control}
 		\begin{figure}[h]
@@ -39,6 +40,18 @@ En el presente trabajo práctico se detallará el diseño, desarrollo e implemen
 		\includegraphics[width=13cm]{img/fpga.png}
 		\caption{Diagrama del bloque de procesamiento.}
 	\end{figure}
+	
+\section{Conversión A/D}
+
+Se utilizó un conversor A/D mediante modulación Sigma/Delta, basado en el siguiente esquema:
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=13cm]{img/sd.png}
+		\caption{Conversor sigma/delta}
+	\end{figure}
+
+El circuito se implementó con dos resistencias y un capacitor, como puede verse en la figura \ref{glob}.
+
 \section{Descripción de los componentes}
 \subsection{Contador BCD}
 El contador BCD de 0000 a 9999 se tomó del trabajo práctico anterior. Está implementado con 4 contadores binarios de 4 bits.
@@ -48,10 +61,10 @@ Este contador se implementó mediante el generador de enable utilizado en el tr�
 el ciclo N+1 resetea el contador BCD y desactiva el enable del registro.
 
 \subsection{Multiplexor}
-El multiplexor se implementó mediante un process en el controlador VGA; en base a la posición actual en pantalla y el valor de la cuenta BCD almacenada en el registro, se elige el índice que corresponde a este en la memoria ROM.
+El multiplexor se implementó mediante un process en el controlador VGA; en base a la posición actual en pantalla y el valor de la cuenta BCD almacenada en el registro, se elige el índice que corresponde al dígito almacenado en la memoria ROM.
 
 \subsection{Controlador VGA - ROM}
-Estos controladores se tomaron de la página de la materia; se agregaron los caracteres necesarios en la memoria y se modificó la integración VGA-ROM para poder mostrar varios dígitos.
+Estos controladores se tomaron de la página de la materia; se agregaron los caracteres necesarios en la memoria y se modificó la integración VGA-ROM para poder mostrar varios dígitos en posiciones distintas.
 
 \section{Tests realizadas}
 Los componentes tomados del trabajo N 1 ya habían sido probados en éste. Respecto de los componentes de este trabajo, sólo se tuvo que agregar un registro, que se probó fácilmente:
@@ -61,7 +74,7 @@ Los componentes tomados del trabajo N 1 ya habían sido probados en éste. Respe
 		\caption{Captura de pantalla del test del registro.}
 	\end{figure}
 	
-La integración de los bloques se testeó directamente por la pantalla.
+La integración de los bloques con el controlador VGA y la memoria ROM se testeó directamente por la pantalla.
 \section{Resumen del output de la sintetización}
 \includepdf[scale=0.8,pages={1,2}]{AplicVGA_summary.pdf}
 
