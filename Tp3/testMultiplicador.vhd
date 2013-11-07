@@ -71,21 +71,51 @@ architecture testShifter of test is
 component shifter is
      generic(N: integer:= 4);   		 -- valor genérico
      port(
-		clk, rst, ena: in std_logic;
-		bin: in std_logic;
-		l_r_select: in std_logic;
-		bout: out std_logic;
-		R: out std_logic_vector(N-1 downto 0)	 -- operando B
+        clk, rst, ena, load: in std_logic;
+        bin: in std_logic;
+        l_r_select: in std_logic;
+        bout: out std_logic;
+        Rin: in std_logic_vector(N-1 downto 0);
+        R: out std_logic_vector(N-1 downto 0)         -- operando B
      );
 end component;
-signal clk, rst, ena, bin_t, bout_t, l_r : std_logic  := '1';
+
+signal clk, rst, ena, load, bin_t, bout_t : std_logic  := '0';
+signal l_r : std_logic  := '1';
 signal R_t: std_logic_vector(7 downto 0);
+signal D_t: std_logic_vector(7 downto 0);
 begin
 	clk <= not clk after 10 ns;
 	ena <= not ena after 20 ns;
-	rst <= '0';
+	rst <= '0' after 10 ns;
+	load <= '1' after 1000 ns, '0' after 1010 ns;
+	D_t <= "00000011";
 	bin_t <= not bin_t after 15 ns;
 	l_r <= not l_r after 2000 ns;
 	
-	shifter_inst: shifter generic map (8) port map(clk,rst,ena,bin_t,l_r,bout_t,R_t);
+	shifter_inst: shifter generic map (8) port map(clk,rst,ena,load,bin_t,l_r,bout_t,D_t,R_t);
+end architecture;
+
+architecture testMult of test is 
+component multiplicador is
+    generic(N: natural:= 5);
+    port(
+        OpA: in std_logic_vector(N-1 downto 0);
+        OpB: in std_logic_vector(N-1 downto 0);
+        Load: in std_logic;
+        Clk: in std_logic;
+        Resultado: out std_logic_vector(2*N-1 downto 0)
+    );
+end component;
+signal clk : std_logic  := '1';
+signal load : std_logic  := '0';
+signal A_t, B_t: std_logic_vector(3 downto 0);
+signal R_t: std_logic_vector(7 downto 0);
+begin
+	clk <= not clk after 10 ns;
+	load <= '1' after 10 ns, '0' after 30 ns;
+	A_t <= "0100";
+	B_t <= "0010";
+	
+	mul: multiplicador generic map (4) port map(A_t,B_t,load,clk,R_t);
 end architecture;
