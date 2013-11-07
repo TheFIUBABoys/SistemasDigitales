@@ -1,0 +1,171 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp3
+Erestadorfp
+Z1 w1383854729
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp3
+Z5 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/restadorFP.vhd
+Z6 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/restadorFP.vhd
+l0
+L86
+VPg7BNglAgAZHA^jmXT[5]2
+!s100 e4OT[9_HiHb^H5kln`zEz3
+Z7 OE;C;6.6b;45
+32
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1
+Abeh
+R2
+R3
+Z10 DEx4 work 10 restadorfp 0 22 Pg7BNglAgAZHA^jmXT[5]2
+l110
+L96
+VZdoL>`KFYm[;ikKb1C^cE1
+!s100 :aRZ]F]Y_VW8`L4=UP_FH2
+R7
+32
+Z11 Mx2 4 ieee 14 std_logic_1164
+Z12 Mx1 4 ieee 11 numeric_std
+R8
+R9
+Eshifter
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L44
+VWM6X<S3i3HA5[FZ0OWzPV2
+!s100 _b5;EKCZJi9@Jf`_N<Qb^2
+R7
+32
+R8
+R9
+Abeh
+R2
+R3
+Z13 DEx4 work 7 shifter 0 22 WM6X<S3i3HA5[FZ0OWzPV2
+l57
+L55
+Z14 Vg4@l4Q[`7kEMN90CQ75FS3
+!s100 WVS^_=cjo7BAQLZDSBE__2
+R7
+32
+R11
+R12
+R8
+R9
+Esumador
+Z15 w1383845961
+R2
+R3
+R4
+Z16 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testRestadorFP.vhd
+Z17 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testRestadorFP.vhd
+l0
+L5
+VJCPBnmjM@1dc5a9>]?HJ?0
+R7
+32
+R8
+R9
+!s100 WhEG`YG]jXQSXAh<THbND2
+Asum
+R2
+R3
+DEx4 work 7 sumador 0 22 JCPBnmjM@1dc5a9>]?HJ?0
+l19
+L16
+VXZMF[i?SiR1cFi>BooPIW3
+!s100 eC^[1LRXF7C0figGKW<Fo2
+R7
+32
+R11
+R12
+R8
+R9
+Esumadorrestador
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L5
+V@H@15RPOzII79X1f=Cc7e3
+!s100 KOdJg`_O7YQ>hROz5ImC40
+R7
+32
+R8
+R9
+Asumrest
+R2
+R3
+Z18 DEx4 work 15 sumadorrestador 0 22 @H@15RPOzII79X1f=Cc7e3
+l29
+L16
+Z19 VJc42jOW0XB9i;4VNAjXjC3
+!s100 laWfiKF658Q4z>7oD3mf82
+R7
+32
+R11
+R12
+R8
+R9
+Etest
+R15
+R3
+R4
+Z20 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testMultiplicador.vhd
+Z21 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testMultiplicador.vhd
+l0
+L5
+V<O8RUA7:OzjW6VXYU82@W1
+R7
+32
+R8
+R9
+!s100 YOODBm5@mBnNgLjA23=IP1
+Atestshifter
+R3
+Z22 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
+l83
+L70
+V84oS>zK2<cY>^Z8gzMn0P0
+R7
+32
+Z23 Mx1 4 ieee 14 std_logic_1164
+R8
+R9
+!s100 Tlf6^19b:8]R5O0DM8nJ90
+Atestsumadorrestador
+R3
+R22
+l63
+L50
+V;5jU[VR:9VR:SA4[NHYmW3
+R7
+32
+R23
+R8
+R9
+!s100 7EDF[VFD5_906OdYLLMY40
+Atestsumador
+R3
+R22
+l21
+L8
+Vobj_kiaI5dh3O]A]kV85A3
+R7
+32
+R23
+R8
+R9
+!s100 0BZV7bCf6e8`n^RIln>Jn3

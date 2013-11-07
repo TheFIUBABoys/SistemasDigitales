@@ -1,0 +1,156 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp3
+T_opt
+VMFoSc=^zD>TM2<E@>Ri053
+Z1 04 9 10 work testbench simulacion 1
+Z2 =7-bc5ff412135b-527be059-6d-614
+Z3 o-quiet -auto_acc_if_foreign -work work
+Z4 n@_opt
+Z5 OE;O;6.6b;45
+Z6 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp3
+Edelay_gen
+Z7 w1352317474
+Z8 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z9 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z10 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z11 dC:\Documents and Settings\alumno\Escritorio\SisDigit\testbench
+Z12 8C:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/delay.vhd
+Z13 FC:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/delay.vhd
+l0
+L6
+Z14 V38DV;IR;:8H9CKZOPZDQ[0
+Z15 OE;C;6.6b;45
+32
+Z16 o-work work -2002 -explicit
+Z17 tExplicit 1
+Z18 !s100 eGUBLj>ACdML[cPkk;lFi0
+Adel
+R8
+R9
+R10
+Z19 DEx4 work 9 delay_gen 0 22 38DV;IR;:8H9CKZOPZDQ[0
+l32
+L18
+Z20 VT?Kk4ZKRDALR@hb<[TGjb0
+R15
+32
+Z21 Mx3 4 ieee 14 std_logic_1164
+Z22 Mx2 4 ieee 18 std_logic_unsigned
+Z23 Mx1 4 ieee 15 std_logic_arith
+R16
+R17
+Z24 !s100 ^a:@9LfSEdi`G6kZ1YG5K1
+Effd
+Z25 w1352211976
+R10
+R11
+Z26 8C:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/ffd.vhd
+Z27 FC:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/ffd.vhd
+l0
+L4
+Z28 VZKgBR_Tjm4ZN2QTGDBS8d3
+R15
+32
+R16
+R17
+Z29 !s100 ki^i_i]hi7K^JQSB^4^[@0
+App
+R10
+Z30 DEx4 work 3 ffd 0 22 ZKgBR_Tjm4ZN2QTGDBS8d3
+l15
+L14
+Z31 V?JClZ0HaT=[7N2neLR5RT3
+R15
+32
+Z32 Mx1 4 ieee 14 std_logic_1164
+R16
+R17
+Z33 !s100 1Nz?mnTR73ckU5Qaef4aa0
+Esumador
+Z34 w1352221842
+R8
+R9
+R10
+R11
+Z35 8C:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/sumador.vhd
+Z36 FC:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/sumador.vhd
+l0
+L6
+Z37 Vm@571DCgX6f5235AWlXG`1
+R15
+32
+R16
+R17
+Z38 !s100 `Mc>DJSzD8WdEQcUj;Kk>2
+Aarq_clock
+R8
+R9
+R10
+Z39 DEx4 work 7 sumador 0 22 m@571DCgX6f5235AWlXG`1
+l29
+L27
+Z40 VV01nYHGc_>G1aVB9R?D861
+R15
+32
+R21
+R22
+R23
+R16
+R17
+Z41 !s100 B2HKPN[R2H8Aj8kkEmI9X3
+Aarq_comb
+R8
+R9
+R10
+R39
+l20
+L18
+Z42 VjIJRLl6Ah^=3AKY:SKT8`2
+R15
+32
+R21
+R22
+R23
+R16
+R17
+Z43 !s100 <6_hjH>Z>1c@]^87[RLkd0
+Etestbench
+Z44 w1383848175
+Z45 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+Z46 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R10
+R11
+Z47 8C:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/testbench.vhd
+Z48 FC:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/testbench.vhd
+l0
+L6
+Z49 V0zEARfNL<:CcGGKEH?0>P0
+R15
+32
+R16
+R17
+Z50 !s100 @mgf3IflzT7gM4EKR[7jo3
+Asimulacion
+R8
+R9
+R39
+R45
+R46
+R10
+Z51 DEx4 work 9 testbench 0 22 0zEARfNL<:CcGGKEH?0>P0
+l52
+L9
+Z52 VZBP;SU<fi^mkbHD:5MF_<0
+R15
+32
+Z53 Mx5 4 ieee 14 std_logic_1164
+Z54 Mx4 4 ieee 11 numeric_std
+Z55 Mx3 3 std 6 textio
+R22
+R23
+R16
+R17
+Z56 !s100 k2CQQQOUJ:dkU4IoLJkZz0

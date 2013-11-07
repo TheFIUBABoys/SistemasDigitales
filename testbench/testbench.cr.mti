@@ -1,0 +1,17 @@
+{C:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/ffd.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/ffd.vhd}
+QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity ffd
+-- Compiling architecture pp of ffd
+
+} {} {}} {C:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/delay.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/testbench/delay.vhd}
+QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity delay_gen
+-- Compiling architecture del of delay_gen
+
+} {} {}}

@@ -1,0 +1,17 @@
+#############
+## PdfLatex
+#############
+
+*.log
+*.aux
+*.out
+*.toc
+*.synctex.gz
+
+# Questasim project
+
+*.cr.mti
+*.wlf
+^[^\.]*$
+*.vstf
+*/work/
