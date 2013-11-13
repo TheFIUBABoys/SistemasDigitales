@@ -131,8 +131,35 @@ Para la memoria ROM se declaro un array de 255x8 donde se guarda la configuraci�
 
 A través del controlador VGA ubicamos cada digito segun la fila y columna donde debia aparecer, obteniamos el digito correspondiente del contador de decadas y segun que numero era haciamos referencia a la dirección de la ROM donde se encontraba dicha representación.
 
+\subsection{Contador}
+
+Para el diseño del contador se uso un process que se encargaba de ir sumando hasta cierto valor, en el que reseteaba y volvia a empezar.
+
 \subsection{Conclusión}
 
 Con la realización del presente trabajo se logro aprender a hacer una aplicación para FPGA con salida VGA, esto nos permite tener una representación grafica mucho más flexible que la limitada por hardward como pueden ser los leds o displays de 7 segmentos.
+
+\begin{figure}[h!]
+  \centering
+	\includegraphics[scale=0.7]{aplicVGA_summary-1.png}\\[1cm] 
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+	\includegraphics[scale=0.7]{aplicVGA_summary-2.png}\\[1cm] 
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+	\includegraphics[scale=0.7]{Board_Top_summary-1.png}\\[1cm] 
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+	\includegraphics[scale=0.7]{Board_Top_summary-2.png}\\[1cm] 
+\end{figure}
+\subsection{Output sintetización}
+
+
 
 \end{document}
