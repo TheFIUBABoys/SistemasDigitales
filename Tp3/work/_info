@@ -2,170 +2,160 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp3
-Erestadorfp
-Z1 w1383854729
-Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
-Z4 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp3
-Z5 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/restadorFP.vhd
-Z6 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/restadorFP.vhd
+Z0 dC:\questasim_6.6b\examples
+T_opt
+V?HS?7J^8ma_o_9lSbFGjE3
+04 9 10 work testbench simulacion 1
+=1-bc5ff412135b-528522bc-2ee-c4c
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;6.6b;45
+Z1 dC:\questasim_6.6b\examples
+Edelay_gen
+Z2 w1384453002
+Z3 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z5 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z6 dC:\Documents and Settings\alumno\Escritorio\SisDigit\Tp3
+Z7 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/delay.vhd
+Z8 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/delay.vhd
 l0
-L86
-VPg7BNglAgAZHA^jmXT[5]2
-!s100 e4OT[9_HiHb^H5kln`zEz3
-Z7 OE;C;6.6b;45
+L6
+VznU:oXD:H1G<8fMYc^JK^1
+Z9 OE;C;6.6b;45
 32
-Z8 o-work work -2002 -explicit
-Z9 tExplicit 1
-Abeh
-R2
-R3
-Z10 DEx4 work 10 restadorfp 0 22 Pg7BNglAgAZHA^jmXT[5]2
-l110
-L96
-VZdoL>`KFYm[;ikKb1C^cE1
-!s100 :aRZ]F]Y_VW8`L4=UP_FH2
-R7
-32
-Z11 Mx2 4 ieee 14 std_logic_1164
-Z12 Mx1 4 ieee 11 numeric_std
-R8
-R9
-Eshifter
-R1
-R2
+Z10 o-work work -2002 -explicit
+Z11 tExplicit 1
+!s100 K@F;9DLo[6Aa[;iCdP2RL1
+Adel
 R3
 R4
 R5
-R6
-l0
-L44
-VWM6X<S3i3HA5[FZ0OWzPV2
-!s100 _b5;EKCZJi9@Jf`_N<Qb^2
-R7
-32
-R8
+DEx4 work 9 delay_gen 0 22 znU:oXD:H1G<8fMYc^JK^1
+l32
+L18
+Vm986aT1GN@RfYXTY^^_o]1
 R9
-Abeh
-R2
-R3
-Z13 DEx4 work 7 shifter 0 22 WM6X<S3i3HA5[FZ0OWzPV2
-l57
-L55
-Z14 Vg4@l4Q[`7kEMN90CQ75FS3
-!s100 WVS^_=cjo7BAQLZDSBE__2
-R7
 32
+Z12 Mx3 4 ieee 14 std_logic_1164
+Mx2 4 ieee 18 std_logic_unsigned
+Z13 Mx1 4 ieee 15 std_logic_arith
+R10
 R11
-R12
-R8
+!s100 MVBW<JOWjAg;1aKGoRO<]2
+Effd
+Z14 w1352211976
+R5
+R6
+Z15 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/ffd.vhd
+Z16 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/ffd.vhd
+l0
+L4
+VZKgBR_Tjm4ZN2QTGDBS8d3
 R9
-Esumador
-Z15 w1383845961
-R2
-R3
-R4
-Z16 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testRestadorFP.vhd
-Z17 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testRestadorFP.vhd
+32
+R10
+R11
+!s100 ki^i_i]hi7K^JQSB^4^[@0
+App
+R5
+DEx4 work 3 ffd 0 22 ZKgBR_Tjm4ZN2QTGDBS8d3
+l15
+L14
+V?JClZ0HaT=[7N2neLR5RT3
+!s100 1Nz?mnTR73ckU5Qaef4aa0
+R9
+32
+Z17 Mx1 4 ieee 14 std_logic_1164
+R10
+R11
+Erestadorfp
+Z18 w1384456949
+Z19 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R5
+R6
+Z20 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/restadorFP.vhd
+Z21 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/restadorFP.vhd
 l0
 L5
-VJCPBnmjM@1dc5a9>]?HJ?0
-R7
-32
-R8
+VQCFd^@fc=1J<XMoTLh[a93
+!s100 A1nn:e1PFT6mF5SL:jKd33
 R9
-!s100 WhEG`YG]jXQSXAh<THbND2
-Asum
-R2
-R3
-DEx4 work 7 sumador 0 22 JCPBnmjM@1dc5a9>]?HJ?0
-l19
-L16
-VXZMF[i?SiR1cFi>BooPIW3
-!s100 eC^[1LRXF7C0figGKW<Fo2
-R7
 32
+R10
 R11
-R12
-R8
+Abeh
+R19
+R5
+Z22 DEx4 work 10 restadorfp 0 22 QCFd^@fc=1J<XMoTLh[a93
+l40
+L17
+Z23 VG]oa9_AZR>[DnP;7Vi8h11
+!s100 MVk5;c?0i:4cHg7J3>YGa3
 R9
+32
+Z24 Mx2 4 ieee 14 std_logic_1164
+Z25 Mx1 4 ieee 11 numeric_std
+R10
+R11
 Esumadorrestador
-R1
-R2
-R3
-R4
+Z26 w1384456379
+R19
 R5
 R6
+R20
+R21
 l0
 L5
 V@H@15RPOzII79X1f=Cc7e3
-!s100 KOdJg`_O7YQ>hROz5ImC40
-R7
-32
-R8
 R9
+32
+R10
+R11
+!s100 KOdJg`_O7YQ>hROz5ImC40
 Asumrest
-R2
-R3
-Z18 DEx4 work 15 sumadorrestador 0 22 @H@15RPOzII79X1f=Cc7e3
+R19
+R5
+DEx4 work 15 sumadorrestador 0 22 @H@15RPOzII79X1f=Cc7e3
 l29
 L16
-Z19 VJc42jOW0XB9i;4VNAjXjC3
-!s100 laWfiKF658Q4z>7oD3mf82
-R7
+VJc42jOW0XB9i;4VNAjXjC3
+R9
 32
+R24
+R25
+R10
 R11
-R12
-R8
-R9
-Etest
-R15
-R3
-R4
-Z20 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testMultiplicador.vhd
-Z21 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testMultiplicador.vhd
+!s100 laWfiKF658Q4z>7oD3mf82
+Etestbench
+Z27 w1384453425
+Z28 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+R19
+R5
+R6
+Z29 8C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testRestadorFP.vhd
+Z30 FC:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testRestadorFP.vhd
 l0
-L5
-V<O8RUA7:OzjW6VXYU82@W1
-R7
-32
-R8
+L6
+VfR2?@V<^Q:bHQ^eUcdbMD3
 R9
-!s100 YOODBm5@mBnNgLjA23=IP1
-Atestshifter
-R3
-Z22 DEx4 work 4 test 0 22 <O8RUA7:OzjW6VXYU82@W1
-l83
-L70
-V84oS>zK2<cY>^Z8gzMn0P0
-R7
 32
-Z23 Mx1 4 ieee 14 std_logic_1164
-R8
+R10
+R11
+!s100 I3OKEaD@;n_ULIgPiA?o^3
+Asimulacion
+R28
+R19
+R5
+DEx4 work 9 testbench 0 22 fR2?@V<^Q:bHQ^eUcdbMD3
+l54
+L9
+V3?81AlHZQTDlB1FfWV`7I2
 R9
-!s100 Tlf6^19b:8]R5O0DM8nJ90
-Atestsumadorrestador
-R3
-R22
-l63
-L50
-V;5jU[VR:9VR:SA4[NHYmW3
-R7
 32
-R23
-R8
-R9
-!s100 7EDF[VFD5_906OdYLLMY40
-Atestsumador
-R3
-R22
-l21
-L8
-Vobj_kiaI5dh3O]A]kV85A3
-R7
-32
-R23
-R8
-R9
-!s100 0BZV7bCf6e8`n^RIln>Jn3
+R12
+Mx2 4 ieee 11 numeric_std
+Z31 Mx1 3 std 6 textio
+R10
+R11
+!s100 nz`f8T?F8mONEf0^W3g0:3

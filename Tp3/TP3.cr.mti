@@ -1,36 +1,26 @@
-{C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testMultiplicador.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testMultiplicador.vhd}
-QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
--- Loading package standard
--- Loading package std_logic_1164
--- Compiling entity test
--- Compiling architecture testsumador of test
--- Compiling architecture testsumadorrestador of test
--- Loading entity test
--- Compiling architecture testsumadorrestador of test
--- Loading entity test
--- Compiling architecture testshifter of test
--- Loading entity test
-
-} {} {}} {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/multiplicadorNBits.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/multiplicadorNBits.vhd}
+{C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testRestadorFP.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/testRestadorFP.vhd}
 QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
 -- Loading package standard
 -- Loading package std_logic_1164
 -- Loading package numeric_std
--- Compiling entity sumador
--- Compiling architecture sum of sumador
--- Compiling entity sumadorrestador
--- Compiling architecture sumrest of sumadorrestador
--- Compiling entity shifter
--- Compiling architecture beh of shifter
+-- Loading package textio
+-- Compiling entity testbench
+-- Compiling architecture simulacion of testbench
 
-} {} {}} {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/multiplicadorFP_Nbits.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/multiplicadorFP_Nbits.vhd}
+} {} {}} {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/delay.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/delay.vhd}
 QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
 -- Loading package standard
 -- Loading package std_logic_1164
--- Loading package numeric_std
--- Compiling entity sumador
--- Compiling architecture sum of sumador
--- Compiling entity sumadorrestador
--- Compiling architecture sumrest of sumadorrestador
+-- Loading package std_logic_arith
+-- Loading package std_logic_unsigned
+-- Compiling entity delay_gen
+-- Compiling architecture del of delay_gen
+
+} {} {}} {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/ffd.vhd} {1 {vcom -work work -2002 -explicit -vopt {C:/Documents and Settings/alumno/Escritorio/SisDigit/Tp3/ffd.vhd}
+QuestaSim vcom 6.6b Compiler 2010.05 May 21 2010
+-- Loading package standard
+-- Loading package std_logic_1164
+-- Compiling entity ffd
+-- Compiling architecture pp of ffd
 
 } {} {}}
