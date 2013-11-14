@@ -69,7 +69,7 @@ end architecture;
 
 architecture testShifter of test is 
 component shifter is
-     generic(N: integer:= 4);   		 -- valor genérico
+     generic(N: integer:= 4);                  -- valor genérico
      port(
         clk, rst, ena, load: in std_logic;
         bin: in std_logic;
@@ -87,7 +87,7 @@ signal D_t: std_logic_vector(7 downto 0);
 begin
 	clk <= not clk after 10 ns;
 	ena <= not ena after 20 ns;
-	rst <= '0' after 10 ns;
+	rst <= '0' after 10 ns,'1' after 400 ns;
 	load <= '1' after 1000 ns, '0' after 1010 ns;
 	D_t <= "00000011";
 	bin_t <= not bin_t after 15 ns;
@@ -109,13 +109,13 @@ component multiplicador is
 end component;
 signal clk : std_logic  := '1';
 signal load : std_logic  := '0';
-signal A_t, B_t: std_logic_vector(3 downto 0);
-signal R_t: std_logic_vector(7 downto 0);
+signal A_t, B_t: std_logic_vector(4 downto 0);
+signal R_t: std_logic_vector(9 downto 0);
 begin
 	clk <= not clk after 10 ns;
-	load <= '1' after 10 ns, '0' after 30 ns;
-	A_t <= "0100";
-	B_t <= "0010";
+	load <= '1' after 30 ns, '0' after 45 ns;						
+	A_t <= "01001";
+	B_t <= "01011";
 	
-	mul: multiplicador generic map (4) port map(A_t,B_t,load,clk,R_t);
+	mul: multiplicador generic map (5) port map(A_t,B_t,load,clk,R_t);
 end architecture;

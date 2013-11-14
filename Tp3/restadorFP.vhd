@@ -41,48 +41,6 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all; 
 
-entity shifter is
-     generic(N: integer:= 4);   		 -- valor genérico
-     port(
-		clk, rst, ena: in std_logic;
-		bin: in std_logic;
-		l_r_select: in std_logic;
-		bout: out std_logic;
-		R: out std_logic_vector(N-1 downto 0)	 -- operando B
-     );
-end shifter;
-
-architecture beh of shifter is
-    signal D: std_logic_vector(N-1 downto 0) := (others => '0');
-begin
-	process(clk,rst,l_r_select)
-	begin
-		if (rst = '1') then
-			D <= (others => '0');
-		elsif rising_edge(clk) then
-			if ena = '1' then
-				if l_r_select = '1' then 
-					-- LEFT SHIFT
-					bout <= D(N-1);
-					D(N-1 downto 1) <= D(N-2 downto 0);
-					D(0) <= bin;
-				else
-					bout <= D(0);
-					D(N-2 downto 0) <= D(N-1 downto 1);
-					D(N-1) <= bin;
-				end if;
-			end if;
-		end if;
-	end process;
-	R <= D;
-end;
-
-
-
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all; 
-
 entity restadorFP is
 	generic(E:integer:=7; M:integer:=24);  -- m = mantisa, e=exponente
 	port(

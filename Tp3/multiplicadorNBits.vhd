@@ -84,10 +84,11 @@ begin
     begin
         if (rst = '1') then
            	D <= (others => '0');
-        elsif load = '1' then
-			D <= Rin;
+           	bout<='0';
         elsif rising_edge(clk) then
-            if ena = '1' then
+           if load = '1' then
+           		D<=Rin;
+           elsif ena = '1' then
                 if l_r_select = '1' then
                     -- LEFT SHIFT
                     bout <= D(N-1);
@@ -161,9 +162,10 @@ signal sum, SumOpB: std_logic_vector(N-1 downto 0) := (others => '0');
 signal Areg_out: std_logic_vector(N-1 downto 0);
 signal SumOpA: std_logic_vector(N-1 downto 0);
 signal rst : std_logic := '1';
-signal Bout,Pout,Cout : std_logic;
+signal Bout,Pout,Cout : std_logic:='0';
+signal regP: std_logic_vector(N-1 downto 0);
 begin
-	rst <= '0';
+	rst <= '0' after 1 ns;
 	loadMux: process(Load)
 	begin
 		if (Load = '1') then
@@ -173,9 +175,10 @@ begin
 		end if;
 	end process loadMux;
 	
-	regB: shifter generic map (N) port map(clk,rst,'1',Load,Pout,'0',Bout,Breg_in,Breg_out);
-	regP: shifter generic map (N) port map(clk,rst,'1','1',Cout,'0',Pout,sum,SumOpB);
-	
+	regB: shifter generic map (N) port map(clk,rst,'1',Load, sum(0),'0',Bout,Breg_in,Breg_out);
+	--regP: shifter generic map (N) port map(clk,rst,'1','1',Cout,'0',Pout,sum,SumOpB);
+	regP(N-2 downto 0 ) <= sum(N-1 downto 1);
+	regP(N-1)<=Cout;
 	regA: registro generic map (N) port map(OpA,clk,rst,Load,Areg_out);
 	
 	mulMux: process(Bout)
@@ -189,7 +192,7 @@ begin
 	
 	sumad: sumador generic map (N) port map(SumOpA,SumOpB,'0',sum,Cout);
 	
-	Resultado(2*N-1 downto N) <= SumOpB;
+	Resultado(2*N-1 downto N) <= regP;
 	Resultado(N-1 downto 0) <= Breg_out;
 	
 end;
