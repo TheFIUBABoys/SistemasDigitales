@@ -15,7 +15,7 @@ end sumador;
 
 architecture sum of sumador is
      -- declaración de una señal auxiliar
-     signal Sal_aux: std_logic_vector(N+1 downto 0);
+     signal Sal_aux: std_logic_vector(N+1 downto 0):= (others => '0');
 begin
 	 Sal_aux <= std_logic_vector(unsigned(('0' & A & Cin)) + unsigned('0' & B & '1'));
      Sal <= Sal_aux(N downto 1);				
@@ -133,18 +133,6 @@ component registro is
      );
 end component;
 
-component shifter is
-     generic(N: integer:= 4);   		 -- valor genérico
-     port(
-        clk, rst, ena, load: in std_logic;
-        bin: in std_logic;
-        l_r_select: in std_logic;
-        bout: out std_logic;
-        Rin: in std_logic_vector(N-1 downto 0);
-        R: out std_logic_vector(N-1 downto 0)         -- operando B
-     );
-end component;
-
 component sumador is
      generic(N: integer:= 4);   		 -- valor genérico
      port(
@@ -156,29 +144,44 @@ component sumador is
      );
 end component;
 
+component GenEnable is
+  generic(contarHasta: integer);
+  port(
+    clk : in std_logic;
+    rst : in std_logic;
+    enable : in std_logic;
+    Q : out std_logic
+  );
+end component;
 
 signal Breg_in, Breg_out: std_logic_vector(N-1 downto 0) := (others => '0');
-signal sum, SumOpB: std_logic_vector(N-1 downto 0) := (others => '0');
+signal sum: std_logic_vector(N-1 downto 0);
 signal Areg_out: std_logic_vector(N-1 downto 0);
 signal SumOpA: std_logic_vector(N-1 downto 0);
 signal rst : std_logic := '1';
+signal resultadoListo: std_logic := '0';
 signal Bout,Pout,Cout : std_logic:='0';
-signal regP: std_logic_vector(N-1 downto 0);
+signal regP, regB: std_logic_vector(N-1 downto 0):= (others => '0');
+signal res_aux: std_logic_vector(2*N-1 downto 0);
 begin
-	rst <= '0' after 1 ns;
-	loadMux: process(Load)
+	rst <= '0';
+	loadMux: process(Load,clk)
 	begin
 		if (Load = '1') then
-			Breg_in <= OpB;
+			regB <= OpB;
+			regP <= (others => '0');
 		else
-			Breg_in <= Breg_out;
+			if rising_edge(clk) then
+				Bout <= regB(0);
+				regB(N-2 downto 0) <= regB(N-1 downto 1);	
+				regB(N-1) <= sum(0);
+				regP(N-2 downto 0) <= sum(N-1 downto 1);
+				regP(N-1) <= Cout;
+			end if;
 		end if;
 	end process loadMux;
-	
-	regB: shifter generic map (N) port map(clk,rst,'1',Load, sum(0),'0',Bout,Breg_in,Breg_out);
-	--regP: shifter generic map (N) port map(clk,rst,'1','1',Cout,'0',Pout,sum,SumOpB);
-	regP(N-2 downto 0 ) <= sum(N-1 downto 1);
-	regP(N-1)<=Cout;
+	genEnable_i: genEnable generic map (N) port map(clk,Load,'1', resultadoListo);
+	regOut: registro generic map (2*N) port map(res_aux,clk,rst,resultadoListo,Resultado);
 	regA: registro generic map (N) port map(OpA,clk,rst,Load,Areg_out);
 	
 	mulMux: process(Bout)
@@ -190,11 +193,10 @@ begin
 		end if;
 	end process mulMux;
 	
-	sumad: sumador generic map (N) port map(SumOpA,SumOpB,'0',sum,Cout);
+	sumad: sumador generic map (N) port map(SumOpA,regP,'0',sum,Cout);
 	
-	Resultado(2*N-1 downto N) <= regP;
-	Resultado(N-1 downto 0) <= Breg_out;
-	
+	res_aux(2*N-1 downto N) <= regP;
+	res_aux(N-1 downto 0) <= regB;
 end;
 
 

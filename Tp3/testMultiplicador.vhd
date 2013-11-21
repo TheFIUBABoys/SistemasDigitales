@@ -109,13 +109,13 @@ component multiplicador is
 end component;
 signal clk : std_logic  := '1';
 signal load : std_logic  := '0';
-signal A_t, B_t: std_logic_vector(4 downto 0);
-signal R_t: std_logic_vector(9 downto 0);
+signal A_t, B_t: std_logic_vector(6 downto 0);
+signal R_t: std_logic_vector(13 downto 0);
 begin
 	clk <= not clk after 10 ns;
 	load <= '1' after 30 ns, '0' after 45 ns;						
-	A_t <= "01001";
-	B_t <= "01011";
+	A_t <= "0010100";
+	B_t <= "0010100";
 	
-	mul: multiplicador generic map (5) port map(A_t,B_t,load,clk,R_t);
+	mul: multiplicador generic map (7) port map(A_t,B_t,load,clk,R_t);
 end architecture;
