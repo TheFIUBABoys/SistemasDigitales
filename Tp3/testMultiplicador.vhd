@@ -114,8 +114,8 @@ signal R_t: std_logic_vector(13 downto 0);
 begin
 	clk <= not clk after 10 ns;
 	load <= '1' after 30 ns, '0' after 45 ns;						
-	A_t <= "0010100";
-	B_t <= "0010100";
+	A_t <= "0100000";
+	B_t <= "0100000";
 	
 	mul: multiplicador generic map (7) port map(A_t,B_t,load,clk,R_t);
 end architecture;

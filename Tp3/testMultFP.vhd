@@ -1,6 +1,7 @@
 --Banco de pruebas
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 
 entity test is
 end;
@@ -17,13 +18,15 @@ component multiplicadorFP is
      );
 end component;
 
-  signal aT, bT, SalT: std_logic_vector(22 downto 0);
+  signal aT, bT, SalT: std_logic_vector(23 downto 0);
   signal load,clk: std_logic := '0';
+  signal aTU: unsigned(23 downto 0) := to_unsigned(16646143, 24);
+  signal bTU: unsigned(23 downto 0) := to_unsigned(4064286, 24);
 begin
-	aT <= "11111101111111111111111";
-	bT <= "00111101010001110011001";
+	aT <= std_logic_vector(aTU);
+	bT <= std_logic_vector(bTU);
 	load <= '1' after 20 ns, '0' after 40 ns;
 	clk <= not clk after 10 ns;
   
-	mul_inst: multiplicadorFP generic map(6,23) port map(clk, aT, bT, load, SalT );
+	mul_inst: multiplicadorFP generic map(6,24) port map(clk, aT, bT, load, SalT );
 end architecture; 

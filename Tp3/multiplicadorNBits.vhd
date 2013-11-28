@@ -158,13 +158,14 @@ signal Breg_in, Breg_out: std_logic_vector(N-1 downto 0) := (others => '0');
 signal sum: std_logic_vector(N-1 downto 0);
 signal Areg_out: std_logic_vector(N-1 downto 0);
 signal SumOpA: std_logic_vector(N-1 downto 0);
-signal rst : std_logic := '1';
+signal rst,aux : std_logic := '1';
 signal resultadoListo: std_logic := '0';
 signal Bout,Pout,Cout : std_logic:='0';
 signal regP, regB: std_logic_vector(N-1 downto 0):= (others => '0');
 signal res_aux: std_logic_vector(2*N-1 downto 0);
 begin
 	rst <= '0';
+  aux <= not Load;
 	loadMux: process(Load,clk)
 	begin
 		if (Load = '1') then
@@ -180,7 +181,7 @@ begin
 			end if;
 		end if;
 	end process loadMux;
-	genEnable_i: genEnable generic map (N) port map(clk,Load,'1', resultadoListo);
+	genEnable_i: genEnable generic map (N) port map(clk, Load, '1', resultadoListo);
 	regOut: registro generic map (2*N) port map(res_aux,clk,rst,resultadoListo,Resultado);
 	regA: registro generic map (N) port map(OpA,clk,rst,Load,Areg_out);
 	

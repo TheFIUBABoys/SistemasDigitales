@@ -25,7 +25,6 @@ begin
 			contador <= contador + 1;
 			Q_tmp <= '0';
 			if (contador = contarHasta) then
-				contador <= 0;
 				Q_tmp <= '1';
 			end if;
 		end if;

@@ -38,7 +38,7 @@ begin
 						aux(1) <= aux(0);
 		end generate;
 		con_retardo: if i > 0 generate
-						aa: ffd port map(clk => clk, rst => '0', D => aux(i), Q => aux(i+1));
+						aa: ffd generic map (N) port map(clk => clk, rst => '0', D => aux(i), Q => aux(i+1));
 		end generate;
 	end generate;
 	
