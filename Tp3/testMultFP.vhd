@@ -20,8 +20,8 @@ end component;
 
   signal aT, bT, SalT: std_logic_vector(23 downto 0);
   signal load,clk: std_logic := '0';
-  signal aTU: unsigned(23 downto 0) := to_unsigned(2485206, 24);
-  signal bTU: unsigned(23 downto 0) := to_unsigned(1805351, 24);
+  signal aTU: unsigned(23 downto 0) := to_unsigned(4064286, 24);
+  signal bTU: unsigned(23 downto 0) := to_unsigned(16646143, 24);
 begin
 	aT <= std_logic_vector(aTU);
 	bT <= std_logic_vector(bTU);

@@ -42,7 +42,6 @@ architecture beh of multiplicadorFP is
 	signal signo1, signo2, signo: std_logic;
 	signal mulSign: std_logic_vector(2*(B-E)-1 downto 0);
 	signal Cout, Cin: std_logic:= '0';
-	
 begin
 	exp1bin<= std_logic_vector(signed(opA(B-2 downto B-E-1))-2**(E-1)+1);
 	exp2bin<= std_logic_vector(signed(opB(B-2 downto B-E-1))-2**(E-1)+1);
@@ -65,6 +64,33 @@ begin
 			Cin <= '0';
 		end if;
 	end process;
-	Sal <= signo & sumExpbin & mulSign(2*(B-E)-2 downto B-E);
+	process(sumExpbin,mulsign)
+	begin
+		--Si alguno es 0
+		if to_integer(unsigned(opA(B-E-2 downto 0))) = 0 or to_integer(unsigned(opB(B-E-2 downto 0))) = 0 then
+			 Sal <= (others => '0');
+		else
+			--Normal: signos distintos => no puede haber over/under
+			if not exp2bin(E-1) = exp1bin(E-1) then
+				Sal <= signo & sumExpbin & mulSign(2*(B-E)-2 downto B-E);
+			else
+			--Como la suma es complemento a 2, miro sumAux(0) para ver el signo (overflow o underflow)
+			--Si hubo underflow pongo todo en 0
+				if Cout = '1' and sumAux(E-1) = '1' then
+					Sal <= (others => '0');
+				else
+					--Overflow: signo normal, todo en 1. miro si los 2 exp son positivos y si se fue de rango la suma
+					if exp1bin(E-1)='0' and exp2bin(E-1) = '0' and sumAux(E-1)= '1' then
+						Sal(B-1 downto B-E)<=(others => '1');
+						Sal(B-E-1) <= '0';
+						Sal(B-E-2 downto 0)<=(others =>'1');
+					else
+						--Normal
+						Sal <= signo & sumExpbin & mulSign(2*(B-E)-2 downto B-E);
+					end if;
+				end if;
+			end if;
+		end if;
+	end process;
 end;
 
