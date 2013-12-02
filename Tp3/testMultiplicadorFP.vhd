@@ -8,18 +8,17 @@ end entity testbench;
 
 architecture testMulFP of testbench is
 	constant TCK: time:= 20 ns; -- periodo de reloj
-	constant DELAY: natural:= 10; -- retardo de procesamiento del DUT
+	constant DELAY: natural:= 20; -- retardo de procesamiento del DUT
 	constant N: natural:= 24;	-- tamano de datos
 	constant E: natural:= 6;	-- tamanio del exponente
 
 	signal clk: std_logic:= '0';
 	signal a_file: unsigned(N-1 downto 0):= (others => '0');
 	signal b_file: unsigned(N-1 downto 0):= (others => '0');
-	signal cin_file, cout_file: std_logic:= '0';
 	signal z_file: unsigned(N-1 downto 0):= (others => '0');
 	signal z_del: unsigned(N-1 downto 0):= (others => '0');
 	signal z_dut: unsigned(N-1 downto 0):= (others => '0');
-	signal cout_dut: std_logic;
+
 	-- z_del_aux se define por un problema de conversión
 	signal z_del_aux: std_logic_vector(N-1 downto 0):= (others => '0');
 	signal z_dut_aux: std_logic_vector(N-1 downto 0):= (others => '0');
@@ -90,15 +89,16 @@ begin
 			Load => ld_t
 		 );
 			
-	del: delay_gen 	generic map(N, DELAY) -- 10 DE DELAY, NROS DE 24 BITS
-				port map(clk, std_logic_vector(z_file), z_del_aux);
+	del: delay_gen 	generic map(N, DELAY) port map(clk, std_logic_vector(z_file), z_del_aux);
 				
 	
 	
 	-- Verificacion de la condicion
-	verificacion: process(clk)
+	process(clk)
 	begin
 		if rising_edge(clk) then
+			report
+				"Iniciando Test...";
 			assert to_integer(unsigned(z_del_aux))=to_integer(unsigned(z_dut_aux)) report
 				"Error: Salida del DUT no coincide con referencia (A = " &
 				integer'image(to_integer(unsigned(a_file))) &
@@ -109,6 +109,8 @@ begin
 				", salida del archivo = " &
 				integer'image(to_integer(unsigned(z_del_aux))) & ")"
 				severity warning;
+			assert not (to_integer(unsigned(z_del_aux))=to_integer(unsigned(z_dut_aux))) report
+				"OK: Test OK"
 		end if;
 	end process;
 

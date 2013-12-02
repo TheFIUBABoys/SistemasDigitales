@@ -8,7 +8,7 @@ end;
 
 architecture testMultFPNoArchivos of testMultFPNoArchivos is
 component multiplicadorFP is
-     generic(E: integer:= 3; B: integer:=9);  		 -- valor genérico
+     generic(E: integer:= 3; B: integer:=9);  		
      port(
 		clk: in std_logic;
 		opA: in std_logic_vector(B-1 downto 0);	 -- operando A
@@ -21,10 +21,10 @@ end component;
 	constant B: natural:= 24;	-- tamano de datos
 	constant E: natural:= 6;	-- tamanio del exponente
 
-  signal aT, bT, SalT: std_logic_vector(B-1 downto 0);
-  signal load,clk: std_logic := '0';
-  signal aTU: unsigned(B-1 downto 0) := to_unsigned(4064286, B);
-  signal bTU: unsigned(B-1 downto 0) := to_unsigned(16646143, B);
+	signal aT, bT, SalT: std_logic_vector(B-1 downto 0);
+  	signal load,clk: std_logic := '0';
+  	signal aTU: unsigned(B-1 downto 0) := to_unsigned(4064286, B);
+  	signal bTU: unsigned(B-1 downto 0) := to_unsigned(16646143, B);
 begin
 	aT <= std_logic_vector(aTU);
 	bT <= std_logic_vector(bTU);

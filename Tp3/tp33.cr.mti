@@ -16,15 +16,6 @@ Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 
 -- Compiling entity registro
 -- Compiling architecture pp of registro
 
-} {} {}} C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd {1 {vcom -work work -2002 -explicit C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd
-Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity testbench
--- Compiling architecture testMulFP of testbench
-
 } {} {}} C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd {1 {vcom -work work -2002 -explicit C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd
 Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
 -- Loading package STANDARD
@@ -67,6 +58,15 @@ Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity delay_gen
 -- Compiling architecture del of delay_gen
+
+} {} {}} C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd {1 {vcom -work work -2002 -explicit C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd
+Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity testMultFPNoArchivos
+-- Compiling architecture testMultFPNoArchivos of testMultFPNoArchivos
 
 } {} {}} C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFPHardcoded.vhd {2 {vcom -work work -2002 -explicit C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFPHardcoded.vhd
 Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013

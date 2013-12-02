@@ -22,8 +22,8 @@ L6
 VLI`_D`@BW2aKZTa3VgbT?2
 Z8 OP;C;10.2c;57
 32
-Z9 !s110 1386005524
-Z10 !s108 1386005524.363000
+Z9 !s110 1386007533
+Z10 !s108 1386007533.327000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/delay.vhd|
 Z12 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/delay.vhd|
 Z13 o-work work -2002 -explicit -O0
@@ -62,7 +62,7 @@ V>]?z2?23SF9k6]cGP7n@I2
 R8
 32
 R9
-Z18 !s108 1386005524.440000
+Z18 !s108 1386007533.407000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/ffd.vhd|
 Z20 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/ffd.vhd|
 R13
@@ -100,7 +100,7 @@ VGgA9>TQ6S9UcLKn6ZZSNC0
 R8
 32
 R9
-Z24 !s108 1386005524.570000
+Z24 !s108 1386007533.488000
 Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd|
 Z26 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd|
 R13
@@ -139,7 +139,7 @@ VPDkY6[UFSRg_kf1;<J89a1
 R8
 32
 R9
-Z30 !s108 1386005524.715000
+Z30 !s108 1386007533.653000
 Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd|
 Z32 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd|
 R13
@@ -178,7 +178,7 @@ Ve>^63TIef6<@Wo:2JYN`m2
 R8
 32
 R9
-Z36 !s108 1386005524.640000
+Z36 !s108 1386007533.564000
 Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd|
 Z38 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd|
 R13
@@ -217,7 +217,7 @@ V>GlVN=iz6`zF_Lk[Z9z0m0
 R8
 32
 R9
-Z41 !s108 1386005524.818000
+Z41 !s108 1386007533.840000
 Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd|
 Z43 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd|
 R13
@@ -256,7 +256,7 @@ Vlz:ib_X2LI1GiiOZJT3N[1
 R8
 32
 R9
-Z46 !s108 1386005524.889000
+Z46 !s108 1386007533.911000
 Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd|
 Z48 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd|
 R13
@@ -410,8 +410,8 @@ L5
 VXA60;Z:_5aMJFCOC=`@hB3
 R8
 32
-Z51 !s110 1386005525
-Z52 !s108 1386005525.030000
+Z51 !s110 1386007534
+Z52 !s108 1386007534.051000
 Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd|
 Z54 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd|
 R13
@@ -502,7 +502,7 @@ R8
 32
 R51
 !i10b 1
-Z58 !s108 1386005525.163000
+Z58 !s108 1386007534.202000
 Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd|
 Z60 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd|
 R13
@@ -530,23 +530,24 @@ R21
 R3
 R4
 R61
-l53
+l52
 L9
-VNLWh<YZ0[7kQ^M8FCEFY[3
-!s100 bi9SM9nnUNZbca8=d=h3B1
+V4dTc>MW4X=cikMEhli5_]2
 R8
 32
 R51
-!s108 1386005525.097000
+!s108 1386007534.131000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd|
 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd|
 R13
 R14
 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd
+w1386007529
 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd
+!s100 64@GL0^e7<f]Vz]a;cWQO1
 !i10b 1
 Etestmultfpnoarchivos
-Z62 w1386005520
+Z62 w1386005627
 R21
 R3
 R4
@@ -559,7 +560,7 @@ VV0^z74;@gG4zTDTPBAmL82
 R8
 32
 R9
-Z65 !s108 1386005524.960000
+Z65 !s108 1386007533.981000
 Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd|
 Z67 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd|
 R13
@@ -576,11 +577,11 @@ L9
 VVBYajYB7PeXN<NY<D@SX;2
 R8
 32
-R9
 R65
 R66
 R67
 R13
 R14
+R51
 !s100 b<YVGnNcgROOFL<Fg6ZbV3
 !i10b 1
