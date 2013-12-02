@@ -18,15 +18,18 @@ component multiplicadorFP is
      );
 end component;
 
-  signal aT, bT, SalT: std_logic_vector(23 downto 0);
+	constant B: natural:= 24;	-- tamano de datos
+	constant E: natural:= 6;	-- tamanio del exponente
+
+  signal aT, bT, SalT: std_logic_vector(B-1 downto 0);
   signal load,clk: std_logic := '0';
-  signal aTU: unsigned(23 downto 0) := to_unsigned(4064286, 24);
-  signal bTU: unsigned(23 downto 0) := to_unsigned(16646143, 24);
+  signal aTU: unsigned(B-1 downto 0) := to_unsigned(4064286, B);
+  signal bTU: unsigned(B-1 downto 0) := to_unsigned(16646143, B);
 begin
 	aT <= std_logic_vector(aTU);
 	bT <= std_logic_vector(bTU);
 	load <= '1' after 20 ns, '0' after 40 ns;
 	clk <= not clk after 10 ns;
   
-	mul_inst: multiplicadorFP generic map(6,24) port map(clk, aT, bT, load, SalT );
+	mul_inst: multiplicadorFP generic map(E,B) port map(clk, aT, bT, load, SalT );
 end architecture; 
