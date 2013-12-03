@@ -53,7 +53,7 @@ architecture beh of multiplicadorFP is
 
 	signal sign1,sign2: std_logic_vector(B-E-1 downto 0);
 	signal signo1, signo2, signo: std_logic;
-	signal mulSign: std_logic_vector(2*(B-E)-1 downto 0);
+	signal mulSign: std_logic_vector(2*(B-E)-1 downto 0); -- size = 2*(B-E)
 	signal Cout, Cin: std_logic:= '0';
 	signal loadAuxIn, loadAuxOut:std_logic_vector(0 downto 0):="0";
 

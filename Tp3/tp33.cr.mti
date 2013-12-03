@@ -1,11 +1,11 @@
-C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd {1 {vcom -work work -2002 -explicit C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd
+C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd {1 {vcom -work work -2002 -explicit C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd
 Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Compiling entity multiplicadorFP
--- Compiling architecture beh of multiplicadorFP
+-- Compiling entity testbench
+-- Compiling architecture testMulFP of testbench
 
 } {} {}} C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd {1 {vcom -work work -2002 -explicit C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd
 Model Technology ModelSim PE Student Edition vcom 10.2c Compiler 2013.07 Jul 18 2013
