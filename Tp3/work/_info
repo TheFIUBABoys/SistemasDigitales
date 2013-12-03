@@ -22,8 +22,8 @@ L6
 VLI`_D`@BW2aKZTa3VgbT?2
 Z8 OP;C;10.2c;57
 32
-Z9 !s110 1386007533
-Z10 !s108 1386007533.327000
+Z9 !s110 1386097175
+Z10 !s108 1386097175.494000
 Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/delay.vhd|
 Z12 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/delay.vhd|
 Z13 o-work work -2002 -explicit -O0
@@ -62,7 +62,7 @@ V>]?z2?23SF9k6]cGP7n@I2
 R8
 32
 R9
-Z18 !s108 1386007533.407000
+Z18 !s108 1386097175.928000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/ffd.vhd|
 Z20 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/ffd.vhd|
 R13
@@ -87,184 +87,184 @@ R14
 !s100 ]H4gW^Mig]I<Fg_0[Ng_72
 !i10b 1
 Egenenable
-R15
-Z21 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z21 w1386093003
+Z22 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
 R3
 R4
 R5
-Z22 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd
-Z23 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd
+Z23 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd
+Z24 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd
 l0
 L4
 VGgA9>TQ6S9UcLKn6ZZSNC0
 R8
 32
-R9
-Z24 !s108 1386007533.488000
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd|
-Z26 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd|
+Z25 !s110 1386097176
+Z26 !s108 1386097176.011000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd|
+Z28 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/genEnableNCiclos.vhd|
 R13
 R14
 !s100 mNmDhFQ?1O>>GWbIL7jY20
 !i10b 1
 Aarq_genenable
-R21
+R22
 R3
 R4
 DEx4 work 9 genenable 0 22 GgA9>TQ6S9UcLKn6ZZSNC0
 l17
 L14
-VO?e>4A>hg>g?T4jbA3Y9^1
+VK=MRk:WBY>k?WV]gZTlcP0
 R8
 32
-R9
-R24
 R25
 R26
+R27
+R28
 R13
 R14
-!s100 WaedhCHoV3OAE7^<K3ClI3
+!s100 lLe:B9iI9K^F3mXl6cbCo2
 !i10b 1
 Emultiplicador
-Z27 w1386003509
-R21
+Z29 w1386094226
+R22
 R3
 R4
 R5
-Z28 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd
-Z29 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd
+Z30 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd
+Z31 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd
 l0
 L113
-VPDkY6[UFSRg_kf1;<J89a1
+V>nfHjM;k1>OiA_ckO[BYZ0
 R8
 32
-R9
-Z30 !s108 1386007533.653000
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd|
-Z32 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd|
+R25
+Z32 !s108 1386097176.151000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd|
+Z34 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorNBits.vhd|
 R13
 R14
-!s100 O1<J>9`hSD_M;<9jm8lhl1
+!s100 SdTK=<LRS<:gD`NPd16AU2
 !i10b 1
 Abeh
-R21
+R22
 R3
 R4
-DEx4 work 13 multiplicador 0 22 PDkY6[UFSRg_kf1;<J89a1
-l166
-L123
-Va[=:JigQVNP[=@SB<Wi?30
+DEx4 work 13 multiplicador 0 22 >nfHjM;k1>OiA_ckO[BYZ0
+l169
+L124
+VH`31LQ]GPWA>JmdBkli>K0
 R8
 32
-R9
-R30
-R31
+R25
 R32
+R33
+R34
 R13
 R14
-!s100 eN^hQ4aCVbgDB3:kJfV@O0
+!s100 Fg@AL[TbPFDWiUci1;01f3
 !i10b 1
 Emultiplicadorfp
-Z33 w1386005096
-R21
+Z35 w1386094301
+R22
 R3
 R4
 R5
-Z34 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd
-Z35 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd
+Z36 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd
+Z37 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd
 l0
 L6
-Ve>^63TIef6<@Wo:2JYN`m2
+V1dSf]HOODHU`[47Mi3mT:0
 R8
 32
-R9
-Z36 !s108 1386007533.564000
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd|
-Z38 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd|
+R25
+Z38 !s108 1386097176.081000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd|
+Z40 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/multiplicadorFP_Nbits.vhd|
 R13
 R14
-!s100 Knk=ddLCi`I8]@6ik]8Jc0
+!s100 T_Bf5zIA=i??R]PATk;Lh0
 !i10b 1
 Abeh
-R21
+R22
 R3
 R4
-DEx4 work 15 multiplicadorfp 0 22 e>^63TIef6<@Wo:2JYN`m2
-l45
-L17
-VU:^dgnNRZR;UDLZfb6iaV3
+DEx4 work 15 multiplicadorfp 0 22 1dSf]HOODHU`[47Mi3mT:0
+l62
+L18
+VoW0T^2nXGzXWlLL1_FZOK1
 R8
 32
-R9
-R36
-R37
+R25
 R38
+R39
+R40
 R13
 R14
-!s100 X1TYJWG@3;_6<7Y[U[e411
+!s100 7mc0]M@7oG>T;GQ;PnA2B3
 !i10b 1
 Eregistro
-R15
-R21
+Z41 w1386094107
+R22
 R3
 R4
 R5
-Z39 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd
-Z40 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd
+Z42 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd
+Z43 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd
 l0
 L5
 V>GlVN=iz6`zF_Lk[Z9z0m0
 R8
 32
-R9
-Z41 !s108 1386007533.840000
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd|
-Z43 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd|
+R25
+Z44 !s108 1386097176.240000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd|
+Z46 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/registroNbits.vhd|
 R13
 R14
 !s100 ?CYi>;CP[0Pb1lZU2Te?60
 !i10b 1
 App
-R21
+R22
 R3
 R4
 DEx4 work 8 registro 0 22 >GlVN=iz6`zF_Lk[Z9z0m0
 l18
 L17
-V?18dEPKK1OodUbiO>7S1@1
+VH@kdWJLUIL9Pez<4EJ9TH3
 R8
 32
-R9
-R41
-R42
-R43
+R25
+R44
+R45
+R46
 R13
 R14
-!s100 eK`<7b5_VoRXGEY3QomV92
+!s100 @:=jA^Wj@:jiF@M_AER1:3
 !i10b 1
 Erestadorfp
 R15
-R21
+R22
 R3
 R4
 R5
-Z44 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd
-Z45 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd
+Z47 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd
+Z48 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd
 l0
 L6
 Vlz:ib_X2LI1GiiOZJT3N[1
 R8
 32
-R9
-Z46 !s108 1386007533.911000
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd|
-Z48 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd|
+R25
+Z49 !s108 1386097176.310000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd|
+Z51 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/restadorFP.vhd|
 R13
 R14
 !s100 c>A:4Gj4eFGj2A:SK`XTd1
 !i10b 1
 Abeh
-R21
+R22
 R3
 R4
 DEx4 work 10 restadorfp 0 22 lz:ib_X2LI1GiiOZJT3N[1
@@ -273,37 +273,37 @@ L18
 Vzon0ia?ANFQYl2eUmmYDI0
 R8
 32
-R9
-R46
-R47
-R48
+R25
+R49
+R50
+R51
 R13
 R14
 !s100 E6laVf;SP@VM`9UnB@iPA3
 !i10b 1
 Eshifter
-R27
-R21
+R29
+R22
 R3
 R4
 R5
-R28
-R29
+R30
+R31
 l0
 L68
 V]XanSPLMifONmZ=B`S`Nb0
 R8
 32
-R9
-R30
-R31
+R25
 R32
+R33
+R34
 R13
 R14
 !s100 AH;R=dK=66bJWIUMQdS]Y0
 !i10b 1
 Abeh
-R21
+R22
 R3
 R4
 DEx4 work 7 shifter 0 22 ]XanSPLMifONmZ=B`S`Nb0
@@ -312,37 +312,37 @@ L80
 Ve7VA]aHZV0h4>6Ij^e0=a2
 R8
 32
-R9
-R30
-R31
+R25
 R32
+R33
+R34
 R13
 R14
 !s100 LD4Q1Rac5@i06[QWhHJ5V1
 !i10b 1
 Esumador
-R27
-R21
+R29
+R22
 R3
 R4
 R5
-R28
-R29
+R30
+R31
 l0
 L5
 VUQ1I=?D8DP2_O:I15CQ[S3
 R8
 32
-R9
-R30
-R31
+R25
 R32
+R33
+R34
 R13
 R14
 !s100 gGEbH1>7SR=_?@1aJ2V8O1
 !i10b 1
 Asum
-R21
+R22
 R3
 R4
 DEx4 work 7 sumador 0 22 UQ1I=?D8DP2_O:I15CQ[S3
@@ -351,37 +351,37 @@ L16
 VN=DUS;EzXFzQ>5_665]^I0
 R8
 32
-R9
-R30
-R31
+R25
 R32
+R33
+R34
 R13
 R14
 !s100 FSf?3f2WH]lAB:mc]4k?Q1
 !i10b 1
 Esumadorrestador
-R27
-R21
+R29
+R22
 R3
 R4
 R5
-R28
-R29
+R30
+R31
 l0
 L29
 V2<jIfVOkjMgN8]kl4ViLi1
 R8
 32
-R9
-R30
-R31
+R25
 R32
+R33
+R34
 R13
 R14
 !s100 797K8;e6QY2460o?18TFM0
 !i10b 1
 Asumrest
-R21
+R22
 R3
 R4
 DEx4 work 15 sumadorrestador 0 22 2<jIfVOkjMgN8]kl4ViLi1
@@ -390,30 +390,30 @@ L40
 V45_KPfen_GGdF07i<`D7e2
 R8
 32
-R9
-R30
-R31
+R25
 R32
+R33
+R34
 R13
 R14
 !s100 Gi;:T:49b2zSAPH`0;?ah1
 !i10b 1
 Etest
-R15
+Z52 w1386092919
 R3
 R4
 R5
-Z49 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd
-Z50 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd
+Z53 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd
+Z54 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd
 l0
 L5
 VXA60;Z:_5aMJFCOC=`@hB3
 R8
 32
-Z51 !s110 1386007534
-Z52 !s108 1386007534.051000
-Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd|
-Z54 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd|
+R25
+Z55 !s108 1386097176.452000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd|
+Z57 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicador.vhd|
 R13
 R14
 !s100 6SRDX63i4odPF[3PWDG5^0
@@ -421,33 +421,33 @@ R14
 Atestmult
 R3
 R4
-Z55 DEx4 work 4 test 0 22 XA60;Z:_5aMJFCOC=`@hB3
-l114
+Z58 DEx4 work 4 test 0 22 XA60;Z:_5aMJFCOC=`@hB3
+l116
 L99
-V;gMXfVW74OS04Dcd:^[j;0
+Vg1in7gQ9003BH;h:]9lOM2
 R8
 32
-R51
-R52
-R53
-R54
+R25
+R55
+R56
+R57
 R13
 R14
-!s100 :kWAFlDb=ngG=[bmbWmnG3
+!s100 IfQ[:fL:J75^PFzZQnLPm2
 !i10b 1
 Atestshifter
 R3
 R4
-R55
+R58
 l87
 L70
 VoVLkRjT2=MoG_W;VaB<zH1
 R8
 32
-R51
-R52
-R53
-R54
+R25
+R55
+R56
+R57
 R13
 R14
 !s100 lP;ILcjbFH7lcQJ8EY5RF3
@@ -455,16 +455,16 @@ R14
 Atestsumadorrestador
 R3
 R4
-R55
+R58
 l63
 L50
 VU]iDjL;Eg48Bei_bgY;0Y0
 R8
 32
-R51
-R52
-R53
-R54
+R25
+R55
+R56
+R57
 R13
 R14
 !s100 E2Hjk6AUGF>1]EL6J6lC<1
@@ -472,116 +472,116 @@ R14
 Atestsumador
 R3
 R4
-R55
+R58
 l21
 L8
 VRQ5]WlmhBGa`dI:>A=]gk0
 R8
 32
-R51
-R52
-R53
-R54
+R25
+R55
+R56
+R57
 R13
 R14
 !s100 G<PGC0PIlKb9F>m:_edkY3
 !i10b 1
 Etestbench
 R15
-R21
+R22
 R3
 R4
 R5
-Z56 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd
-Z57 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd
+Z59 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd
+Z60 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd
 l0
 L6
 VboWPG9IJLYDC^nWa@cn^l3
 !s100 4<=VOWAJm3S@b<Qn<Oe9l0
 R8
 32
-R51
+R25
 !i10b 1
-Z58 !s108 1386007534.202000
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd|
-Z60 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd|
+Z61 !s108 1386097176.611000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd|
+Z63 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testRestadorFP.vhd|
 R13
 R14
 Asimulacion
-R21
+R22
 R3
 R4
-Z61 DEx4 work 9 testbench 0 22 boWPG9IJLYDC^nWa@cn^l3
+Z64 DEx4 work 9 testbench 0 22 boWPG9IJLYDC^nWa@cn^l3
 l54
 L9
 V<3URnO<FcIPGmG653[1=e2
 !s100 [U3jzT?VOB8<X;6@z;7kG3
 R8
 32
-R51
+R25
 !i10b 1
-R58
-R59
-R60
+R61
+R62
+R63
 R13
 R14
 Atestmulfp
-R21
+R22
 R3
 R4
-R61
-l52
+R64
+l54
 L9
-V4dTc>MW4X=cikMEhli5_]2
+VQR:>aJOol?>^]0HMHW<A53
+!s100 RclKzhX`B9V2?4jd=oz3n3
 R8
 32
-R51
-!s108 1386007534.131000
+R25
+!s108 1386097176.540000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd|
 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd|
 R13
 R14
 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd
-w1386007529
+w1386096915
 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultiplicadorFP.vhd
-!s100 64@GL0^e7<f]Vz]a;cWQO1
 !i10b 1
 Etestmultfpnoarchivos
-Z62 w1386005627
-R21
+Z65 w1386097156
+R22
 R3
 R4
 R5
-Z63 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd
-Z64 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd
+Z66 8C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd
+Z67 FC:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd
 l0
 L6
 VV0^z74;@gG4zTDTPBAmL82
 R8
 32
-R9
-Z65 !s108 1386007533.981000
-Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd|
-Z67 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd|
+R25
+Z68 !s108 1386097176.382000
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd|
+Z70 !s107 C:/Users/Lucas/Documents/GitHub/SistemasDigitales/Tp3/testMultFP.vhd|
 R13
 R14
 !s100 5l>E8QI>fX2l<KldIjR]S1
 !i10b 1
 Atestmultfpnoarchivos
-R21
+R22
 R3
 R4
 DEx4 work 20 testmultfpnoarchivos 0 22 V0^z74;@gG4zTDTPBAmL82
-l28
+l30
 L9
-VVBYajYB7PeXN<NY<D@SX;2
+V]aSLb;W]fn@Q0PiUN9iBb1
 R8
 32
-R65
-R66
-R67
+R25
+R68
+R69
+R70
 R13
 R14
-R51
-!s100 b<YVGnNcgROOFL<Fg6ZbV3
+!s100 IE?W7e]QRS>A3PPBPGj2B1
 !i10b 1

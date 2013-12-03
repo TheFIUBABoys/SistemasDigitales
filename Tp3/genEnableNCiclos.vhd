@@ -13,7 +13,7 @@ end entity GenEnable;
   
 architecture arq_GenEnable of GenEnable is
 signal contador: integer;
-signal Q_tmp : std_logic;
+signal Q_tmp : std_logic:='0';
 begin
 process(clk, rst)
 begin

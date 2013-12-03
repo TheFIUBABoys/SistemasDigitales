@@ -7,10 +7,11 @@ entity multiplicadorFP is
      generic(E: integer:= 3; B: integer:=9);   		 -- valor genérico
      port(
 		clk: in std_logic;
-		opA: in std_logic_vector(B-1 downto 0);	 -- operando A
-		opB: in std_logic_vector(B-1 downto 0);	 -- operando B
+		inA: in std_logic_vector(B-1 downto 0);	 -- operando A
+		inB: in std_logic_vector(B-1 downto 0);	 -- operando B
 		load: in std_logic := '0';
-		Sal: out std_logic_vector(B-1 downto 0)-- resultado de la operación
+		Sal: out std_logic_vector(B-1 downto 0);-- resultado de la operación
+		ready: out std_logic
      );
 end multiplicadorFP;
 
@@ -32,8 +33,20 @@ architecture beh of multiplicadorFP is
 		    OpB: in std_logic_vector(N-1 downto 0);
 		    Load: in std_logic;
 		    Clk: in std_logic;
-		    Resultado: out std_logic_vector(2*N-1 downto 0)
+		    Resultado: out std_logic_vector(2*N-1 downto 0);
+		    ready: out std_logic
 		);
+	end component;
+
+	component registro is
+    generic(N: integer:= 4);		-- valor genérico
+	    port(
+	          D: in std_logic_vector(N-1 downto 0);	-- entrada del registro
+	          clk: in std_logic;			-- señal de reloj
+	          rst: in std_logic;			-- señal de reset
+	          ena: in std_logic;		-- señal de habilitación
+	          Q: out std_logic_vector(N-1 downto 0)	-- salida del registro
+	    );
 	end component;
 
 	signal sumExpBin, exp1bin, exp2bin, sumAux: std_logic_vector(E-1 downto 0);
@@ -42,7 +55,17 @@ architecture beh of multiplicadorFP is
 	signal signo1, signo2, signo: std_logic;
 	signal mulSign: std_logic_vector(2*(B-E)-1 downto 0);
 	signal Cout, Cin: std_logic:= '0';
+	signal loadAuxIn, loadAuxOut:std_logic_vector(0 downto 0):="0";
+
+	signal res: std_logic:= '1';
+	signal opA, opB: std_logic_vector(B-1 downto 0):=(others => '0');
 begin
+	res <= '0';
+	loadAuxIn(0)<=load;
+	regA: registro generic map(B) port map(inA, clk, res, load, opA);
+	regB: registro generic map(B) port map(inB, clk, res, load, opB);
+	regLoad: registro generic map(1) port map(loadAuxIn, clk, res, '1', loadAuxOut);
+
 	exp1bin<= std_logic_vector(signed(opA(B-2 downto B-E-1))-2**(E-1)+1);
 	exp2bin<= std_logic_vector(signed(opB(B-2 downto B-E-1))-2**(E-1)+1);
 
@@ -54,7 +77,7 @@ begin
 	signo2<=opB(B-1);
 	signo<=signo1 xor signo2;
 	inst_sumador: sumador generic map(E) port map(exp1bin, exp2bin, Cin , sumAux, Cout);
-	inst_multi: multiplicador generic map (B-E) port map(sign1, sign2, Load, clk, mulSign); 
+	inst_multi: multiplicador generic map (B-E) port map(sign1, sign2, loadAuxOut(0), clk, mulSign, ready); 
 	sumExpbin <= std_logic_vector(signed(sumAux)+2**(E-1)-1);
 	process(mulSign)
 	begin

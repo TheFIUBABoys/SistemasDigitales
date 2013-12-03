@@ -98,17 +98,19 @@ end architecture;
 
 architecture testMult of test is 
 component multiplicador is
-    generic(N: natural:= 5);
+   generic(N: natural:= 5);
     port(
         OpA: in std_logic_vector(N-1 downto 0);
         OpB: in std_logic_vector(N-1 downto 0);
         Load: in std_logic;
         Clk: in std_logic;
-        Resultado: out std_logic_vector(2*N-1 downto 0)
+        Resultado: out std_logic_vector(2*N-1 downto 0);
+        Ready: out std_logic
     );
 end component;
 signal clk : std_logic  := '1';
 signal load : std_logic  := '0';
+signal ready_t: std_logic:='0';
 signal A_t, B_t: std_logic_vector(6 downto 0);
 signal R_t: std_logic_vector(13 downto 0);
 begin
@@ -117,5 +119,5 @@ begin
 	A_t <= "0100000";
 	B_t <= "0100000";
 	
-	mul: multiplicador generic map (7) port map(A_t,B_t,load,clk,R_t);
+	mul: multiplicador generic map (7) port map(A_t,B_t,load,clk,R_t,ready_t);
 end architecture;

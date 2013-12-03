@@ -20,7 +20,7 @@ begin
      begin
           if rst = '1' then
                Q <= (others => '0');
-          elsif clk = '1' and clk'event then
+          elsif rising_edge(clk) then
                if ena = '1' then
                     Q <= D;
                end if;

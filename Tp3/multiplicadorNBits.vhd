@@ -117,7 +117,8 @@ entity multiplicador is
         OpB: in std_logic_vector(N-1 downto 0);
         Load: in std_logic;
         Clk: in std_logic;
-        Resultado: out std_logic_vector(2*N-1 downto 0)
+        Resultado: out std_logic_vector(2*N-1 downto 0);
+        Ready: out std_logic
     );
 end;
 architecture beh of multiplicador is
@@ -163,9 +164,12 @@ signal resultadoListo: std_logic := '0';
 signal Bout,Pout,Cout : std_logic:='0';
 signal regP, regB: std_logic_vector(N-1 downto 0):= (others => '0');
 signal res_aux: std_logic_vector(2*N-1 downto 0);
+signal listoAuxIn: std_logic_vector(0 downto 0):="0";
+signal listoAuxOut: std_logic_vector(0 downto 0);
 begin
 	rst <= '0';
   aux <= not Load;
+  listoAuxIn(0)<=resultadoListo;
 	loadMux: process(Load,clk)
 	begin
 		if (Load = '1') then
@@ -183,6 +187,7 @@ begin
 	end process loadMux;
 	genEnable_i: genEnable generic map (N) port map(clk, Load, '1', resultadoListo);
 	regOut: registro generic map (2*N) port map(res_aux,clk,rst,resultadoListo,Resultado);
+  regReady: registro generic map(1) port map(listoAuxIn, clk, Load, resultadoListo, listoAuxOut);
 	regA: registro generic map (N) port map(OpA,clk,rst,Load,Areg_out);
 	
 	mulMux: process(Bout)
@@ -198,6 +203,7 @@ begin
 	
 	res_aux(2*N-1 downto N) <= regP;
 	res_aux(N-1 downto 0) <= regB;
+  ready <= listoAuxOut(0);
 end;
 
 
