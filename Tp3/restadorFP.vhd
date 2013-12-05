@@ -15,20 +15,24 @@ entity restadorFP is
 end restadorFP;
 
 architecture beh of restadorFP is
+signal s_a_signal, s_b_signal: std_logic;
+
 signal e_a, e_b: integer;
 signal e_a_bits, e_b_bits: std_logic_vector(E-1 downto 0); --exponentes
 
 signal m_a, m_b: std_logic_vector(M-1 downto 0); --mantisas
 signal p: std_logic_vector(M downto 0);
+signal p_a: std_logic_vector(M downto 0);
 signal temp_result: std_logic_vector(M downto 0);
 signal temp_result_no_desp: std_logic_vector(M downto 0);
-signal g_temp: std_logic;
 
 signal restando_aux: std_logic_vector(E+M downto 0);
 signal restador_aux: std_logic_vector(E+M downto 0);
 
 signal bias: integer;
 signal todosUnos: std_logic_vector(M-1 downto 0):=(others => '1');
+
+signal desplazamientos_signal: integer;
 
 begin
 	bias <= (2**(E - 1)) - 1;
@@ -43,7 +47,6 @@ begin
 	 variable p_a_var: std_logic_vector(M downto 0);
 	 variable p_var_extrabit: std_logic_vector(M+1 downto 0);
 	 variable p_a_var_extrabit: std_logic_vector(M+1 downto 0);
-	 variable g_temp_var: std_logic;
 	 variable g_var, r_var: std_logic;
 	 variable s_var: std_logic_vector(M downto 0);
 	 variable temp_result_var: std_logic_vector(M downto 0);
@@ -55,20 +58,20 @@ begin
 	 variable loops: integer;
 	 begin
 
-	 	if (restando(E+M-1 downto 0) < restador(E+M-1 downto 0)) then
+	 	if (restando(E+M-1 downto M) < restador(E+M-1 downto M)) then
 	 		m_a_var := restador(M-1 downto 0);
 	 		m_b_var := restando(M-1 downto 0);
 	 		s_a := restador(M+E);
-	 		s_b := restando(M+E);
-	 		-- s_b := not restando(M+E); -- como es una resta basicamente invierto el signo del restador
+	 		-- s_b := restando(M+E);
+	 		s_b := not restando(M+E); -- como es una resta basicamente invierto el signo del restador
 	 		e_a_bits_var := restador(E+M-1 downto M);
 	 		e_b_bits_var := restando(E+M-1 downto M);
 	 	else
 	 		m_a_var := restando(M-1 downto 0);
 	 		m_b_var := restador(M-1 downto 0);
 	 		s_a := restando(M+E);
-	 		s_b := restador(M+E);
-	 		-- s_b := not restador(M+E); -- como es una resta basicamente invierto el signo del restador
+	 		-- s_b := restador(M+E);
+	 		s_b := not restador(M+E); -- como es una resta basicamente invierto el signo del restador
 	 		e_a_bits_var := restando(E+M-1 downto M);
 	 		e_b_bits_var := restador(E+M-1 downto M);
 	 	end if;
@@ -78,40 +81,39 @@ begin
 
 		--paso 2 de las diapos (complemento si b son != signos)
 
+		 p_var(M) := '1';
+		 p_var(M-1 downto 0) := m_b_var(M-1 downto 0); 
+
 	 	if (s_a /= s_b) then
-	 		m_b_var := not m_b_var;
-	 		m_b_var := std_logic_vector(unsigned(m_b_var) + 1);
+	 		p_var := not p_var;
+	 		p_var := std_logic_vector(unsigned(p_var) + 1);
 	 	end if;
 
-		 -- paso 3
-		 p_var(M) := e_a_bits_var(0);
-		 p_var(M-1 downto 0) := m_b_var(M-1 downto 0);
-		 
+		 -- paso 3		 
 		 tmp := e_a_var - e_b_var;
 		 
 	 	 if tmp = 1 then
-	 	 	g_temp_var := p_var(0);
 	 	 	g_var := p_var(0);
 	 	 end if;
 		
 	 	 if tmp = 2 then
-	 	 	g_temp_var := p_var(1);
 	 	 	g_var := p_var(1);
 	 	 	r_var := p_var(0);
 	 	 end if;
 		
 	 	 if tmp > 2 then
-	 	 	g_temp_var := p_var(tmp - 1);
-	 	 	g_var := p(tmp - 1);
-	 	 	r_var := p(tmp - 2);
+	 	 	g_var := p_var(tmp - 1);
+	 	 	r_var := p_var(tmp - 2);
 	 	 	s_var(tmp downto 0) := p_var(tmp downto 0);	-- sospecho que esto esta mal
 	 	 end if;
 		
+		 -- desplazo a la derecha tmp posiciones
 		 for I in tmp to M loop
 			p_var(I - tmp) := p_var(I);
 		 end loop;
 		
-	 	 if (not (s_a = s_b)) then
+		 -- Agrego 0s o 1s a la izquierda segun los signos
+	 	 if (s_a /= s_b) then
 	 	 	for I in M downto (M - tmp + 1) loop
 	 	 		p_var(I) := '1';
 	 	 	end loop;
@@ -123,20 +125,20 @@ begin
 		
 		--paso 4
 		p_a_var(M-1 downto 0) := m_a_var(M-1 downto 0);
-		p_a_var(M) := e_a_bits_var(0);
+		p_a_var(M) := '1';
 		
+		-- Agrego un bit mas para fijarme el cout
 		p_a_var_extrabit(M downto 0) := p_a_var(M downto 0);
 		p_a_var_extrabit(M+1) := '0';
 		
 		p_var_extrabit(M downto 0) := p_var(M downto 0);
 		p_var_extrabit(M+1) := '0';
 		
-		temp_result_with_cout_var := (others => '0');
 	 	temp_result_with_cout_var(M+1 downto 0) := std_logic_vector(signed(p_a_var_extrabit) + signed(p_var_extrabit));
 	 	temp_result_var(M downto 0) := temp_result_with_cout_var(M downto 0);	
 	 	c_out := temp_result_with_cout_var(M+1);
 		
-	 	if (s_a /= s_b) and temp_result(M-1) = '1' and c_out = '0' then
+	 	if (s_a /= s_b) and temp_result_var(M-1) = '1' and c_out = '0' then
 	 		-- Reemplazo por complemento a dos.
 			temp_result_var := not temp_result_var;
 			temp_result_var := std_logic_vector(unsigned(temp_result_var) + 1);
@@ -148,7 +150,7 @@ begin
 	 	temp_result_no_desp_var := temp_result_var;
 		
 	 	if s_a = s_b and c_out = '1' then
-	 		for I in 1 to M-1 loop
+	 		for I in 1 to M loop
 	 			temp_result_var(I - 1) := temp_result_var(I);
 	 		end loop;
 	 		temp_result_var(M) := '1';
@@ -157,7 +159,7 @@ begin
 		
 	 	-- Normalize number
 	 	if temp_result_var(M) = '0' then
-	 		for I in M-2 downto 0 loop
+	 		for I in M-1 downto 0 loop
 	 			temp_result_var(I + 1) := temp_result_var(I);
 	 		end loop;
 	 		temp_result_var(0) := g_var;
@@ -168,7 +170,7 @@ begin
 		
 	 	loops := 0;
 	 	while temp_result_var(M) = '0' and loops < M loop
-	 		for I in M-2 downto 0 loop
+	 		for I in M-1 downto 0 loop
 	 			temp_result_var(I + 1) := temp_result_var(I);
 	 		end loop;
 	 		temp_result_var(0) := '0';
@@ -184,7 +186,7 @@ begin
 	 	end if;
 		
 	 	if desplazamientos = 0 then
-	 		r_var := g_temp;
+	 		r_var := g_var;
 	 		-- s <= r or s;
 	 	end if;
 	
@@ -200,7 +202,7 @@ begin
 	 		resta(M + E) <= s_a;
 	 	end if;
 		
-		e_a_bits_var := std_logic_vector(unsigned(e_a_bits_var) + desplazamientos);
+		e_a_bits_var := std_logic_vector(unsigned(e_a_bits_var) - desplazamientos);
 
 		resta(E+M-1 downto M) <= e_a_bits_var; -- exp resultado -> exp operando A
 		resta(M-1 downto 0) <= temp_result_var(M-1 downto 0);
@@ -212,14 +214,17 @@ begin
 	 	m_b <= m_b_var;
 	 	e_a_bits <= e_a_bits_var;
 	 	e_b_bits <= e_b_bits_var;
+	 	p_a <= p_a_var;
 	 	p <= p_var;	
 	 	r <= r_var;
 	 	g <= g_var;
 	 	s <= s_var;
 	 	temp_result <= temp_result_var;
 	 	temp_result_no_desp <= temp_result_no_desp_var;
-	 	
+	 	s_a_signal <= s_a;
+	 	s_b_signal <= s_b;
+	 	desplazamientos_signal <= desplazamientos;
+
 	end process;
 	
-
 end architecture;

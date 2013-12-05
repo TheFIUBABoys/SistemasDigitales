@@ -21,21 +21,27 @@ architecture simulacion of testbench is
 		);
 	end component;
 
-	signal valA: std_logic_vector(31 downto 0);
-	signal valB: std_logic_vector(31 downto 0);
-	signal result: std_logic_vector(31 downto 0);
+	signal valA: std_logic_vector(22 downto 0);
+	signal valB: std_logic_vector(22 downto 0);
+	signal result: std_logic_vector(22 downto 0);
+	signal correct_result: std_logic_vector(22 downto 0);
 
 	signal g_t, r_t: std_logic;
-	signal s_t: std_logic_vector(23 downto 0);
+	signal s_t: std_logic_vector(16 downto 0);
+
+	signal valAUnsinged: unsigned(22 downto 0) := to_unsigned(5881356,23);
+	signal valBUnsinged: unsigned(22 downto 0) := to_unsigned(6039891,23);
+	signal resultUnsinged: unsigned(22 downto 0) := to_unsigned(1827619,23);
 begin
 	-- generacion del clock del sistema
 	clk <= not(clk) after 5ns; -- reloj
 
-	valA <= "00111110110000000000000000000000";
-	valB <= "01000010110010000000000000000000";
+	valA <= std_logic_vector(valAUnsinged);
+	valB <= std_logic_vector(valBUnsinged);
+	correct_result <= std_logic_vector(resultUnsinged);
 
-	-- instanciacion del DUT (sumador)
-	DUT: restadorFP generic map(8, 23)
+	-- instanciacion del DUT (restador)
+	DUT: restadorFP generic map(6, 16)
 		 port map(clk, valA, valB, result, g_T, r_t, s_t);
 
-end architecture Simulacion; 
+end architecture Simulacion;
