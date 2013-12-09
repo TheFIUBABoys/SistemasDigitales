@@ -1,0 +1,9 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Objetivos}{2}
+\contentsline {section}{\numberline {2}Modulos}{2}
+\contentsline {subsection}{\numberline {2.1}Registro}{2}
+\contentsline {subsection}{\numberline {2.2}Char ROM}{3}
+\contentsline {subsection}{\numberline {2.3}Controlador VGA}{3}
+\contentsline {subsection}{\numberline {2.4}Contador}{3}
+\contentsline {subsection}{\numberline {2.5}Conclusi\IeC {\'o}n}{3}
+\contentsline {subsection}{\numberline {2.6}Output sintetizaci\IeC {\'o}n}{3}

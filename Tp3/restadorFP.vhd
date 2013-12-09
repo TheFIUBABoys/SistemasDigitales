@@ -56,6 +56,8 @@ begin
 	 variable desplazamientos: integer;
 	 variable c_out: std_logic;
 	 variable loops: integer;
+	 variable operands_swap: std_logic;
+	 variable complemented: std_logic;
 	 begin
 
 	 	if (restando(E+M-1 downto M) < restador(E+M-1 downto M)) then
@@ -66,6 +68,7 @@ begin
 	 		s_b := not restando(M+E); -- como es una resta basicamente invierto el signo del restador
 	 		e_a_bits_var := restador(E+M-1 downto M);
 	 		e_b_bits_var := restando(E+M-1 downto M);
+	 		operands_swap := '0';
 	 	else
 	 		m_a_var := restando(M-1 downto 0);
 	 		m_b_var := restador(M-1 downto 0);
@@ -74,6 +77,7 @@ begin
 	 		s_b := not restador(M+E); -- como es una resta basicamente invierto el signo del restador
 	 		e_a_bits_var := restando(E+M-1 downto M);
 	 		e_b_bits_var := restador(E+M-1 downto M);
+	 		operands_swap := '1';
 	 	end if;
 		
 	 	e_a_var := to_integer(unsigned(e_a_bits_var))-bias;	
@@ -91,6 +95,8 @@ begin
 
 		 -- paso 3		 
 		 tmp := e_a_var - e_b_var;
+		 
+		 g_var := '0';
 		 
 	 	 if tmp = 1 then
 	 	 	g_var := p_var(0);
@@ -138,10 +144,12 @@ begin
 	 	temp_result_var(M downto 0) := temp_result_with_cout_var(M downto 0);	
 	 	c_out := temp_result_with_cout_var(M+1);
 		
+		complemented := '0';
 	 	if (s_a /= s_b) and temp_result_var(M-1) = '1' and c_out = '0' then
 	 		-- Reemplazo por complemento a dos.
 			temp_result_var := not temp_result_var;
 			temp_result_var := std_logic_vector(unsigned(temp_result_var) + 1);
+			complemented := '1';
 	 	end if;
 		
 		
@@ -163,7 +171,6 @@ begin
 	 			temp_result_var(I + 1) := temp_result_var(I);
 	 		end loop;
 	 		temp_result_var(0) := g_var;
-	 		e_a_bits_var := std_logic_vector(unsigned(e_a_bits_var) + 1);
 			
 	 		desplazamientos := desplazamientos + 1;
 	 	end if;
@@ -200,9 +207,25 @@ begin
 
 	 	if (s_a = s_b) then
 	 		resta(M + E) <= s_a;
+	 	elsif  (s_a = '0' and s_b = '1') then	-- a+  b-
+			if (operands_swap = '1') then
+				resta(M + E) <= '1';
+			elsif  (complemented = '0') then
+				resta(M + E) <= '0';
+			else
+				resta(M + E) <= '1';
+			end if;
+		else -- a-  b+
+			if (operands_swap = '1') then
+				resta(M + E) <= '0';
+			elsif (complemented = '0') then
+				resta(M + E) <= '1';
+			else
+				resta(M + E) <= '0';
+			end if;
 	 	end if;
 		
-		e_a_bits_var := std_logic_vector(unsigned(e_a_bits_var) - desplazamientos);
+		e_a_bits_var := std_logic_vector(signed(e_a_bits_var) - desplazamientos);
 
 		resta(E+M-1 downto M) <= e_a_bits_var; -- exp resultado -> exp operando A
 		resta(M-1 downto 0) <= temp_result_var(M-1 downto 0);

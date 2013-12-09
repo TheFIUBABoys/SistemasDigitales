@@ -29,9 +29,9 @@ architecture simulacion of testbench is
 	signal g_t, r_t: std_logic;
 	signal s_t: std_logic_vector(16 downto 0);
 
-	signal valAUnsinged: unsigned(22 downto 0) := to_unsigned(5881356,23);
-	signal valBUnsinged: unsigned(22 downto 0) := to_unsigned(6039891,23);
-	signal resultUnsinged: unsigned(22 downto 0) := to_unsigned(1827619,23);
+	signal valAUnsinged: unsigned(22 downto 0) := to_unsigned(6098703,23);
+	signal valBUnsinged: unsigned(22 downto 0) := to_unsigned(6096244,23);
+	signal resultUnsinged: unsigned(22 downto 0) := to_unsigned(5780320,23);
 begin
 	-- generacion del clock del sistema
 	clk <= not(clk) after 5ns; -- reloj
