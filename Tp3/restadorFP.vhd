@@ -58,26 +58,26 @@ begin
 	 variable loops: integer;
 	 variable operands_swap: std_logic;
 	 variable complemented: std_logic;
+	 variable s_a_non_swaped: std_logic;
+	 variable s_b_non_swaped: std_logic;
 	 begin
 
 	 	if (restando(E+M-1 downto M) < restador(E+M-1 downto M)) then
 	 		m_a_var := restador(M-1 downto 0);
 	 		m_b_var := restando(M-1 downto 0);
-	 		s_a := restador(M+E);
-	 		-- s_b := restando(M+E);
-	 		s_b := not restando(M+E); -- como es una resta basicamente invierto el signo del restador
+	 		s_a := not restador(M+E);  -- como es una resta basicamente invierto el signo del restador
+	 		s_b := restando(M+E);
 	 		e_a_bits_var := restador(E+M-1 downto M);
 	 		e_b_bits_var := restando(E+M-1 downto M);
-	 		operands_swap := '0';
+	 		operands_swap := '1';
 	 	else
 	 		m_a_var := restando(M-1 downto 0);
 	 		m_b_var := restador(M-1 downto 0);
 	 		s_a := restando(M+E);
-	 		-- s_b := restador(M+E);
 	 		s_b := not restador(M+E); -- como es una resta basicamente invierto el signo del restador
 	 		e_a_bits_var := restando(E+M-1 downto M);
 	 		e_b_bits_var := restador(E+M-1 downto M);
-	 		operands_swap := '1';
+	 		operands_swap := '0';
 	 	end if;
 		
 	 	e_a_var := to_integer(unsigned(e_a_bits_var))-bias;	
@@ -205,17 +205,20 @@ begin
 	
 	 --paso 8
 
-	 	if (s_a = s_b) then
-	 		resta(M + E) <= s_a;
-	 	elsif  (s_a = '0' and s_b = '1') then	-- a+  b-
+		s_a_non_swaped := restando(M+E);
+		s_b_non_swaped := not restador(M+E);
+		
+	 	if (s_a_non_swaped = s_b_non_swaped) then
+	 		resta(M + E) <= s_a_non_swaped;
+	 	elsif  (s_a_non_swaped = '0' and s_b_non_swaped = '1') then	-- a+  b-
 			if (operands_swap = '1') then
 				resta(M + E) <= '1';
-			elsif  (complemented = '0') then
+			elsif (complemented = '0') then
 				resta(M + E) <= '0';
 			else
 				resta(M + E) <= '1';
 			end if;
-		else -- a-  b+
+		else 	-- a-  b+
 			if (operands_swap = '1') then
 				resta(M + E) <= '0';
 			elsif (complemented = '0') then
