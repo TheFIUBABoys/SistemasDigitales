@@ -8,8 +8,8 @@ end entity testbench;
 
 architecture simulacion of testbench is
 	constant TCK: time:= 20 ns; -- periodo de reloj
-	constant DELAY: natural:= 2; -- retardo de procesamiento del DUT
-	constant N: natural:= 30;	-- tamano de datos
+	constant DELAY: natural:= 1; -- retardo de procesamiento del DUT
+	constant N: natural:= 23;	-- tamano de datos
 	
 	signal clk: std_logic:= '0';
 	signal a_file: unsigned(N-1 downto 0):= (others => '0');
@@ -25,7 +25,7 @@ architecture simulacion of testbench is
 	file datos: text open read_mode is "test_dif_float_23_6.txt";
 	
 	component restadorFP is
-		generic(E:integer:=7; M:integer:=24);  -- m = mantisa, e=exponente
+		generic(E:integer:=8; M:integer:=23);  -- m = mantisa, e=exponente
 		port(
 			clk: in std_logic;
 			restando: in std_logic_vector(E+M downto 0);
@@ -49,7 +49,7 @@ architecture simulacion of testbench is
 	end component;
 
 	signal g_t, r_t: std_logic;
-	signal s_t: std_logic_vector(23 downto 0);
+	signal s_t: std_logic_vector(16 downto 0);
 
 begin
 	-- generacion del clock del sistema
@@ -94,7 +94,7 @@ begin
 	end process Test_Sequence;
 
 	-- instanciacion del DUT (sumador)
-	DUT: restadorFP generic map(6, 23)
+	DUT: restadorFP generic map(6, 16)
 		 port map(
 			clk => clk,
 			restando => std_logic_vector(a_file),
@@ -106,10 +106,11 @@ begin
 		 );
 			
 
-	del: delay_gen 	generic map(30, DELAY)
-				port map(clk, std_logic_vector(z_file), z_del_aux);
+	--del: delay_gen 	generic map(23, DELAY)
+	--			port map(clk, std_logic_vector(z_file), z_del_aux);
 				
-	z_del <= unsigned(z_del_aux);
+	--z_del <= unsigned(z_del_aux);
+	z_del <= z_file;
 	
 	-- Verificacion de la condicion
 	verificacion: process(clk)
